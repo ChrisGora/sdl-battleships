@@ -412,6 +412,10 @@ int longToShortID(int longID) {
 
 //TODO: let them know which ship it was
 
+bool sunk() {
+	return false;
+}
+
 void letKnow(game *g, int x, int y, field result, char input[]) {
 	printf("\n\nYou shot at %c%c and ", input[0], input[1]);
 	if (result == W) printf("you MISSED\n\n");
