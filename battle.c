@@ -109,6 +109,19 @@ void printOne(int a) {
 	if (a == 4) printf("* ");
 }
 
+void printKey() {
+	printOne(0);
+	printf("is a healthy ship square\n");
+	printOne(1);
+	printf("is a hit ship square\n");
+	printOne(2);
+	printf("is a known water square\n");
+	printOne(3);
+	printf("is an unknown square\n");
+	printOne(4);
+	printf("is a completely sunken ship\n\n");	
+}
+
 void printGrid(int grid, game *g) {
 	printf("\n");
 	int y = 0;
@@ -201,19 +214,20 @@ void placeShip(game *g, int x, int y, int length, char orientation[]) {
 }
 
 void sinkShip(game *g, int id) {
+	int owner = g->ships[id][0];
 	int x = g->ships[id][4];
-	int y = g->ships[id][4];
+	int y = g->ships[id][5];
 	char orientation = g->ships[id][6];
 	int length = g->ships[id][2];
 	while (length > 0) {
-		if (g->currentPlayer == 1) {
+		if (owner == 2) {
 			g->prim2[x][y] = U;
 			g->track1[x][y] = U;
 //			g->p1Ships[] = g->p1Ships + 1;
 //			printOne(g->prim1[x][y]);
 //			printf("\n");
 		}
-		else if (g->currentPlayer == 2) {
+		else if (owner == 1) {
 			g->prim1[x][y] = U;
 			g->track2[x][y] = U;
 //			printOne(g->prim2[x][y]);
@@ -260,6 +274,7 @@ void registerShip(game *g, int x, int y, int id, int shipLength, char orientatio
 
 void locationSelect(game *g, int id, char ship[], int shipLength) {
 	clear();
+	printKey();
 	printGrid(playerGrid(g), g);	
 	char loc[5];
 	char orient[5];
@@ -321,6 +336,7 @@ int maxShipId(game *g, bool ownShip) {
 }
 
 //NOTE: You should only attempt to locate a ship. Don't try to locate water
+//Tested pretty well - no bugs
 
 int locateShip(game *g, int x, int y, bool ownShip) {
 	int id = minShipId(g, ownShip);
@@ -330,12 +346,12 @@ int locateShip(game *g, int x, int y, bool ownShip) {
 		int checkX = x;
 		int checkY = y;
 		while ((! located) && (checkX >= 0) && (checkY >= 0)) {
-//			printf("checkX %d , checkY %d, id %d\n", checkX, checkY, id);
+			printf("checkX %d , checkY %d, id %d\n", checkX, checkY, id);
 			if ((g->ships[id][1]) == 0) id++;
 			else if ((g->ships[id][4] == checkX) && (g->ships[id][5] == checkY)) located = true;
 			else if ((g->ships[id][6]) == ('v')) checkY = checkY - 1;
 			else if ((g->ships[id][6]) == ('h')) checkX = checkX - 1;
-//			printf("located %d \n", located);
+			printf("located %d \n", located);
 		}
 		if (! located) id++;
 	}
@@ -435,13 +451,14 @@ int longToShortID(int longID) {
 
 //TODO: let them know which ship it was
 
-bool sunk(game *g, int x, int y, int id) {
+bool sunk(game *g, int id) {
 	bool isSunk;
 	if (g->ships[id][3] == 0) isSunk = true;
 	else isSunk = false;
 	if (isSunk == true) {
 		sinkShip(g, id);
 	}
+	printf("sunk says %d", isSunk);
 	return isSunk;
 }
 
@@ -451,7 +468,7 @@ void letKnow(game *g, int x, int y, field result, char input[]) {
 	if (result == X) {
 		printf("you HIT a ship!\n");
 		int id = locateShip(g, x, y, false);
-		bool isSunk = sunk(g, x, y, id);
+		bool isSunk = sunk(g, id);
 		if (isSunk == true) {
 			id = longToShortID(id);
 			printf("It was a %s and it has been SUNK \n\n", g->names[id]);
@@ -467,12 +484,10 @@ void letOpponentKnow(game *g) {
 		if (g->result == X) {
 			printf("they HIT a ");
 			int id = locateShip(g, g->x, g->y, true);
-			bool sunk;
-			if (g->ships[id][3] == 0) sunk = true;
-			else sunk = false;
+			bool isSunk = sunk(g, id);
 			id = longToShortID(id);
 			printf("%s", g->names[id]);
-			if (sunk == true) printf(" and it has been SUNK\n");
+			if (isSunk == true) printf(" and it has been SUNK\n");
 			else printf("\n");
 		}
 	}
@@ -551,6 +566,7 @@ void playGame(game *g) {
 		whoNext(g);
 		confirmContinue();
         clear();
+		printKey();
 		printPlayersGrids(g);
 		printHealth(g);
 		letOpponentKnow(g);
@@ -664,6 +680,26 @@ void weirdBugTest(game *g) {
 	printGrid(playerGrid(g), g);
 	printGrid(trackGrid(g), g);
 	assert(locateShip(g, 0, 5, true) == 12);
+
+	emptyAllGrids(g);
+	emptyAllShips(g);
+	g->currentPlayer = 1;
+	placeShip(g, 7, 9, 3, "h");
+	registerShip(g, 7, 9, 4, 3, "h");
+	printGrid(playerGrid(g), g);
+	printGrid(trackGrid(g), g);
+	g->currentPlayer = 2;
+	assert(locateShip(g, 9, 9, false) == 4);
+	assert(locateShip(g, 8, 9, false) == 4);
+	assert(locateShip(g, 7, 9, false) == 4);
+	turn(g, 9, 9);
+	turn(g, 8, 9);
+	turn(g, 7, 9);
+	sunk(g, (locateShip(g, 7, 9, false)));
+	printGrid(playerGrid(g), g);
+	printGrid(trackGrid(g), g);
+	assert(g->prim1[8][9] == U);
+
 }
 
 void sinkingTest(game *g) {
@@ -671,11 +707,12 @@ void sinkingTest(game *g) {
 	g->currentPlayer = 2;
 	placeShip(g, 0, 0, 10, "v");
 	registerShip(g, 0, 0, 7, 10, "v");
+	g->currentPlayer = 1;
 	sinkShip(g, 7);
-	assert(g->prim1[0][0] == U);
-	assert(g->prim1[0][9] == U);
-	assert(g->track2[0][0] == U);
-	assert(g->track2[0][9] == U);
+	assert(g->prim2[0][0] == U);
+	assert(g->prim2[0][9] == U);
+	assert(g->track1[0][0] == U);
+	assert(g->track1[0][9] == U);
 	printGrid(playerGrid(g), g);
 	printGrid(trackGrid(g), g);
 }
