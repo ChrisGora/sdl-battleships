@@ -336,7 +336,6 @@ int maxShipId(game *g, bool ownShip) {
 }
 
 //NOTE: You should only attempt to locate a ship. Don't try to locate water
-//Tested pretty well - no bugs
 
 int locateShip(game *g, int x, int y, bool ownShip) {
 	int id = minShipId(g, ownShip);
@@ -347,7 +346,7 @@ int locateShip(game *g, int x, int y, bool ownShip) {
 		int checkY = y;
 		while ((! located) && (checkX >= 0) && (checkY >= 0)) {
 //			printf("checkX %d , checkY %d, id %d\n", checkX, checkY, id);
-			if ((g->ships[id][1]) == 0) id++;
+			if ((g->ships[id][0]) == 0) id++;
 			else if ((g->ships[id][4] == checkX) && (g->ships[id][5] == checkY)) located = true;
 			else if ((g->ships[id][6]) == ('v')) checkY = checkY - 1;
 			else if ((g->ships[id][6]) == ('h')) checkX = checkX - 1;
@@ -355,6 +354,18 @@ int locateShip(game *g, int x, int y, bool ownShip) {
 		}
 		if (! located) id++;
 	}
+/*
+	int checkX = x;
+	int checkY = y;
+	while (((! located) && (checkX >= 0) && (checkY >= 0)) {
+		int n = id;
+		while ((n <= idMax) && (! located)) {
+			if ((g->ships[n][4] == checkX) && (g->ships[n][5] == checkY)) located = true;
+			else n++;
+		}
+		if ((g->ships[id][6]) == ('v')) checkY = checkY - 1;
+		if ((g->ships[id][6]) == ('h')) checkX = checkX - 1;
+	} */
 	assert((id >= 0) && (id <= 13));
 	if (located) return id;
 	else return -1;
@@ -711,6 +722,23 @@ void sinkingTest(game *g) {
 	printGrid(trackGrid(g), g);
 }
 
+void weirdBugTest2(game *g) {
+	emptyAllGrids(g);
+	emptyAllShips(g);
+	printGrid(playerGrid(g), g);
+	printGrid(trackGrid(g), g);
+	g->currentPlayer = 1;
+	placeShip(g, 0, 0, 5, "h");
+	registerShip(g, 0, 0, 0, 5, "h");
+	printGrid(playerGrid(g), g);
+	printGrid(trackGrid(g), g);
+	assert(locateShip(g, 0, 0, true) == 0);
+	assert(locateShip(g, 1, 0, true) == 0);
+	assert(locateShip(g, 2, 0, true) == 0);
+	assert(locateShip(g, 3, 0, true) == 0);
+	assert(locateShip(g, 4, 0, true) == 0);
+}
+
 void tests(game *g) {
 	emptyGridsTest(g);
 	placingShipsTestPlayer1(g);
@@ -722,6 +750,7 @@ void tests(game *g) {
 	shootTest(g);
 	weirdBugTest(g);
 	sinkingTest(g);
+	weirdBugTest2(g);
 	printf("tests passed!\n");	
 }
 
