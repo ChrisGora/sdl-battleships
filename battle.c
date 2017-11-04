@@ -303,7 +303,7 @@ void fillNewIn(game *g) {
 	else if (g->currentPlayer == 2) n = 7;
 	while (i < 7) {
 	    locationSelect(g, n, g->names[i], g->lengths[i]);
-		printf("fillNewIn i %d n %d", i, n);
+//		printf("fillNewIn i %d n %d", i, n);
         i++;
 		n++;
 	}
@@ -346,12 +346,13 @@ int locateShip(game *g, int x, int y, bool ownShip) {
 		int checkX = x;
 		int checkY = y;
 		while ((! located) && (checkX >= 0) && (checkY >= 0)) {
-			printf("checkX %d , checkY %d, id %d\n", checkX, checkY, id);
+//			printf("checkX %d , checkY %d, id %d\n", checkX, checkY, id);
 			if ((g->ships[id][1]) == 0) id++;
 			else if ((g->ships[id][4] == checkX) && (g->ships[id][5] == checkY)) located = true;
 			else if ((g->ships[id][6]) == ('v')) checkY = checkY - 1;
 			else if ((g->ships[id][6]) == ('h')) checkX = checkX - 1;
-			printf("located %d \n", located);
+//			
+("located %d \n", located);
 		}
 		if (! located) id++;
 	}
@@ -458,7 +459,7 @@ bool sunk(game *g, int id) {
 	if (isSunk == true) {
 		sinkShip(g, id);
 	}
-	printf("sunk says %d", isSunk);
+//	printf("sunk says %d", isSunk);
 	return isSunk;
 }
 
