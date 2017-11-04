@@ -449,8 +449,6 @@ int longToShortID(int longID) {
 	return shortID;
 }
 
-//TODO: let them know which ship it was
-
 bool sunk(game *g, int id) {
 	bool isSunk;
 	if (g->ships[id][3] == 0) isSunk = true;
@@ -545,10 +543,6 @@ void target(game *g) {
 	letKnow(g, col(position), row(position), result, position);
 	store(g, col(position), row(position), result, position);
 }
-
-//TODO: Label sunken ships using asterisks!!! design a sunk function
-//TODO: Include a key to the grids
-//TODO: Maybe singleplayer???
 
 void playGame(game *g) {
 	newGame(g);
