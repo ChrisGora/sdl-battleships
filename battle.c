@@ -413,7 +413,7 @@ int longToShortID(int longID) {
 //TODO: let them know which ship it was
 
 bool sunk() {
-	return false;
+	return true;
 }
 
 void letKnow(game *g, int x, int y, field result, char input[]) {
