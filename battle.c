@@ -351,8 +351,7 @@ int locateShip(game *g, int x, int y, bool ownShip) {
 			else if ((g->ships[id][4] == checkX) && (g->ships[id][5] == checkY)) located = true;
 			else if ((g->ships[id][6]) == ('v')) checkY = checkY - 1;
 			else if ((g->ships[id][6]) == ('h')) checkX = checkX - 1;
-//			
-("located %d \n", located);
+//			printf("located %d \n", located);
 		}
 		if (! located) id++;
 	}
@@ -566,7 +565,7 @@ void playGame(game *g) {
 		nextPlayer(g);
 		whoNext(g);
 		confirmContinue();
-        clear();
+		clear();
 		printKey();
 		printPlayersGrids(g);
 		printHealth(g);
