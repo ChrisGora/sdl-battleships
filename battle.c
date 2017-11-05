@@ -343,7 +343,7 @@ bool verifyLocation(game *g, int id, int x, int y, int checkX, int checkY) {
 	bool c = false;
 	if ((g->ships[id][6]) == ('v')) c = (checkY + g->ships[id][2] - 1) >= y;
 	if ((g->ships[id][6]) == ('h')) c = (checkX + g->ships[id][2] - 1) >= x;
-	printf("id %d x %d y %d checkX %d checkY %d bool a %d bool b %d bool c %d\n", id, x, y, checkX, checkY, a, b, c);
+//	printf("id %d x %d y %d checkX %d checkY %d bool a %d bool b %d bool c %d\n", id, x, y, checkX, checkY, a, b, c);
 	return a && b && c;	
 }
 
@@ -357,7 +357,7 @@ int locateShip(game *g, int x, int y, bool ownShip) {
 		while ((! located) && (checkX >= 0) && (checkY >= 0)) {
 //			printf("checkX %d , checkY %d, id %d\n", checkX, checkY, id);
 			located = verifyLocation(g, id, x, y, checkX, checkY);
-			printf("ships[id][0] %d ships id[6] %d 'h' %d 'v' %d\n\n", g->ships[id][0], g->ships[id][6], 'h', 'v');
+//			printf("ships[id][0] %d ships id[6] %d 'h' %d 'v' %d\n\n", g->ships[id][0], g->ships[id][6], 'h', 'v');
 			if (! located) {
 				if ((g->ships[id][6]) == ('v')) checkY = checkY - 1;
 				else if ((g->ships[id][6]) == ('h')) checkX = checkX - 1;
