@@ -337,6 +337,16 @@ int maxShipId(game *g, bool ownShip) {
 
 //NOTE: You should only attempt to locate a ship. Don't try to locate water
 
+bool verifyLocation(game *g, int id, int x, int y, int checkX, int checkY) {
+	bool a = g->ships[id][4] == checkX;
+	bool b = g->ships[id][5] == checkY;
+	bool c = false;
+	if ((g->ships[id][6]) == ('v')) c = (checkY + g->ships[id][2] - 1) >= y;
+	if ((g->ships[id][6]) == ('h')) c = (checkX + g->ships[id][2] - 1) >= x;
+	printf("id %d x %d y %d checkX %d checkY %d bool a %d bool b %d bool c %d\n", id, x, y, checkX, checkY, a, b, c);
+	return a && b && c;	
+}
+
 int locateShip(game *g, int x, int y, bool ownShip) {
 	int id = minShipId(g, ownShip);
 	int idMax = maxShipId(g, ownShip);
@@ -346,26 +356,17 @@ int locateShip(game *g, int x, int y, bool ownShip) {
 		int checkY = y;
 		while ((! located) && (checkX >= 0) && (checkY >= 0)) {
 //			printf("checkX %d , checkY %d, id %d\n", checkX, checkY, id);
-			if ((g->ships[id][0]) == 0) id++;
-			else if ((g->ships[id][4] == checkX) && (g->ships[id][5] == checkY)) located = true;
-			else if ((g->ships[id][6]) == ('v')) checkY = checkY - 1;
-			else if ((g->ships[id][6]) == ('h')) checkX = checkX - 1;
+			located = verifyLocation(g, id, x, y, checkX, checkY);
+			printf("ships[id][0] %d ships id[6] %d 'h' %d 'v' %d\n\n", g->ships[id][0], g->ships[id][6], 'h', 'v');
+			if (! located) {
+				if ((g->ships[id][6]) == ('v')) checkY = checkY - 1;
+				else if ((g->ships[id][6]) == ('h')) checkX = checkX - 1;
+				else id++;
+			}
 //			printf("located %d \n", located);
 		}
 		if (! located) id++;
 	}
-/*
-	int checkX = x;
-	int checkY = y;
-	while (((! located) && (checkX >= 0) && (checkY >= 0)) {
-		int n = id;
-		while ((n <= idMax) && (! located)) {
-			if ((g->ships[n][4] == checkX) && (g->ships[n][5] == checkY)) located = true;
-			else n++;
-		}
-		if ((g->ships[id][6]) == ('v')) checkY = checkY - 1;
-		if ((g->ships[id][6]) == ('h')) checkX = checkX - 1;
-	} */
 	assert((id >= 0) && (id <= 13));
 	if (located) return id;
 	else return -1;
@@ -642,6 +643,7 @@ void shipRegTest(game *g) {
 	assert(g->ships[2][6] == 'h');
 	
 	emptyAllGrids(g);
+	emptyAllShips(g);
 	g->currentPlayer = 2;
 	placeShip(g, 3, 2, 7, "v");
 	registerShip(g, 3, 2, 8, 7, "v");
@@ -657,6 +659,19 @@ void shipRegTest(game *g) {
 
 void locationTest(game *g) {
 	assert(locateShip(g, 3, 7, true) == 8);
+//	emptyAllGrids(g);
+//	emptyAllShips(g);
+	g->currentPlayer = 1;
+	placeShip(g, 2, 0, 3, "v");
+	registerShip(g, 2, 0, 1, 3, "v");
+	printGrid(playerGrid(g), g);
+	printGrid(trackGrid(g), g);
+	assert(locateShip(g, 2, 2, true) == 1);
+	placeShip(g, 0, 2, 2, "h");
+	registerShip(g, 0, 2, 0, 2, "h");
+	printGrid(playerGrid(g), g);
+	printGrid(trackGrid(g), g);
+	assert(locateShip(g, 2, 2, true) == 1);
 }
 
 void shootTest(game *g) {
