@@ -15,10 +15,6 @@
 enum field {S, X, W, N, U};
 typedef enum field field;
 
-//TODO: Use the validity enums or get rid of them
-
-enum validity { Unchecked, OK, BadFormat, BadLetter, BadDigit, BadCell };
-typedef enum validity validity;
 
 // Prim is used as the grid with your ships, track is for tracking the enemy ships
 
