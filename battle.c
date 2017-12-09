@@ -1,5 +1,6 @@
 /* Battleships!!! */
 
+#include "display.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
@@ -18,7 +19,7 @@ typedef enum field field;
 
 // Prim is used as the grid with your ships, track is for tracking the enemy ships
 
-// int ships matrix:  14 ships, [0]owner, [1]type of ship, [2]initial length, 
+// int ships matrix:  14 ships, [0]owner, [1]type of ship, [2]initial length,
 // [3]still healthy length, [4]start x loc, [5]start y loc, [6]orient
 
 struct game {
@@ -30,13 +31,13 @@ struct game {
 	char names[7][20];
 	int lengths[7];
 	int ships[14][7];
-    //INFO about the previous move to let the next player know about what happened.    
+    //INFO about the previous move to let the next player know about what happened.
 	int x;
 	int y;
 	field result;
 	char input[2];
 	bool stored;
-	
+
 };
 typedef struct game game;
 
@@ -115,14 +116,14 @@ void printKey() {
 	printOne(3);
 	printf("is an unknown square\n");
 	printOne(4);
-	printf("is a completely sunken ship\n\n");	
+	printf("is a completely sunken ship\n\n");
 }
 
 void printGrid(int grid, game *g) {
 	printf("\n");
 	int y = 0;
 	char col = 'a';
-	printf("  ");	
+	printf("  ");
 	while (col <= 'j') {
 		printf("%c ", col);
 		col++;
@@ -271,7 +272,7 @@ void registerShip(game *g, int x, int y, int id, int shipLength, char orientatio
 void locationSelect(game *g, int id, char ship[], int shipLength) {
 	clear();
 	printKey();
-	printGrid(playerGrid(g), g);	
+	printGrid(playerGrid(g), g);
 	char loc[5];
 	char orient[5];
 	orient[1] = 'f';
@@ -310,8 +311,8 @@ void nextPlayer(game *g) {
 	else if (g->currentPlayer == 2) g->currentPlayer = 1;
 }
 
-//find the starting x y coords 
-// 
+//find the starting x y coords
+//
 
 int minShipId(game *g, bool ownShip) {
 	int id;
@@ -340,7 +341,7 @@ bool verifyLocation(game *g, int id, int x, int y, int checkX, int checkY) {
 	if ((g->ships[id][6]) == ('v')) c = (checkY + g->ships[id][2] - 1) >= y;
 	if ((g->ships[id][6]) == ('h')) c = (checkX + g->ships[id][2] - 1) >= x;
 //	printf("id %d x %d y %d checkX %d checkY %d bool a %d bool b %d bool c %d\n", id, x, y, checkX, checkY, a, b, c);
-	return a && b && c;	
+	return a && b && c;
 }
 
 int locateShip(game *g, int x, int y, bool ownShip) {
@@ -374,7 +375,7 @@ void updateHitShipData(game *g, int x, int y) {
 	int id = locateShip(g, x, y, false);
 	g->ships[id][3] = g->ships[id][3] - 1;
 }
-	
+
 
 field shoot(game *g, int x, int y) {
 	int cell = N;
@@ -384,7 +385,7 @@ field shoot(game *g, int x, int y) {
 	if (g->currentPlayer == 1) g->track1[x][y] = cell;
 	if (g->currentPlayer == 2) g->track2[x][y] = cell;
 	if (g->currentPlayer == 1) g->prim2[x][y] = cell;
-	if (g->currentPlayer == 2) g->prim1[x][y] = cell;	
+	if (g->currentPlayer == 2) g->prim1[x][y] = cell;
 	return cell;
 }
 
@@ -430,7 +431,7 @@ void whoNext(game *g) {
 void confirmContinue() {
 	printf("Please press [Enter] to continue\n");
 	char ch;
-	while (ch != '\r' && ch != '\n') { 
+	while (ch != '\r' && ch != '\n') {
 		ch = getchar();
 	}
 }
@@ -439,7 +440,7 @@ bool validTarget(game *g, int x, int y) {
 	if ((x > 9) || (x < 0)) return false;
 	if ((y > 9) || (y < 0)) return false;
 	if ((g->currentPlayer == 1) && (g->track1[x][y] != N)) return false;
-	if ((g->currentPlayer == 2) && (g->track2[x][y] != N)) return false;	
+	if ((g->currentPlayer == 2) && (g->track2[x][y] != N)) return false;
 	else return true;
 }
 
@@ -579,6 +580,22 @@ void playGame(game *g) {
 	confirmContinue();
 }
 
+//------------------------------------------------------------------------------
+// DISPLAY HELPER FUNCTIONS
+
+char *selectGridForDisplay(int grid, game *g) {
+	if (grid == 0) return &g->prim1;
+	if (grid == 1) return &g->track1;
+	if (grid == 2) return &g->prim2;
+	if (grid == 3) return &g->track2;
+	else return NULL;
+}
+
+
+//------------------------------------------------------------------------------
+// TESTS
+
+
 void emptyGridsTest(game *g) {
 	emptyAllGrids(g);
 	assert(g->prim1[0][0] == W);
@@ -617,7 +634,7 @@ void placingShipsTestPlayer2(game *g) {
 	assert(g->prim2[0][0] == S);
 	assert(g->prim2[0][9] == S);
 }
-	
+
 void emptyShipsTest(game *g) {
 	emptyAllShips(g);
 	assert(g->ships[0][0] == 0);
@@ -637,7 +654,7 @@ void shipRegTest(game *g) {
 	assert(g->ships[2][4] == 0);
 	assert(g->ships[2][5] == 0);
 	assert(g->ships[2][6] == 'h');
-	
+
 	emptyAllGrids(g);
 	emptyAllShips(g);
 	g->currentPlayer = 2;
@@ -750,6 +767,15 @@ void weirdBugTest2(game *g) {
 	assert(locateShip(g, 4, 0, true) == 0);
 }
 
+void placeGridTest(game *g) {
+	display *d = newDisplay("displayGrid test");
+	grid *grid1 = setGrid(d, selectGridForDisplay(playerGrid(g), g));
+	grid *grid2 = setGrid(d, selectGridForDisplay(trackGrid(g), g));
+	placeGrid(d, grid1);
+	placeGrid(d, grid2);
+	end(d);
+}
+
 void tests(game *g) {
 	emptyGridsTest(g);
 	placingShipsTestPlayer1(g);
@@ -762,7 +788,8 @@ void tests(game *g) {
 	weirdBugTest(g);
 	sinkingTest(g);
 	weirdBugTest2(g);
-	printf("tests passed!\n");	
+	displayGridTest(g);
+	printf("tests passed!\n");
 }
 
 int main(int n, char *args[n]) {

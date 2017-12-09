@@ -15,6 +15,18 @@ struct display {
 
 };
 
+struct grid {
+    int x;
+    int y;
+    char *gridMatrix[10][10];
+    int space;
+
+    int squareW;
+    int squareH;
+    int gridW;
+    int gridH;
+};
+
 // If SDL fails, print the SDL error message, and stop the program.
 static void fail() {
     fprintf(stderr, "Error: %s\n", SDL_GetError());
@@ -26,10 +38,51 @@ static void fail() {
 void *notNull(void *p) { if (p == NULL) fail(); return p; }
 int notNeg(int n) { if (n < 0) fail(); return n; }
 
-void loadBackground(display *d) {
-    SDL_Surface *background = SDL_LoadBMP("sea.bmp");
-    notNull(background);
-    notNeg(SDL_BlitSurface(background, NULL, d->surface, NULL));
+static void loadPicture(display *d, char *name, int x, int y, int w, int h) {
+    SDL_Surface *s = SDL_LoadBMP(name);
+    notNull(s);
+    SDL_Texture *t = SDL_CreateTextureFromSurface(d->renderer, s);
+    notNull(t);
+    //notNeg(SDL_RenderClear(d->renderer));
+
+    SDL_Rect r;
+    r.x = x;
+    r.y = y;
+    r.w = w;
+    r.h = h;
+
+    SDL_RenderCopy(d->renderer, t, NULL, &r);
+}
+
+static void colour(display *d, int rgba) {
+    int r = (rgba >> 24) & 0xFF;
+    int g = (rgba >> 16) & 0xFF;
+    int b = (rgba >> 8) & 0xFF;
+    int a = rgba & 0xFF;
+    notNeg(SDL_SetRenderDrawColor(d->renderer, r, g, b, a));
+    //notNeg(SDL_RenderClear(d->renderer));
+}
+
+grid *setGrid(int x, int y, char *gridMatrix[10][10]) {
+    grid *g = malloc(sizeof(grid));
+    int squareW = 30;
+    int squareH = 30;
+    int space = 5;
+    int gridW = (squareW * 10) + (space * 11);
+    int gridH = (squareH * 10) + (space * 11);
+    //TODO: Work out why this is giving a billion errors...
+    *g = (grid) {x, y, gridMatrix, 5, squareW, squareH, gridW, gridH};
+    return g;
+}
+
+
+void placeGrid(display *d, grid *g) {
+    loadPicture(d, "gridBackground.bmp", g->x, g->y, g->gridW, g->gridH);
+}
+
+void displayFrame(display *d) {
+    SDL_RenderPresent(d->renderer);
+    notNeg(SDL_RenderClear(d->renderer));
 }
 
 display *newDisplay(char *title) {
@@ -40,17 +93,22 @@ display *newDisplay(char *title) {
     int x = SDL_WINDOWPOS_CENTERED, y = SDL_WINDOWPOS_CENTERED;
     d->window = notNull(SDL_CreateWindow(title, x, y, d->width, d->height, 0));
     d->surface = notNull(SDL_GetWindowSurface(d->window));
-    d->renderer = notNull(SDL_CreateSoftwareRenderer(d->surface));
-    loadBackground(d);
-    SDL_SetRenderDrawColor(d->renderer, 255, 255, 255, 255);
-    SDL_RenderClear(d->renderer);
-    SDL_UpdateWindowSurface(d->window);
-    SDL_SetRenderDrawColor(d->renderer, 0, 0, 0, 255);
+    d->renderer = notNull(SDL_CreateRenderer(d->window, -1, 0));
+
+    notNeg(SDL_RenderClear(d->renderer));
+    //loadPicture(d, "sea.bmp", 0, 0, d->width, d->height);
+    //loadPicture(d, "gridBackground.bmp", 10, 10, 365, 365);
+    //loadPicture(d, "testSquare.bmp", 15, 15, 30, 30);
+    //loadPicture(d, "testSquare.bmp", 50, 15, 30, 30);
+    //SDL_RenderPresent(d->renderer);
     return d;
 }
 
 void end(display *d) {
-    SDL_Delay(5000);
+    SDL_Delay(1000);
+    //SDL_FreeSurface(d->surface);
+    //SDL_DestroyRenderer(d->renderer);
+    //SDL_DestroyWindow(d->window);
     SDL_Quit();
 }
 
@@ -58,12 +116,38 @@ void end(display *d) {
 // TESTING
 
 static void newDisplayTest() {
-    display *d = newDisplay("Battleships");
+    display *d = newDisplay("display test");
     end(d);
 }
 
+static void loadPictureTest() {
+    display *d = newDisplay("picture test");
+    notNeg(SDL_RenderClear(d->renderer));
+    loadPicture(d, "sea.bmp", 0, 0, d->width, d->height);
+    loadPicture(d, "gridBackground.bmp", 10, 10, 365, 365);
+    loadPicture(d, "testSquare.bmp", 15, 15, 30, 30);
+    loadPicture(d, "testSquare.bmp", 50, 15, 30, 30);
+    SDL_RenderPresent(d->renderer);
+    end(d);
+}
+
+/*
+static void gridTest() {
+    display *d = newDisplay("picture test");
+    notNeg(SDL_RenderClear(d->renderer));
+    placeGrid(d, 10, 10);
+    end(d);
+
+    d = newDisplay("picture test");
+    notNeg(SDL_RenderClear(d->renderer));
+    placeGrid(d, 300, 10);
+    end(d);
+}
+*/
+
 static void tests() {
     newDisplayTest();
+    loadPictureTest();
 }
 
 int displayMain() {

@@ -1,0 +1,170 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BadCell	oxo.c	/^enum validity { Unchecked, OK, BadFormat, BadLetter, BadDigit, BadCell };$/;"	e	enum:validity	file:
+BadDigit	oxo.c	/^enum validity { Unchecked, OK, BadFormat, BadLetter, BadDigit, BadCell };$/;"	e	enum:validity	file:
+BadFormat	oxo.c	/^enum validity { Unchecked, OK, BadFormat, BadLetter, BadDigit, BadCell };$/;"	e	enum:validity	file:
+BadLetter	oxo.c	/^enum validity { Unchecked, OK, BadFormat, BadLetter, BadDigit, BadCell };$/;"	e	enum:validity	file:
+DdisplayMain	Makefile	/^	gcc -DdisplayMain=main -std=c99 -pedantic -Wall -O3 display.c -lSDL2 -o display$/;"	m
+GCC	Makefile	/^GCC = gcc -std=c99 -O3 -Wall -pedantic$/;"	m
+N	battle.c	/^enum field {S, X, W, N, U};$/;"	e	enum:field	file:
+N	oxo.c	/^enum player { X, O, N };$/;"	e	enum:player	file:
+O	oxo.c	/^enum player { X, O, N };$/;"	e	enum:player	file:
+OK	oxo.c	/^enum validity { Unchecked, OK, BadFormat, BadLetter, BadDigit, BadCell };$/;"	e	enum:validity	file:
+S	battle.c	/^enum field {S, X, W, N, U};$/;"	e	enum:field	file:
+SCREEN_HEIGHT	02_getting_an_image_on_the_screen/02_getting_an_image_on_the_screen.cpp	/^const int SCREEN_HEIGHT = 480;$/;"	v
+SCREEN_WIDTH	02_getting_an_image_on_the_screen/02_getting_an_image_on_the_screen.cpp	/^const int SCREEN_WIDTH = 640;$/;"	v
+U	battle.c	/^enum field {S, X, W, N, U};$/;"	e	enum:field	file:
+Unchecked	oxo.c	/^enum validity { Unchecked, OK, BadFormat, BadLetter, BadDigit, BadCell };$/;"	e	enum:validity	file:
+W	battle.c	/^enum field {S, X, W, N, U};$/;"	e	enum:field	file:
+X	battle.c	/^enum field {S, X, W, N, U};$/;"	e	enum:field	file:
+X	oxo.c	/^enum player { X, O, N };$/;"	e	enum:player	file:
+ask	oxo.c	/^void ask(game *g, char text[100]) {$/;"	f
+askWhere	battle.c	/^void askWhere(char ship[], int length, char location[], char orientation[]) {$/;"	f
+checkConstants	oxo.c	/^void checkConstants() {$/;"	f
+clear	battle.c	/^void clear() {$/;"	f
+close	02_getting_an_image_on_the_screen/02_getting_an_image_on_the_screen.cpp	/^void close()$/;"	f
+col	battle.c	/^int col(char *text) {$/;"	f
+col	oxo.c	/^int col(char *text) {$/;"	f
+colour	display.c	/^static void colour(display *d, int rgba) {$/;"	f	file:
+confirmContinue	battle.c	/^void confirmContinue() {$/;"	f
+currentPlayer	battle.c	/^	int currentPlayer;$/;"	m	struct:game	file:
+display	display.c	/^struct display {$/;"	s	file:
+display	display.h	/^typedef struct display display;$/;"	t	typeref:struct:display
+display	oxo.c	/^void display(game *g) {$/;"	f
+displayFrame	display.c	/^void displayFrame(display *d) {$/;"	f
+displayMain	display.c	/^int displayMain() {$/;"	f
+drawn	oxo.c	/^bool drawn(game *g) {$/;"	f
+emptyAllGrids	battle.c	/^void emptyAllGrids(game *g) {$/;"	f
+emptyAllShips	battle.c	/^void emptyAllShips(game *g) {$/;"	f
+emptyGridsTest	battle.c	/^void emptyGridsTest(game *g) {$/;"	f
+emptyShipsTest	battle.c	/^void emptyShipsTest(game *g) {$/;"	f
+end	display.c	/^void end(display *d) {$/;"	f
+fail	display.c	/^static void fail() {$/;"	f	file:
+field	battle.c	/^enum field {S, X, W, N, U};$/;"	g	file:
+field	battle.c	/^typedef enum field field;$/;"	t	typeref:enum:field	file:
+fillNewIn	battle.c	/^void fillNewIn(game *g) {$/;"	f
+gHelloWorld	02_getting_an_image_on_the_screen/02_getting_an_image_on_the_screen.cpp	/^SDL_Surface* gHelloWorld = NULL;$/;"	v
+gScreenSurface	02_getting_an_image_on_the_screen/02_getting_an_image_on_the_screen.cpp	/^SDL_Surface* gScreenSurface = NULL;$/;"	v
+gWindow	02_getting_an_image_on_the_screen/02_getting_an_image_on_the_screen.cpp	/^SDL_Window* gWindow = NULL;$/;"	v
+game	battle.c	/^struct game {$/;"	s	file:
+game	battle.c	/^typedef struct game game;$/;"	t	typeref:struct:game	file:
+game	oxo.c	/^struct game {$/;"	s	file:
+game	oxo.c	/^typedef struct game game;$/;"	t	typeref:struct:game	file:
+grid	display.c	/^struct grid {$/;"	s	file:
+grid	display.h	/^typedef struct grid grid;$/;"	t	typeref:struct:grid
+grid	oxo.c	/^    player grid[3][3];$/;"	m	struct:game	file:
+gridH	display.c	/^    int gridH;$/;"	m	struct:grid	file:
+gridMatrix	display.c	/^    char *gridMatrix[10][10];$/;"	m	struct:grid	file:
+gridW	display.c	/^    int gridW;$/;"	m	struct:grid	file:
+healthSumPlayer1	battle.c	/^int healthSumPlayer1(game *g) {$/;"	f
+healthSumPlayer2	battle.c	/^int healthSumPlayer2(game *g) {$/;"	f
+height	display.c	/^    int width, height;$/;"	m	struct:display	file:
+init	02_getting_an_image_on_the_screen/02_getting_an_image_on_the_screen.cpp	/^bool init()$/;"	f
+input	battle.c	/^	char input[2];$/;"	m	struct:game	file:
+lengths	battle.c	/^	int lengths[7];$/;"	m	struct:game	file:
+letKnow	battle.c	/^void letKnow(game *g, int x, int y, field result, char input[]) {$/;"	f
+letOpponentKnow	battle.c	/^void letOpponentKnow(game *g) {$/;"	f
+line	oxo.c	/^player line(player x, player y, player z) {$/;"	f
+loadMedia	02_getting_an_image_on_the_screen/02_getting_an_image_on_the_screen.cpp	/^bool loadMedia()$/;"	f
+loadPicture	display.c	/^static void loadPicture(display *d, char *name, int x, int y, int w, int h) {$/;"	f	file:
+loadPictureTest	display.c	/^static void loadPictureTest() {$/;"	f	file:
+locateShip	battle.c	/^int locateShip(game *g, int x, int y, bool ownShip) {$/;"	f
+locationSelect	battle.c	/^void locationSelect(game *g, int id, char ship[], int shipLength) {$/;"	f
+locationTest	battle.c	/^void locationTest(game *g) {$/;"	f
+longToShortID	battle.c	/^int longToShortID(int longID) {$/;"	f
+main	02_getting_an_image_on_the_screen/02_getting_an_image_on_the_screen.cpp	/^int main( int argc, char* args[] )$/;"	f
+main	battle.c	/^int main(int n, char *args[n]) {$/;"	f
+main	oxo.c	/^int main(int n, char *args[n]) {$/;"	f
+maxShipId	battle.c	/^int maxShipId(game *g, bool ownShip) {$/;"	f
+minShipId	battle.c	/^int minShipId(game *g, bool ownShip) {$/;"	f
+move	oxo.c	/^void move(game *g, int r, int c) {$/;"	f
+moves	oxo.c	/^    int moves;$/;"	m	struct:game	file:
+names	battle.c	/^	char names[7][20];$/;"	m	struct:game	file:
+newDisplay	display.c	/^display *newDisplay(char *title) {$/;"	f
+newDisplayTest	display.c	/^static void newDisplayTest() {$/;"	f	file:
+newGame	battle.c	/^void newGame(game *g) {$/;"	f
+newGame	oxo.c	/^void newGame(game *g, player first) {$/;"	f
+next	oxo.c	/^    player next;$/;"	m	struct:game	file:
+nextPlayer	battle.c	/^void nextPlayer(game *g) {$/;"	f
+notNeg	display.c	/^int notNeg(int n) { if (n < 0) fail(); return n; }$/;"	f
+notNull	display.c	/^void *notNull(void *p) { if (p == NULL) fail(); return p; }$/;"	f
+placeGrid	display.c	/^void placeGrid(display *d, grid *g) {$/;"	f
+placeGridTest	battle.c	/^void placeGridTest(game *g) {$/;"	f
+placeShip	battle.c	/^void placeShip(game *g, int x, int y, int length, char orientation[]) {$/;"	f
+placingShipsTestPlayer1	battle.c	/^void placingShipsTestPlayer1(game *g) {$/;"	f
+placingShipsTestPlayer2	battle.c	/^void placingShipsTestPlayer2(game *g) {$/;"	f
+play	oxo.c	/^void play(char player) {$/;"	f
+playGame	battle.c	/^void playGame(game *g) {$/;"	f
+player	oxo.c	/^enum player { X, O, N };$/;"	g	file:
+player	oxo.c	/^typedef enum player player;$/;"	t	typeref:enum:player	file:
+playerGrid	battle.c	/^int playerGrid(game *g) {$/;"	f
+prim1	battle.c	/^	char prim1[10][10];$/;"	m	struct:game	file:
+prim2	battle.c	/^	char prim2[10][10];$/;"	m	struct:game	file:
+printGrid	battle.c	/^void printGrid(int grid, game *g) {$/;"	f
+printHealth	battle.c	/^void printHealth(game *g) {$/;"	f
+printInvalid	oxo.c	/^void printInvalid(validity v) {$/;"	f
+printKey	battle.c	/^void printKey() {$/;"	f
+printOne	battle.c	/^void printOne(int a) {$/;"	f
+printPlayersGrids	battle.c	/^void printPlayersGrids(game *g) {$/;"	f
+registerShip	battle.c	/^void registerShip(game *g, int x, int y, int id, int shipLength, char orientation[]) {$/;"	f
+renderer	display.c	/^    SDL_Renderer *renderer;$/;"	m	struct:display	file:
+result	battle.c	/^	field result;$/;"	m	struct:game	file:
+row	battle.c	/^int row(char *text) {$/;"	f
+row	oxo.c	/^int row(char *text) {$/;"	f
+selectGridForDisplay	battle.c	/^char *selectGridForDisplay(int grid, game *g) {$/;"	f
+selectTarget	battle.c	/^void selectTarget(char location[]) {$/;"	f
+setGrid	display.c	/^grid *setGrid(int x, int y, char *gridMatrix[10][10]) {$/;"	f
+shipRegTest	battle.c	/^void shipRegTest(game *g) {$/;"	f
+ships	battle.c	/^	int ships[14][7];$/;"	m	struct:game	file:
+shoot	battle.c	/^field shoot(game *g, int x, int y) {$/;"	f
+shootTest	battle.c	/^void shootTest(game *g) {$/;"	f
+show	oxo.c	/^char show(player c) {$/;"	f
+sinkShip	battle.c	/^void sinkShip(game *g, int id) {$/;"	f
+sinkingTest	battle.c	/^void sinkingTest(game *g) {$/;"	f
+space	display.c	/^    int space;$/;"	m	struct:grid	file:
+squareH	display.c	/^    int squareH;$/;"	m	struct:grid	file:
+squareW	display.c	/^    int squareW;$/;"	m	struct:grid	file:
+store	battle.c	/^void store(game *g, int x, int y, field result, char input[]) {$/;"	f
+stored	battle.c	/^	bool stored;$/;"	m	struct:game	file:
+sunk	battle.c	/^bool sunk(game *g, int id) {$/;"	f
+surface	display.c	/^    SDL_Surface *surface;$/;"	m	struct:display	file:
+target	battle.c	/^void target(game *g) {$/;"	f
+test	oxo.c	/^void test() {$/;"	f
+testDraw	oxo.c	/^void testDraw(game *g) {$/;"	f
+testInvalid	oxo.c	/^void testInvalid(game *g) {$/;"	f
+testLine	oxo.c	/^void testLine() {$/;"	f
+testMove	oxo.c	/^void testMove(game *g) {$/;"	f
+testNew	oxo.c	/^void testNew(game *g) {$/;"	f
+testNoWin	oxo.c	/^void testNoWin(game *g) {$/;"	f
+testRowCol	oxo.c	/^void testRowCol() {$/;"	f
+testWin	oxo.c	/^void testWin(game *g) {$/;"	f
+tests	battle.c	/^void tests(game *g) {$/;"	f
+tests	display.c	/^static void tests() {$/;"	f	file:
+track1	battle.c	/^	char track1[10][10];$/;"	m	struct:game	file:
+track2	battle.c	/^	char track2[10][10];$/;"	m	struct:game	file:
+trackGrid	battle.c	/^int trackGrid(game *g) {$/;"	f
+turn	battle.c	/^field turn(game *g, int x, int y) {$/;"	f
+updateHitShipData	battle.c	/^void updateHitShipData(game *g, int x, int y) {$/;"	f
+valid	oxo.c	/^validity valid(game *g, char *text) {$/;"	f
+validTarget	battle.c	/^bool validTarget(game *g, int x, int y) {$/;"	f
+validity	oxo.c	/^enum validity { Unchecked, OK, BadFormat, BadLetter, BadDigit, BadCell };$/;"	g	file:
+validity	oxo.c	/^typedef enum validity validity;$/;"	t	typeref:enum:validity	file:
+verifyLocation	battle.c	/^bool verifyLocation(game *g, int id, int x, int y, int checkX, int checkY) {$/;"	f
+waterOnlyAll	battle.c	/^bool waterOnlyAll(game *g, int x, int y, int length, char orientation[]) {$/;"	f
+waterOnlySingle	battle.c	/^bool waterOnlySingle(game *g, int x, int y) {$/;"	f
+weirdBugTest	battle.c	/^void weirdBugTest(game *g) {$/;"	f
+weirdBugTest2	battle.c	/^void weirdBugTest2(game *g) {$/;"	f
+whoNext	battle.c	/^void whoNext(game *g) {$/;"	f
+width	display.c	/^    int width, height;$/;"	m	struct:display	file:
+window	display.c	/^    SDL_Window *window;$/;"	m	struct:display	file:
+won	battle.c	/^void won(game *g) {$/;"	f
+won	oxo.c	/^player won(game *g) {$/;"	f
+wonCheck	oxo.c	/^bool wonCheck(game *g, int x1, int y1, int x2, int y2, int x3, int y3) {$/;"	f
+x	battle.c	/^	int x;$/;"	m	struct:game	file:
+x	display.c	/^    int x;$/;"	m	struct:grid	file:
+y	battle.c	/^	int y;$/;"	m	struct:game	file:
+y	display.c	/^    int y;$/;"	m	struct:grid	file:
