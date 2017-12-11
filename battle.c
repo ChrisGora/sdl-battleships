@@ -770,9 +770,22 @@ void weirdBugTest2(game *g) {
 
 //TODO: Make this work!!!
 void placeGridTest(game *g) {
-	display *d = newDisplay("displayGrid test");
-	grid *grid1 = newGrid(10, 50, selectGridForDisplay(playerGrid(g), g));
-	grid *grid2 = newGrid(500, 100, selectGridForDisplay(trackGrid(g), g));
+	int screenW = 1500;
+	int screenH = 500;
+	display *d = newDisplay("displayGrid test", screenW, screenH);
+	int squareW = screenW / 100 * 3;
+	int squareH = screenH / 100 * 6;
+	if (squareW < squareH) squareH = squareW;
+	else squareW = squareH;
+	int space = 5;
+	int gridW = (squareW * 10) + (space * 11);
+	int gridH = (squareH * 10) + (space * 11);
+	int grid1X = screenW / 4 - gridW / 2;
+	int grid1Y = screenH / 2 - gridH / 2;
+	int grid2X = screenW * 3 / 4 - gridW / 2;
+	int grid2Y = grid1Y;
+	grid *grid1 = newGrid(grid1X, grid1Y, space, squareW, squareH, selectGridForDisplay(playerGrid(g), g));
+	grid *grid2 = newGrid(grid2X, grid2Y, space, squareW, squareH, selectGridForDisplay(trackGrid(g), g));
 	placeBackground(d);
 	placeGrid(d, grid1);
 	placeGrid(d, grid2);

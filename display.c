@@ -8,7 +8,8 @@
 #include <stdbool.h>
 
 struct display {
-    int width, height;
+    int width;
+    int height;
     SDL_Window *window;
     SDL_Renderer *renderer;
     SDL_Surface *surface;
@@ -88,14 +89,11 @@ void placeBackground(display *d) {
 //------------------------------------------------------------------------------
 // GRIDS
 
-grid *newGrid(int x, int y, int **gridMatrix) {
+grid *newGrid(int x, int y, int space, int squareW, int squareH, int **gridMatrix) {
     grid *g = malloc(sizeof(grid));
-    int squareW = 30;
-    int squareH = 30;
-    int space = 5;
     int gridW = (squareW * 10) + (space * 11);
     int gridH = (squareH * 10) + (space * 11);
-    *g = (grid){x, y, 5, squareW, squareH, gridW, gridH, gridMatrix};
+    *g = (grid){x, y, space, squareW, squareH, gridW, gridH, gridMatrix};
     return g;
 }
 
@@ -136,13 +134,13 @@ void displayFrame(display *d) {
     notNeg(SDL_RenderClear(d->renderer));
 }
 
-display *newDisplay(char *title) {
+display *newDisplay(char *title, int width, int height) {
     display *d = malloc(sizeof(display));
-    d->width = 1000;
-    d->height = 500;
+    d->width = width;
+    d->height = height;
     notNeg(SDL_Init(SDL_INIT_VIDEO));
     int x = SDL_WINDOWPOS_CENTERED, y = SDL_WINDOWPOS_CENTERED;
-    d->window = notNull(SDL_CreateWindow(title, x, y, d->width, d->height, 0));
+    d->window = notNull(SDL_CreateWindow(title, x, y, d->width, d->height, SDL_WINDOW_RESIZABLE));
     d->surface = notNull(SDL_GetWindowSurface(d->window));
     d->renderer = notNull(SDL_CreateRenderer(d->window, -1, 0));
 
@@ -156,8 +154,12 @@ display *newDisplay(char *title) {
     return d;
 }
 
+void pause(display *d, int ms) {
+    if (ms > 0) SDL_Delay(ms);
+}
+
 void end(display *d) {
-    SDL_Delay(5000);
+    pause(d, 5000);
     //SDL_FreeSurface(d->surface);
     //SDL_DestroyRenderer(d->renderer);
     //SDL_DestroyWindow(d->window);
@@ -168,12 +170,12 @@ void end(display *d) {
 // TESTING
 
 static void newDisplayTest() {
-    display *d = newDisplay("display test");
+    display *d = newDisplay("display test", 200, 200);
     end(d);
 }
 
 static void loadPictureTest() {
-    display *d = newDisplay("picture test");
+    display *d = newDisplay("picture test", 1000, 500);
     notNeg(SDL_RenderClear(d->renderer));
     loadPicture(d, "sea.bmp", 'B');
     loadPicture(d, "gridBackground.bmp", 'G');
@@ -193,7 +195,7 @@ static void loadPictureTest() {
     displayFrame(d);
     end(d);
 
-    d = newDisplay("picture test - using loadAll");
+    d = newDisplay("picture test - using loadAll", 1000, 500);
     notNeg(SDL_RenderClear(d->renderer));
     loadAll(d);
     placePicture(d, 'B', 0, 0, d->width, d->height);
