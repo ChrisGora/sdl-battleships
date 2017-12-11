@@ -3,3 +3,7 @@ oxo
 *.c~
 *.*~
 *.nfs*
+
+display
+
+tags

@@ -26,10 +26,10 @@ typedef enum field field;
 //TODO: Change char to int!!! Or maybe field????
 struct game {
 	int currentPlayer;
-	field prim1[10][10];
-	field track1[10][10];
-	field prim2[10][10];
-	field track2[10][10];
+	field **prim1;
+	field **track1;
+	field **prim2;
+	field **track2;
 	char names[7][20];
 	int lengths[7];
 	int ships[14][7];
@@ -585,11 +585,11 @@ void playGame(game *g) {
 //------------------------------------------------------------------------------
 // DISPLAY HELPER FUNCTIONS
 
-char *selectGridForDisplay(int grid, game *g) {
-	if (grid == 0) return &(g->prim1[0][0]);
-	if (grid == 1) return &(g->track1[0][0]);
-	if (grid == 2) return &(g->prim2[0][0]);
-	if (grid == 3) return &(g->track2[0][0]);
+field **selectGridForDisplay(int grid, game *g) {
+	if (grid == 0) return g->prim1;
+	if (grid == 1) return g->track1;
+	if (grid == 2) return g->prim2;
+	if (grid == 3) return g->track2;
 	else return NULL;
 }
 
@@ -795,12 +795,26 @@ void tests(game *g) {
 	printf("tests passed!\n");
 }
 
+//-----------------------------------------------------------------------------
+
+field **newMatrix(int rows, int cols) {
+	field **matrix = malloc(rows * sizeof(field *));
+	for(int i = 0; i < rows; i++) {
+		matrix[i] = malloc(cols * sizeof(field));
+	}
+	return matrix;
+}
+
 int main(int n, char *args[n]) {
     for (int i=0; i<n; i++) {
 //		printf("Arg %d is %s\n", i, args[i]);
 	}
 	game *g;
 	g = malloc(sizeof(struct game));
+	g->prim1 = newMatrix(10, 10);
+	g->track1 = newMatrix(10, 10);
+	g->prim2 = newMatrix(10, 10);
+	g->track2 = newMatrix(10, 10);
 	char copy1[7][20] = {
 		{"Carrier"},
 		{"Battleship"},

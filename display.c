@@ -25,7 +25,7 @@ struct grid {
     int gridW;
     int gridH;
 
-    int *gridMatrix;
+    int **gridMatrix;
 };
 
 // If SDL fails, print the SDL error message, and stop the program.
@@ -89,7 +89,7 @@ static void colour(display *d, int rgba) {
     //notNeg(SDL_RenderClear(d->renderer));
 }
 
-grid *newGrid(int x, int y, int *gridMatrix) {
+grid *newGrid(int x, int y, int **gridMatrix) {
     grid *g = malloc(sizeof(grid));
     int squareW = 30;
     int squareH = 30;
@@ -109,10 +109,10 @@ void placeGrid(display *d, grid *g) {
     while (row < 10) {
         col = 0;
         while (col < 10) {
-            printOne(*g->gridMatrix + col);
-            printf("\n");
+            printOne(g->gridMatrix[col][row]);
             col++;
         }
+        printf("\n");
         row++;
     }
 }
