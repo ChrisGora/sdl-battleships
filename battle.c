@@ -768,10 +768,12 @@ void weirdBugTest2(game *g) {
 	printf("All LOGIC tests passed\n");
 }
 
-//TODO: Make this work!!!
+//TODO: Put al of this into an updateGrid function in display.c
+//TODO: Work out a way of selecting a square and storing that selection
+//TODO: Create a mechanism for handling keypresses - change current x and y
 void placeGridTest(game *g) {
-	int screenW = 1500;
-	int screenH = 500;
+	int screenW = 1280;
+	int screenH = 800;
 	display *d = newDisplay("displayGrid test", screenW, screenH);
 	int squareW = screenW / 100 * 3;
 	int squareH = screenH / 100 * 6;

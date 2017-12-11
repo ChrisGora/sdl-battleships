@@ -124,7 +124,6 @@ void placeGrid(display *d, grid *g) {
             placeOne(d, g, field, x, y);
             col++;
         }
-        printf("\n");
         row++;
     }
 }
