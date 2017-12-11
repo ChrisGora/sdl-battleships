@@ -70,7 +70,7 @@ letKnow	battle.c	/^void letKnow(game *g, int x, int y, field result, char input[
 letOpponentKnow	battle.c	/^void letOpponentKnow(game *g) {$/;"	f
 line	oxo.c	/^player line(player x, player y, player z) {$/;"	f
 loadMedia	02_getting_an_image_on_the_screen/02_getting_an_image_on_the_screen.cpp	/^bool loadMedia()$/;"	f
-loadPicture	display.c	/^static void loadPicture(display *d, char *name, int x, int y, int w, int h) {$/;"	f	file:
+loadPicture	display.c	/^static void loadPicture(display *d, char *filename, char letter) {$/;"	f	file:
 loadPictureTest	display.c	/^static void loadPictureTest() {$/;"	f	file:
 locateShip	battle.c	/^int locateShip(game *g, int x, int y, bool ownShip) {$/;"	f
 locationSelect	battle.c	/^void locationSelect(game *g, int id, char ship[], int shipLength) {$/;"	f
@@ -88,12 +88,14 @@ newDisplay	display.c	/^display *newDisplay(char *title) {$/;"	f
 newDisplayTest	display.c	/^static void newDisplayTest() {$/;"	f	file:
 newGame	battle.c	/^void newGame(game *g) {$/;"	f
 newGame	oxo.c	/^void newGame(game *g, player first) {$/;"	f
+newGrid	display.c	/^grid *newGrid(int x, int y, char *gridMatrix) {$/;"	f
 next	oxo.c	/^    player next;$/;"	m	struct:game	file:
 nextPlayer	battle.c	/^void nextPlayer(game *g) {$/;"	f
 notNeg	display.c	/^int notNeg(int n) { if (n < 0) fail(); return n; }$/;"	f
 notNull	display.c	/^void *notNull(void *p) { if (p == NULL) fail(); return p; }$/;"	f
 placeGrid	display.c	/^void placeGrid(display *d, grid *g) {$/;"	f
 placeGridTest	battle.c	/^void placeGridTest(game *g) {$/;"	f
+placePicture	display.c	/^static void placePicture(display *d, char letter, int x, int y, int w, int h) {$/;"	f	file:
 placeShip	battle.c	/^void placeShip(game *g, int x, int y, int length, char orientation[]) {$/;"	f
 placingShipsTestPlayer1	battle.c	/^void placingShipsTestPlayer1(game *g) {$/;"	f
 placingShipsTestPlayer2	battle.c	/^void placingShipsTestPlayer2(game *g) {$/;"	f
@@ -117,7 +119,6 @@ row	battle.c	/^int row(char *text) {$/;"	f
 row	oxo.c	/^int row(char *text) {$/;"	f
 selectGridForDisplay	battle.c	/^char *selectGridForDisplay(int grid, game *g) {$/;"	f
 selectTarget	battle.c	/^void selectTarget(char location[]) {$/;"	f
-setGrid	display.c	/^grid *setGrid(int x, int y, char *gridMatrix) {$/;"	f
 shipRegTest	battle.c	/^void shipRegTest(game *g) {$/;"	f
 ships	battle.c	/^	int ships[14][7];$/;"	m	struct:game	file:
 shoot	battle.c	/^field shoot(game *g, int x, int y) {$/;"	f
@@ -144,6 +145,7 @@ testRowCol	oxo.c	/^void testRowCol() {$/;"	f
 testWin	oxo.c	/^void testWin(game *g) {$/;"	f
 tests	battle.c	/^void tests(game *g) {$/;"	f
 tests	display.c	/^static void tests() {$/;"	f	file:
+textures	display.c	/^    SDL_Texture *textures[128];$/;"	m	struct:display	file:
 track1	battle.c	/^	char track1[10][10];$/;"	m	struct:game	file:
 track2	battle.c	/^	char track2[10][10];$/;"	m	struct:game	file:
 trackGrid	battle.c	/^int trackGrid(game *g) {$/;"	f

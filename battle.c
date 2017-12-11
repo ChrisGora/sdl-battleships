@@ -672,8 +672,6 @@ void shipRegTest(game *g) {
 
 void locationTest(game *g) {
 	assert(locateShip(g, 3, 7, true) == 8);
-//	emptyAllGrids(g);
-//	emptyAllShips(g);
 	g->currentPlayer = 1;
 	placeShip(g, 2, 0, 3, "v");
 	registerShip(g, 2, 0, 1, 3, "v");
