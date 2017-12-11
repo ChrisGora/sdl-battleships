@@ -4,7 +4,7 @@ GCC = gcc -std=c99 -O3 -Wall -pedantic
 
 battle:
 	ctags -R
-	$(GCC) battle.c display.c -lSDL2 -o battle
+	$(GCC) display.c battle.c -lSDL2 -o battle
 
 display:
 	ctags -R

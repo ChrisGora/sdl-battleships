@@ -18,13 +18,14 @@ struct display {
 struct grid {
     int x;
     int y;
-    char *gridMatrix[10][10];
     int space;
 
     int squareW;
     int squareH;
     int gridW;
     int gridH;
+
+    char *gridMatrix;
 };
 
 // If SDL fails, print the SDL error message, and stop the program.
@@ -63,7 +64,7 @@ static void colour(display *d, int rgba) {
     //notNeg(SDL_RenderClear(d->renderer));
 }
 
-grid *setGrid(int x, int y, char *gridMatrix[10][10]) {
+grid *setGrid(int x, int y, char *gridMatrix) {
     grid *g = malloc(sizeof(grid));
     int squareW = 30;
     int squareH = 30;
@@ -71,13 +72,18 @@ grid *setGrid(int x, int y, char *gridMatrix[10][10]) {
     int gridW = (squareW * 10) + (space * 11);
     int gridH = (squareH * 10) + (space * 11);
     //TODO: Work out why this is giving a billion errors...
-    *g = (grid) {x, y, gridMatrix, 5, squareW, squareH, gridW, gridH};
+    *g = (grid){x, y, 5, squareW, squareH, gridW, gridH, gridMatrix};
     return g;
 }
 
 
 void placeGrid(display *d, grid *g) {
     loadPicture(d, "gridBackground.bmp", g->x, g->y, g->gridW, g->gridH);
+    int col = 0;
+    int row = 0;
+    while (col < 10) {
+        
+    }
 }
 
 void displayFrame(display *d) {

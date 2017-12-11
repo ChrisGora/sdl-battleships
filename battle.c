@@ -584,10 +584,10 @@ void playGame(game *g) {
 // DISPLAY HELPER FUNCTIONS
 
 char *selectGridForDisplay(int grid, game *g) {
-	if (grid == 0) return &g->prim1;
-	if (grid == 1) return &g->track1;
-	if (grid == 2) return &g->prim2;
-	if (grid == 3) return &g->track2;
+	if (grid == 0) return &(g->prim1[0][0]);
+	if (grid == 1) return &(g->track1[0][0]);
+	if (grid == 2) return &(g->prim2[0][0]);
+	if (grid == 3) return &(g->track2[0][0]);
 	else return NULL;
 }
 
@@ -760,8 +760,8 @@ void weirdBugTest2(game *g) {
 	registerShip(g, 0, 0, 0, 5, "h");
 	printGrid(playerGrid(g), g);
 	printGrid(trackGrid(g), g);
-	assert(locateShip(g, 0, 0, true) == 0);
 	assert(locateShip(g, 1, 0, true) == 0);
+	assert(locateShip(g, 0, 0, true) == 0);
 	assert(locateShip(g, 2, 0, true) == 0);
 	assert(locateShip(g, 3, 0, true) == 0);
 	assert(locateShip(g, 4, 0, true) == 0);
@@ -769,10 +769,11 @@ void weirdBugTest2(game *g) {
 
 void placeGridTest(game *g) {
 	display *d = newDisplay("displayGrid test");
-	grid *grid1 = setGrid(d, selectGridForDisplay(playerGrid(g), g));
-	grid *grid2 = setGrid(d, selectGridForDisplay(trackGrid(g), g));
+	grid *grid1 = setGrid(10, 10, selectGridForDisplay(playerGrid(g), g));
+	grid *grid2 = setGrid(500, 10, selectGridForDisplay(trackGrid(g), g));
 	placeGrid(d, grid1);
 	placeGrid(d, grid2);
+	displayFrame(d);
 	end(d);
 }
 
@@ -788,7 +789,7 @@ void tests(game *g) {
 	weirdBugTest(g);
 	sinkingTest(g);
 	weirdBugTest2(g);
-	displayGridTest(g);
+	placeGridTest(g);
 	printf("tests passed!\n");
 }
 

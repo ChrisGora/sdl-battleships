@@ -58,7 +58,7 @@ grid	display.c	/^struct grid {$/;"	s	file:
 grid	display.h	/^typedef struct grid grid;$/;"	t	typeref:struct:grid
 grid	oxo.c	/^    player grid[3][3];$/;"	m	struct:game	file:
 gridH	display.c	/^    int gridH;$/;"	m	struct:grid	file:
-gridMatrix	display.c	/^    char *gridMatrix[10][10];$/;"	m	struct:grid	file:
+gridMatrix	display.c	/^    char *gridMatrix;$/;"	m	struct:grid	file:
 gridW	display.c	/^    int gridW;$/;"	m	struct:grid	file:
 healthSumPlayer1	battle.c	/^int healthSumPlayer1(game *g) {$/;"	f
 healthSumPlayer2	battle.c	/^int healthSumPlayer2(game *g) {$/;"	f
@@ -117,7 +117,7 @@ row	battle.c	/^int row(char *text) {$/;"	f
 row	oxo.c	/^int row(char *text) {$/;"	f
 selectGridForDisplay	battle.c	/^char *selectGridForDisplay(int grid, game *g) {$/;"	f
 selectTarget	battle.c	/^void selectTarget(char location[]) {$/;"	f
-setGrid	display.c	/^grid *setGrid(int x, int y, char *gridMatrix[10][10]) {$/;"	f
+setGrid	display.c	/^grid *setGrid(int x, int y, char *gridMatrix) {$/;"	f
 shipRegTest	battle.c	/^void shipRegTest(game *g) {$/;"	f
 ships	battle.c	/^	int ships[14][7];$/;"	m	struct:game	file:
 shoot	battle.c	/^field shoot(game *g, int x, int y) {$/;"	f
