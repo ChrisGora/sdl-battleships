@@ -25,7 +25,7 @@ struct grid {
     int gridW;
     int gridH;
 
-    char *gridMatrix;
+    int *gridMatrix;
 };
 
 // If SDL fails, print the SDL error message, and stop the program.
@@ -37,9 +37,19 @@ static void fail() {
 
 // Check return values from SDL functions.
 void *notNull(void *p) { if (p == NULL) fail(); return p; }
+
 int notNeg(int n) { if (n < 0) fail(); return n; }
 
-static void loadPicture(display *d, char *filename, char letter) {
+static void printOne(int a) {
+	if (a == 0) printf("S ");
+	if (a == 1) printf("X ");
+	if (a == 2) printf("# ");
+	if (a == 3) printf("- ");
+	if (a == 4) printf("* ");
+}
+
+//TODO: Handle the letter using typedef instead
+static void loadPicture(display *d, char *filename, int letter) {
     SDL_Surface *s = SDL_LoadBMP(filename);
     notNull(s);
     SDL_Texture *t = SDL_CreateTextureFromSurface(d->renderer, s);
@@ -48,7 +58,18 @@ static void loadPicture(display *d, char *filename, char letter) {
     //notNeg(SDL_RenderClear(d->renderer));
 }
 
-static void placePicture(display *d, char letter, int x, int y, int w, int h) {
+static void loadAll(display *d) {
+    loadPicture(d, "sea.bmp", 'B');
+    loadPicture(d, "gridBackground.bmp", 'G');
+    loadPicture(d, "testSquare.bmp", 'T');
+    loadPicture(d, "healthyShip.bmp", 'S');
+    loadPicture(d, "hitShip.bmp", 'X');
+    loadPicture(d, "water.bmp", 'W');
+    loadPicture(d, "unknown.bmp", 'N');
+    loadPicture(d, "sunkShip.bmp", 'U');
+}
+
+static void placePicture(display *d, int letter, int x, int y, int w, int h) {
     SDL_Rect r;
     r.x = x;
     r.y = y;
@@ -68,14 +89,13 @@ static void colour(display *d, int rgba) {
     //notNeg(SDL_RenderClear(d->renderer));
 }
 
-grid *newGrid(int x, int y, char *gridMatrix) {
+grid *newGrid(int x, int y, int *gridMatrix) {
     grid *g = malloc(sizeof(grid));
     int squareW = 30;
     int squareH = 30;
     int space = 5;
     int gridW = (squareW * 10) + (space * 11);
     int gridH = (squareH * 10) + (space * 11);
-    //TODO: Work out why this is giving a billion errors...
     *g = (grid){x, y, 5, squareW, squareH, gridW, gridH, gridMatrix};
     return g;
 }
@@ -84,9 +104,16 @@ grid *newGrid(int x, int y, char *gridMatrix) {
 // TODO Design the loop
 void placeGrid(display *d, grid *g) {
     //loadPicture(d, "gridBackground.bmp", g->x, g->y, g->gridW, g->gridH);
-    int col = 0;
     int row = 0;
-    while (col < 10) {
+    int col = 0;
+    while (row < 10) {
+        col = 0;
+        while (col < 10) {
+            printOne(*g->gridMatrix + col);
+            printf("\n");
+            col++;
+        }
+        row++;
     }
 }
 
@@ -141,6 +168,19 @@ static void loadPictureTest() {
     loadPicture(d, "water.bmp", 'W');
     loadPicture(d, "unknown.bmp", 'N');
     loadPicture(d, "sunkShip.bmp", 'U');
+    placePicture(d, 'B', 0, 0, d->width, d->height);
+    placePicture(d, 'G', 10, 10, 365, 365);
+    placePicture(d, 'S', 15, 15, 30, 30);
+    placePicture(d, 'X', 50, 15, 30, 30);
+    placePicture(d, 'W', 15, 50, 30, 30);
+    placePicture(d, 'N', 50, 50, 30, 30);
+    placePicture(d, 'U', 85, 15, 30, 30);
+    displayFrame(d);
+    end(d);
+
+    d = newDisplay("picture test - using loadAll");
+    notNeg(SDL_RenderClear(d->renderer));
+    loadAll(d);
     placePicture(d, 'B', 0, 0, d->width, d->height);
     placePicture(d, 'G', 10, 10, 365, 365);
     placePicture(d, 'S', 15, 15, 30, 30);

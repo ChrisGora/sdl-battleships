@@ -22,12 +22,14 @@ typedef enum field field;
 // int ships matrix:  14 ships, [0]owner, [1]type of ship, [2]initial length,
 // [3]still healthy length, [4]start x loc, [5]start y loc, [6]orient
 
+
+//TODO: Change char to int!!! Or maybe field????
 struct game {
 	int currentPlayer;
-	char prim1[10][10];
-	char track1[10][10];
-	char prim2[10][10];
-	char track2[10][10];
+	field prim1[10][10];
+	field track1[10][10];
+	field prim2[10][10];
+	field track2[10][10];
 	char names[7][20];
 	int lengths[7];
 	int ships[14][7];
@@ -763,13 +765,14 @@ void weirdBugTest2(game *g) {
 	assert(locateShip(g, 2, 0, true) == 0);
 	assert(locateShip(g, 3, 0, true) == 0);
 	assert(locateShip(g, 4, 0, true) == 0);
+	printf("All LOGIC tests passed\n");
 }
 
 //TODO: Make this work!!!
 void placeGridTest(game *g) {
 	display *d = newDisplay("displayGrid test");
-	grid *grid1 = setGrid(10, 10, selectGridForDisplay(playerGrid(g), g));
-	grid *grid2 = setGrid(500, 10, selectGridForDisplay(trackGrid(g), g));
+	grid *grid1 = newGrid(10, 10, selectGridForDisplay(playerGrid(g), g));
+	grid *grid2 = newGrid(500, 10, selectGridForDisplay(trackGrid(g), g));
 	placeGrid(d, grid1);
 	placeGrid(d, grid2);
 	displayFrame(d);

@@ -9,7 +9,7 @@ typedef struct grid grid;
 // Create a display object representing a plain white window.
 display *newDisplay(char *title);
 
-grid *newGrid(int x, int y, char *gridMatrix);
+grid *newGrid(int x, int y, int *gridMatrix);
 
 // Draw a 10x10 grid for the ships
 void placeGrid(display *d, grid *g);
