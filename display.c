@@ -28,6 +28,9 @@ struct grid {
     int **gridMatrix;
 };
 
+//------------------------------------------------------------------------------
+// SDL ERRORS
+
 // If SDL fails, print the SDL error message, and stop the program.
 static void fail() {
     fprintf(stderr, "Error: %s\n", SDL_GetError());
@@ -40,13 +43,9 @@ void *notNull(void *p) { if (p == NULL) fail(); return p; }
 
 int notNeg(int n) { if (n < 0) fail(); return n; }
 
-static void printOne(int a) {
-	if (a == 0) printf("S ");
-	if (a == 1) printf("X ");
-	if (a == 2) printf("# ");
-	if (a == 3) printf("- ");
-	if (a == 4) printf("* ");
-}
+//-----------------------------------------------------------------------------
+// PICTURES
+
 
 //TODO: Handle the letter using typedef instead
 static void loadPicture(display *d, char *filename, int letter) {
@@ -79,15 +78,15 @@ static void placePicture(display *d, int letter, int x, int y, int w, int h) {
     SDL_RenderCopy(d->renderer, d->textures[letter], NULL, &r);
 }
 
+//------------------------------------------------------------------------------
+// BACKGROUND
 
-static void colour(display *d, int rgba) {
-    int r = (rgba >> 24) & 0xFF;
-    int g = (rgba >> 16) & 0xFF;
-    int b = (rgba >> 8) & 0xFF;
-    int a = rgba & 0xFF;
-    notNeg(SDL_SetRenderDrawColor(d->renderer, r, g, b, a));
-    //notNeg(SDL_RenderClear(d->renderer));
+void placeBackground(display *d) {
+    placePicture(d, 'B', 0, 0, d->width, d->height);
 }
+
+//------------------------------------------------------------------------------
+// GRIDS
 
 grid *newGrid(int x, int y, int **gridMatrix) {
     grid *g = malloc(sizeof(grid));
@@ -100,16 +99,31 @@ grid *newGrid(int x, int y, int **gridMatrix) {
     return g;
 }
 
+static void placeOne(display *d, grid *g, int field, int x, int y) {
+    char c = -1;
+	if (field == 0) c = 'S';
+	if (field == 1) c = 'X';
+	if (field == 2) c = 'W';
+	if (field == 3) c = 'N';
+	if (field == 4) c = 'U';
+    //printf("char c = %c\n\n", c);
+    placePicture(d, c, x, y, g->squareW, g->squareH);
+}
 
-// TODO Design the loop
 void placeGrid(display *d, grid *g) {
-    //loadPicture(d, "gridBackground.bmp", g->x, g->y, g->gridW, g->gridH);
+    placePicture(d, 'G', g->x, g->y, g->gridW, g->gridH);
     int row = 0;
     int col = 0;
     while (row < 10) {
         col = 0;
         while (col < 10) {
-            printOne(g->gridMatrix[col][row]);
+            int field = g->gridMatrix[row][col];
+            //printf("field: %d\n", field);
+            int x = g->x + g->space + row * (g->squareW + g->space);
+            //printf("x %d\n", x);
+            int y = g->y + g->space + col * (g->squareH + g->space);
+            //printf("y %d\n", y);
+            placeOne(d, g, field, x, y);
             col++;
         }
         printf("\n");
@@ -138,11 +152,12 @@ display *newDisplay(char *title) {
     //loadPicture(d, "testSquare.bmp", 15, 15, 30, 30);
     //loadPicture(d, "testSquare.bmp", 50, 15, 30, 30);
     //SDL_RenderPresent(d->renderer);
+    loadAll(d);
     return d;
 }
 
 void end(display *d) {
-    SDL_Delay(1000);
+    SDL_Delay(5000);
     //SDL_FreeSurface(d->surface);
     //SDL_DestroyRenderer(d->renderer);
     //SDL_DestroyWindow(d->window);

@@ -771,8 +771,9 @@ void weirdBugTest2(game *g) {
 //TODO: Make this work!!!
 void placeGridTest(game *g) {
 	display *d = newDisplay("displayGrid test");
-	grid *grid1 = newGrid(10, 10, selectGridForDisplay(playerGrid(g), g));
-	grid *grid2 = newGrid(500, 10, selectGridForDisplay(trackGrid(g), g));
+	grid *grid1 = newGrid(10, 50, selectGridForDisplay(playerGrid(g), g));
+	grid *grid2 = newGrid(500, 100, selectGridForDisplay(trackGrid(g), g));
+	placeBackground(d);
 	placeGrid(d, grid1);
 	placeGrid(d, grid2);
 	displayFrame(d);

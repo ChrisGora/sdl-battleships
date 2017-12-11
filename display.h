@@ -9,6 +9,10 @@ typedef struct grid grid;
 // Create a display object representing a plain white window.
 display *newDisplay(char *title);
 
+// Place the background into the buffer
+void placeBackground(display *d);
+
+// Create new grid structure with information about a grid of battleships
 grid *newGrid(int x, int y, int **gridMatrix);
 
 // Draw a 10x10 grid for the ships
