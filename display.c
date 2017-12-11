@@ -12,7 +12,7 @@ struct display {
     SDL_Window *window;
     SDL_Renderer *renderer;
     SDL_Surface *surface;
-
+    SDL_Texture *textures[128];
 };
 
 struct grid {
@@ -39,21 +39,25 @@ static void fail() {
 void *notNull(void *p) { if (p == NULL) fail(); return p; }
 int notNeg(int n) { if (n < 0) fail(); return n; }
 
-static void loadPicture(display *d, char *name, int x, int y, int w, int h) {
-    SDL_Surface *s = SDL_LoadBMP(name);
+static void loadPicture(display *d, char *filename, char letter) {
+    SDL_Surface *s = SDL_LoadBMP(filename);
     notNull(s);
     SDL_Texture *t = SDL_CreateTextureFromSurface(d->renderer, s);
     notNull(t);
+    d->textures[letter] = t;
     //notNeg(SDL_RenderClear(d->renderer));
+}
 
+static void placePicture(display *d, char letter, int x, int y, int w, int h) {
     SDL_Rect r;
     r.x = x;
     r.y = y;
     r.w = w;
     r.h = h;
 
-    SDL_RenderCopy(d->renderer, t, NULL, &r);
+    SDL_RenderCopy(d->renderer, d->textures[letter], NULL, &r);
 }
+
 
 static void colour(display *d, int rgba) {
     int r = (rgba >> 24) & 0xFF;
@@ -64,7 +68,7 @@ static void colour(display *d, int rgba) {
     //notNeg(SDL_RenderClear(d->renderer));
 }
 
-grid *setGrid(int x, int y, char *gridMatrix) {
+grid *newGrid(int x, int y, char *gridMatrix) {
     grid *g = malloc(sizeof(grid));
     int squareW = 30;
     int squareH = 30;
@@ -78,11 +82,11 @@ grid *setGrid(int x, int y, char *gridMatrix) {
 
 
 void placeGrid(display *d, grid *g) {
-    loadPicture(d, "gridBackground.bmp", g->x, g->y, g->gridW, g->gridH);
+    //loadPicture(d, "gridBackground.bmp", g->x, g->y, g->gridW, g->gridH);
     int col = 0;
     int row = 0;
     while (col < 10) {
-        
+
     }
 }
 
@@ -129,11 +133,14 @@ static void newDisplayTest() {
 static void loadPictureTest() {
     display *d = newDisplay("picture test");
     notNeg(SDL_RenderClear(d->renderer));
-    loadPicture(d, "sea.bmp", 0, 0, d->width, d->height);
-    loadPicture(d, "gridBackground.bmp", 10, 10, 365, 365);
-    loadPicture(d, "testSquare.bmp", 15, 15, 30, 30);
-    loadPicture(d, "testSquare.bmp", 50, 15, 30, 30);
-    SDL_RenderPresent(d->renderer);
+    loadPicture(d, "sea.bmp", 'B');
+    loadPicture(d, "gridBackground.bmp", 'G');
+    loadPicture(d, "testSquare.bmp", 'T');
+    placePicture(d, 'B', 0, 0, d->width, d->height);
+    placePicture(d, 'G', 10, 10, 365, 365);
+    placePicture(d, 'T', 15, 15, 30, 30);
+    placePicture(d, 'T', 50, 15, 30, 30);
+    displayFrame(d);
     end(d);
 }
 
