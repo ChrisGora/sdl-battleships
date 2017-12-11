@@ -81,12 +81,12 @@ grid *newGrid(int x, int y, char *gridMatrix) {
 }
 
 
+// TODO Design the loop
 void placeGrid(display *d, grid *g) {
     //loadPicture(d, "gridBackground.bmp", g->x, g->y, g->gridW, g->gridH);
     int col = 0;
     int row = 0;
     while (col < 10) {
-
     }
 }
 
@@ -136,10 +136,18 @@ static void loadPictureTest() {
     loadPicture(d, "sea.bmp", 'B');
     loadPicture(d, "gridBackground.bmp", 'G');
     loadPicture(d, "testSquare.bmp", 'T');
+    loadPicture(d, "healthyShip.bmp", 'S');
+    loadPicture(d, "hitShip.bmp", 'X');
+    loadPicture(d, "water.bmp", 'W');
+    loadPicture(d, "unknown.bmp", 'N');
+    loadPicture(d, "sunkShip.bmp", 'U');
     placePicture(d, 'B', 0, 0, d->width, d->height);
     placePicture(d, 'G', 10, 10, 365, 365);
-    placePicture(d, 'T', 15, 15, 30, 30);
-    placePicture(d, 'T', 50, 15, 30, 30);
+    placePicture(d, 'S', 15, 15, 30, 30);
+    placePicture(d, 'X', 50, 15, 30, 30);
+    placePicture(d, 'W', 15, 50, 30, 30);
+    placePicture(d, 'N', 50, 50, 30, 30);
+    placePicture(d, 'U', 85, 15, 30, 30);
     displayFrame(d);
     end(d);
 }
@@ -161,6 +169,7 @@ static void gridTest() {
 static void tests() {
     newDisplayTest();
     loadPictureTest();
+    printf("All tests DONE\n");
 }
 
 int displayMain() {

@@ -765,6 +765,7 @@ void weirdBugTest2(game *g) {
 	assert(locateShip(g, 4, 0, true) == 0);
 }
 
+//TODO: Make this work!!!
 void placeGridTest(game *g) {
 	display *d = newDisplay("displayGrid test");
 	grid *grid1 = setGrid(10, 10, selectGridForDisplay(playerGrid(g), g));
