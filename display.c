@@ -142,7 +142,7 @@ static void placeOne(display *d, grid *g, int field, int x, int y) {
     placePicture(d, c, x, y, g->squareW, g->squareH);
 }
 
-void placeGrid(display *d, grid *g) {
+void placeGrid(display *d, grid *g, bool selecting) {
     placePicture(d, 'G', g->x, g->y, g->gridW, g->gridH);
     int row = 0;
     int col = 0;
@@ -156,7 +156,7 @@ void placeGrid(display *d, grid *g) {
             int y = g->y + g->space + col * (g->squareH + g->space);
             //printf("y %d\n", y);
             placeOne(d, g, field, x, y);
-            if ((g->position == 2) && (g->selectedCol == row) && (g->selectedRow == col)){
+            if ((selecting) && (g->position == 2) && (g->selectedCol == row) && (g->selectedRow == col)){
                 placePicture(d, 'A', x, y, g->squareW, g->squareH);
             }
             col++;

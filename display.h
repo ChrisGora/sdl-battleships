@@ -19,7 +19,7 @@ void placeBackground(display *d);
 grid *newGrid(display *d, int **gridMatrix, int position);
 
 // Draw a 10x10 grid for the ships
-void placeGrid(display *d, grid *g);
+void placeGrid(display *d, grid *g, bool selecting);
 
 // Ask the user to select a square and saves the column and row in grid structure
 bool setCoords(display *d, grid *g);

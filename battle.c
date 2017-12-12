@@ -40,6 +40,7 @@ struct game {
 	char input[2];
 	bool stored;
 
+	bool display;
 };
 
 
@@ -585,6 +586,10 @@ void playGame(game *g) {
 	confirmContinue();
 }
 
+void playGameDisplay(game *f) {
+
+}
+
 //------------------------------------------------------------------------------
 // DISPLAY HELPER FUNCTIONS
 
@@ -595,6 +600,14 @@ field **selectGridForDisplay(int grid, game *g) {
 	if (grid == 3) return g->track2;
 	else return NULL;
 }
+
+void updateDisplay(display *d, grid *g1, grid *g2, bool selecting) {
+	placeBackground(d);
+	placeGrid(d, g1, selecting);
+	placeGrid(d, g2, selecting);
+	displayFrame(d);
+}
+
 
 
 //------------------------------------------------------------------------------
@@ -780,10 +793,7 @@ void placeGridTest(game *g) {
 	display *d = newDisplay("placeGrid test", screenW, screenH);
 	grid *grid1 = newGrid(d, selectGridForDisplay(playerGrid(g), g), 1);
 	grid *grid2 = newGrid(d, selectGridForDisplay(trackGrid(g), g), 2);
-	placeBackground(d);
-	placeGrid(d, grid1);
-	placeGrid(d, grid2);
-	displayFrame(d);
+	updateDisplay(d, grid1, grid2, false);
 	end(d);
 }
 
@@ -793,23 +803,59 @@ void coordSelectTest(game *g) {
 	display *d = newDisplay("coordSelect test", screenW, screenH);
 	grid *grid1 = newGrid(d, selectGridForDisplay(playerGrid(g), g), 1);
 	grid *grid2 = newGrid(d, selectGridForDisplay(trackGrid(g), g), 2);
-	placeBackground(d);
-	placeGrid(d, grid1);
-	placeGrid(d, grid2);
-	displayFrame(d);
-
+	updateDisplay(d, grid1, grid2, true);
 	bool confirmed = false;
 	while (! confirmed) {
 		confirmed = setCoords(d, grid2);
-		placeBackground(d);
-		placeGrid(d, grid1);
-		placeGrid(d, grid2);
-		displayFrame(d);
+		updateDisplay(d, grid1, grid2, true);
 	}
 	int x = getXcoord(grid2);
 	int y = getYcoord(grid2);
 	printf("selected x = %d, y = %d\n", x, y);
+	end(d);
+}
 
+void displayShootTest(game *g) {
+	emptyAllGrids(g);
+	emptyAllShips(g);
+	g->currentPlayer = 2;
+	placeShip(g, 3, 2, 7, "v");
+	registerShip(g, 3, 2, 8, 7, "v");
+	printGrid(playerGrid(g), g);
+
+	int screenW = 1000;
+	int screenH = 500;
+	display *d = newDisplay("coordSelect test", screenW, screenH);
+	g->currentPlayer = 1;
+	grid *grid1 = newGrid(d, selectGridForDisplay(playerGrid(g), g), 1);
+	grid *grid2 = newGrid(d, selectGridForDisplay(trackGrid(g), g), 2);
+	updateDisplay(d, grid1, grid2, false);
+
+	printGrid(playerGrid(g), g);
+	printGrid(trackGrid(g), g);
+
+	assert(g->prim2[3][7] == S);
+	int before = g->ships[8][3];
+
+	printf("IMPORTANT: SELECT x = 3 AND y = 7 \n");
+
+	bool confirmed = false;
+	while (! confirmed) {
+		confirmed = setCoords(d, grid2);
+		updateDisplay(d, grid1, grid2, true);
+	}
+	int x = getXcoord(grid2);
+	int y = getYcoord(grid2);
+	printf("selected x = %d, y = %d\n", x, y);
+	turn(g, x, y);
+	updateDisplay(d, grid1, grid2, false);
+	int after = g->ships[8][3];
+	printGrid(playerGrid(g), g);
+	printGrid(trackGrid(g), g);
+	assert(g->prim2[3][7] == X);
+	assert(g->track1[3][7] == X);
+	assert(after == before - 1);
+	letKnow(g, 3, 7, X, "d7");
 	end(d);
 }
 
@@ -827,6 +873,7 @@ void tests(game *g) {
 	weirdBugTest2(g);
 	//placeGridTest(g);
 	coordSelectTest(g);
+	displayShootTest(g);
 	printf("tests passed!\n");
 }
 
@@ -841,9 +888,9 @@ field **newMatrix(int rows, int cols) {
 }
 
 int main(int n, char *args[n]) {
-    for (int i=0; i<n; i++) {
-//		printf("Arg %d is %s\n", i, args[i]);
-	}
+    // for (int i=0; i<n; i++) {
+	// printf("Arg %d is %s\n", i, args[i]);
+	// }
 	game *g;
 	g = malloc(sizeof(struct game));
 	g->prim1 = newMatrix(10, 10);
@@ -862,7 +909,15 @@ int main(int n, char *args[n]) {
 	int copy2[7] = {5,4,3,3,3,2,2};
 	memcpy(g->names, copy1, sizeof(g->names));
 	memcpy(g->lengths, copy2, sizeof(g->lengths));
-	if (n > 1) tests(g);
-	else while (true) playGame(g);
+	//tests(g);
+	if (n == 1) {
+		g->display = false;
+		while (true) playGame(g);
+	}
+	else if (strcmp(args[1], "t") == 0) tests(g);
+	else if (strcmp(args[1], "d") == 0) {
+		g->display = true;
+		while (true) playGameDisplay(g);
+	}
 	return 0;
 }
