@@ -218,16 +218,21 @@ static void checkCoords(int row, int col, int x, int y, grid *g) {
     int endY = startY + g->squareH;
     //printf("y %d\n", y);
     if ((x >= startX) && (x <= endX) && (y >= startY) && (y <= endY)) {
-        g->selectedCol = x;
-        g->selectedRow = y;
+        g->selectedCol = row;
+        printf("x selected as %d\n", g->selectedCol);
+        g->selectedRow = col;
+        printf("y selected as %d\n", g->selectedRow);
         g->selected = true;
     }
 }
 
 static void setCoordsMouse(int x, int y, grid *g) {
+    printf("setting coords with mouse\n");
+    printf("mouse says x = %d , y = %d\n", x, y);
     g->selected = false;
     checkCoords(g->selectedRow, g->selectedCol, x, y, g);
     if (g->selected) return;
+    printf("first check not successfull\n");
     int row = 0;
     int col = 0;
     while ((row < 10) && (! g->selected)) {
@@ -238,6 +243,7 @@ static void setCoordsMouse(int x, int y, grid *g) {
         }
         row++;
     }
+    printf("Done loop, selected = %d\n", g->selected);
 }
 
 bool setCoords(display *d, grid *g) {
@@ -261,7 +267,12 @@ bool setCoords(display *d, grid *g) {
         if (sym == SDLK_SPACE) g->confirmed = true;
     }
     else if (event->type == SDL_MOUSEMOTION) {
-        //setCoordsMouse(event->x, event->y, g);
+        setCoordsMouse(event->motion.x, event->motion.y, g);
+    }
+    else if (event->type == SDL_MOUSEBUTTONDOWN) {
+        printf("detected button down\n");
+        //if ((event->button.button == SDL_BUTTON_LEFT) && g->selected) g->confirmed = true;
+        g->confirmed = true;
     }
     else if (event->type == SDL_WINDOWEVENT) {
 
