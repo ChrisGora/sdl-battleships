@@ -788,13 +788,29 @@ void placeGridTest(game *g) {
 }
 
 void coordSelectTest(game *g) {
-	int screenW = 1100
+	int screenW = 1100;
 	int screenH = 400;
 	display *d = newDisplay("coordSelect test", screenW, screenH);
 	grid *grid1 = newGrid(d, selectGridForDisplay(playerGrid(g), g), 1);
 	grid *grid2 = newGrid(d, selectGridForDisplay(trackGrid(g), g), 2);
-	setCoords(d, grid2);
-	printf
+	placeBackground(d);
+	placeGrid(d, grid1);
+	placeGrid(d, grid2);
+	displayFrame(d);
+
+	bool confirmed = false;
+	while (! confirmed) {
+		confirmed = setCoords(d, grid2);
+		placeBackground(d);
+		placeGrid(d, grid1);
+		placeGrid(d, grid2);
+		displayFrame(d);
+	}
+	int x = getXcoord(grid2);
+	int y = getYcoord(grid2);
+	printf("selected x = %d, y = %d\n", x, y);
+
+	end(d);
 }
 
 void tests(game *g) {
@@ -809,7 +825,8 @@ void tests(game *g) {
 	weirdBugTest(g);
 	sinkingTest(g);
 	weirdBugTest2(g);
-	placeGridTest(g);
+	//placeGridTest(g);
+	coordSelectTest(g);
 	printf("tests passed!\n");
 }
 

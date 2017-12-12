@@ -20,6 +20,7 @@ struct grid {
     int x;
     int y;
     int space;
+    int position;
 
     int squareW;
     int squareH;
@@ -31,6 +32,7 @@ struct grid {
     int selectedCol;
     int selectedRow;
     bool selected;
+    bool confirmed;
 };
 
 //------------------------------------------------------------------------------
@@ -71,6 +73,7 @@ static void loadAll(display *d) {
     loadPicture(d, "water.bmp", 'W');
     loadPicture(d, "unknown.bmp", 'N');
     loadPicture(d, "sunkShip.bmp", 'U');
+    loadPicture(d, "aimTest.bmp", 'A');
 }
 
 static void placePicture(display *d, int letter, int x, int y, int w, int h) {
@@ -106,6 +109,8 @@ static void updateGrid(display *d, grid *g, int **gridMatrix, int position) {
     g->space = 5;
     g->gridW = (squareW * 10) + (g->space * 11);
     g->gridH = (squareH * 10) + (g->space * 11);
+
+    g->position = position;
     if (position == 1) {
         g->x = screenW / 4 - g->gridW / 2;
         g->y = screenH / 2 - g->gridH / 2;
@@ -114,11 +119,15 @@ static void updateGrid(display *d, grid *g, int **gridMatrix, int position) {
         g->x = screenW * 3 / 4 - g->gridW / 2;
         g->y = screenH / 2 - g->gridH / 2;
     }
+    g->selectedCol = 0;
+    g->selectedRow = 0;
 }
 
 grid *newGrid(display *d, int **gridMatrix, int position) {
     grid *g = malloc(sizeof(grid));
     updateGrid(d, g, gridMatrix, position);
+    g->selected = false;
+    g->confirmed = false;
     return g;
 }
 
@@ -147,6 +156,9 @@ void placeGrid(display *d, grid *g) {
             int y = g->y + g->space + col * (g->squareH + g->space);
             //printf("y %d\n", y);
             placeOne(d, g, field, x, y);
+            if ((g->position == 2) && (g->selectedCol == row) && (g->selectedRow == col)){
+                placePicture(d, 'A', x, y, g->squareW, g->squareH);
+            }
             col++;
         }
         row++;
@@ -195,6 +207,9 @@ void end(display *d) {
 //-----------------------------------------------------------------------------
 // COORDINATE SELECTION
 
+// 'Selected' shows whether events match the selection
+// 'Confirmed' shows whether the player confirmed the target
+
 static void checkCoords(int row, int col, int x, int y, grid *g) {
     int startX = g->x + g->space + row * (g->squareW + g->space);
     int endX = startX + g->squareW;
@@ -202,68 +217,63 @@ static void checkCoords(int row, int col, int x, int y, grid *g) {
     int startY = g->y + g->space + col * (g->squareH + g->space);
     int endY = startY + g->squareH;
     //printf("y %d\n", y);
-    if ((x >= startX) && (x <= endX) && (y >= starty) && (y <= endY)) {
+    if ((x >= startX) && (x <= endX) && (y >= startY) && (y <= endY)) {
         g->selectedCol = x;
         g->selectedRow = y;
+        g->selected = true;
     }
 }
 
 static void setCoordsMouse(int x, int y, grid *g) {
     g->selected = false;
+    checkCoords(g->selectedRow, g->selectedCol, x, y, g);
+    if (g->selected) return;
     int row = 0;
     int col = 0;
-    while (row < 10) {
+    while ((row < 10) && (! g->selected)) {
         col = 0;
-        while (col < 10) {
-            int startX = g->x + g->space + row * (g->squareW + g->space);
-            int endX = startX + g->squareW;
-            //printf("x %d\n", x);
-            int startY = g->y + g->space + col * (g->squareH + g->space);
-            int endY = startY + g->squareH;
-            //printf("y %d\n", y);
-            if ((x >= startX) && (x <= endX) && (y >= starty) && (y <= endY)) {
-                g->selectedCol = x;
-                g->selectedRow = y;
-            }
+        while ((col < 10) && (! g->selected)) {
+            checkCoords(row, col, x, y, g);
             col++;
         }
         row++;
     }
 }
 
-void setCoords(display *d, grid *g) {
+bool setCoords(display *d, grid *g) {
     g->selected = false;
+    g->confirmed = false;
     SDL_Event event_structure;
     SDL_Event *event = &event_structure;
-    while (true) {
-        notNeg(SDL_WaitEvent(event));
-        if (event->type == SDL_QUIT) {
-            SDL_Quit();
-            exit(0);
-        }
-        else if (event->type == SDL_KEYUP) {
-            int sym = event->key.keysym.sym;
-            if (sym == SDLK_UP) g->selectedRow--;
-            if (sym == SDLK_DOWN) g->selectedRow++;
-            if (sym == SDLK_LEFT) g->selectedCol--;
-            if (sym == SDLK_RIGHT) g->selectedCol++;
-            if (sym == SDLK_SPACE) return;
-        }
-        else if (event->type == SDL_MOUSEMOTION) {
-            setCoordsMouse(event->x, event->y, g);
-            !!!!    if (g->selected) return;
-        }
-        else if (event->type == SDL_WINDOWEVENT) {
+    notNeg(SDL_WaitEvent(event));
 
-        }
+    if (event->type == SDL_QUIT) {
+        SDL_Quit();
+        exit(0);
     }
+    else if (event->type == SDL_KEYUP) {
+        int sym = event->key.keysym.sym;
+        g->selected = true;
+        if (sym == SDLK_UP) g->selectedRow--;
+        if (sym == SDLK_DOWN) g->selectedRow++;
+        if (sym == SDLK_LEFT) g->selectedCol--;
+        if (sym == SDLK_RIGHT) g->selectedCol++;
+        if (sym == SDLK_SPACE) g->confirmed = true;
+    }
+    else if (event->type == SDL_MOUSEMOTION) {
+        //setCoordsMouse(event->x, event->y, g);
+    }
+    else if (event->type == SDL_WINDOWEVENT) {
+
+    }
+    return g->confirmed;
 }
 int getXcoord(grid *g) {
-    return g->selected
+    return g->selectedCol;
 }
 
 int getYcoord(grid *g) {
-
+    return g->selectedRow;
 }
 
 

@@ -1,5 +1,7 @@
 // This display module provides graphics for the battleships game.
 
+#include <stdbool.h>
+
 struct display;
 typedef struct display display;
 
@@ -19,11 +21,13 @@ grid *newGrid(display *d, int **gridMatrix, int position);
 // Draw a 10x10 grid for the ships
 void placeGrid(display *d, grid *g);
 
-// Asks the user to select a square and saves the column and row in grid structure
-void setCoords(display *d, grid *g);
+// Ask the user to select a square and saves the column and row in grid structure
+bool setCoords(display *d, grid *g);
 
+// Return the x coordinate selected by the user
 int getXcoord(grid *g);
 
+// Return the y coordinate selected by the user
 int getYcoord(grid *g);
 
 // Show the next frame and clear the render
