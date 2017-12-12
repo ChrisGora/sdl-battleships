@@ -41,6 +41,9 @@ struct game {
 	bool stored;
 
 };
+
+
+
 typedef struct game game;
 
 void emptyAllGrids(game *g) {
@@ -768,24 +771,13 @@ void weirdBugTest2(game *g) {
 	printf("All LOGIC tests passed\n");
 }
 
-//TODO: Put al of this into an updateGrid function in display.c
+//DONE: Put al of this into an updateGrid function in display.c
 //TODO: Work out a way of selecting a square and storing that selection
 //TODO: Create a mechanism for handling keypresses - change current x and y
 void placeGridTest(game *g) {
 	int screenW = 1000;
 	int screenH = 500;
-	display *d = newDisplay("displayGrid test", screenW, screenH);
-	// int squareW = screenW / 100 * 3;
-	// int squareH = screenH / 100 * 6;
-	// if (squareW < squareH) squareH = squareW;
-	// else squareW = squareH;
-	// int space = 5;
-	// int gridW = (squareW * 10) + (space * 11);
-	// int gridH = (squareH * 10) + (space * 11);
-	// int grid1X = screenW / 4 - gridW / 2;
-	// int grid1Y = screenH / 2 - gridH / 2;
-	// int grid2X = screenW * 3 / 4 - gridW / 2;
-	// int grid2Y = grid1Y;
+	display *d = newDisplay("placeGrid test", screenW, screenH);
 	grid *grid1 = newGrid(d, selectGridForDisplay(playerGrid(g), g), 1);
 	grid *grid2 = newGrid(d, selectGridForDisplay(trackGrid(g), g), 2);
 	placeBackground(d);
@@ -793,6 +785,16 @@ void placeGridTest(game *g) {
 	placeGrid(d, grid2);
 	displayFrame(d);
 	end(d);
+}
+
+void coordSelectTest(game *g) {
+	int screenW = 1100
+	int screenH = 400;
+	display *d = newDisplay("coordSelect test", screenW, screenH);
+	grid *grid1 = newGrid(d, selectGridForDisplay(playerGrid(g), g), 1);
+	grid *grid2 = newGrid(d, selectGridForDisplay(trackGrid(g), g), 2);
+	setCoords(d, grid2);
+	printf
 }
 
 void tests(game *g) {

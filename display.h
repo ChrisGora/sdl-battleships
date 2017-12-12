@@ -19,14 +19,18 @@ grid *newGrid(display *d, int **gridMatrix, int position);
 // Draw a 10x10 grid for the ships
 void placeGrid(display *d, grid *g);
 
+// Asks the user to select a square and saves the column and row in grid structure
+void setCoords(display *d, grid *g);
+
+int getXcoord(grid *g);
+
+int getYcoord(grid *g);
+
 // Show the next frame and clear the render
 void displayFrame(display *d);
 
 // Pause for the given number of milliseconds.
 void pause(display *d, int ms);
-
-// Wait for a key press.
-char key(display *d);
 
 // Hold the display for a few seconds, then shut down.
 void end(display *d);

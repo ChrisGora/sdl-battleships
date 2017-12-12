@@ -27,6 +27,10 @@ struct grid {
     int gridH;
 
     int **gridMatrix;
+
+    int selectedCol;
+    int selectedRow;
+    bool selected;
 };
 
 //------------------------------------------------------------------------------
@@ -188,6 +192,80 @@ void end(display *d) {
     //SDL_DestroyWindow(d->window);
     SDL_Quit();
 }
+//-----------------------------------------------------------------------------
+// COORDINATE SELECTION
+
+static void checkCoords(int row, int col, int x, int y, grid *g) {
+    int startX = g->x + g->space + row * (g->squareW + g->space);
+    int endX = startX + g->squareW;
+    //printf("x %d\n", x);
+    int startY = g->y + g->space + col * (g->squareH + g->space);
+    int endY = startY + g->squareH;
+    //printf("y %d\n", y);
+    if ((x >= startX) && (x <= endX) && (y >= starty) && (y <= endY)) {
+        g->selectedCol = x;
+        g->selectedRow = y;
+    }
+}
+
+static void setCoordsMouse(int x, int y, grid *g) {
+    g->selected = false;
+    int row = 0;
+    int col = 0;
+    while (row < 10) {
+        col = 0;
+        while (col < 10) {
+            int startX = g->x + g->space + row * (g->squareW + g->space);
+            int endX = startX + g->squareW;
+            //printf("x %d\n", x);
+            int startY = g->y + g->space + col * (g->squareH + g->space);
+            int endY = startY + g->squareH;
+            //printf("y %d\n", y);
+            if ((x >= startX) && (x <= endX) && (y >= starty) && (y <= endY)) {
+                g->selectedCol = x;
+                g->selectedRow = y;
+            }
+            col++;
+        }
+        row++;
+    }
+}
+
+void setCoords(display *d, grid *g) {
+    g->selected = false;
+    SDL_Event event_structure;
+    SDL_Event *event = &event_structure;
+    while (true) {
+        notNeg(SDL_WaitEvent(event));
+        if (event->type == SDL_QUIT) {
+            SDL_Quit();
+            exit(0);
+        }
+        else if (event->type == SDL_KEYUP) {
+            int sym = event->key.keysym.sym;
+            if (sym == SDLK_UP) g->selectedRow--;
+            if (sym == SDLK_DOWN) g->selectedRow++;
+            if (sym == SDLK_LEFT) g->selectedCol--;
+            if (sym == SDLK_RIGHT) g->selectedCol++;
+            if (sym == SDLK_SPACE) return;
+        }
+        else if (event->type == SDL_MOUSEMOTION) {
+            setCoordsMouse(event->x, event->y, g);
+            !!!!    if (g->selected) return;
+        }
+        else if (event->type == SDL_WINDOWEVENT) {
+
+        }
+    }
+}
+int getXcoord(grid *g) {
+    return g->selected
+}
+
+int getYcoord(grid *g) {
+
+}
+
 
 //-----------------------------------------------------------------------------
 // TESTING
