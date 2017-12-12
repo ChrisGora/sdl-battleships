@@ -13,7 +13,8 @@ display *newDisplay(char *title, int width, int height);
 void placeBackground(display *d);
 
 // Create new grid structure with information about a grid of battleships
-grid *newGrid(int x, int y, int space, int squareW, int squareH, int **gridMatrix);
+// Position 1 is left, position 2 is right
+grid *newGrid(display *d, int **gridMatrix, int position);
 
 // Draw a 10x10 grid for the ships
 void placeGrid(display *d, grid *g);

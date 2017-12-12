@@ -89,11 +89,32 @@ void placeBackground(display *d) {
 //------------------------------------------------------------------------------
 // GRIDS
 
-grid *newGrid(int x, int y, int space, int squareW, int squareH, int **gridMatrix) {
+static void updateGrid(display *d, grid *g, int **gridMatrix, int position) {
+    g->gridMatrix = gridMatrix;
+    int screenW = d->width;
+    int screenH = d->height;
+    int squareW = screenW / 100 * 3;
+    int squareH = screenH / 100 * 6;
+    if (squareW < squareH) squareH = squareW;
+    else squareW = squareH;
+    g->squareW = squareW;
+    g->squareH = squareH;
+    g->space = 5;
+    g->gridW = (squareW * 10) + (g->space * 11);
+    g->gridH = (squareH * 10) + (g->space * 11);
+    if (position == 1) {
+        g->x = screenW / 4 - g->gridW / 2;
+        g->y = screenH / 2 - g->gridH / 2;
+    }
+    else if (position == 2) {
+        g->x = screenW * 3 / 4 - g->gridW / 2;
+        g->y = screenH / 2 - g->gridH / 2;
+    }
+}
+
+grid *newGrid(display *d, int **gridMatrix, int position) {
     grid *g = malloc(sizeof(grid));
-    int gridW = (squareW * 10) + (space * 11);
-    int gridH = (squareH * 10) + (space * 11);
-    *g = (grid){x, y, space, squareW, squareH, gridW, gridH, gridMatrix};
+    updateGrid(d, g, gridMatrix, position);
     return g;
 }
 
@@ -127,6 +148,9 @@ void placeGrid(display *d, grid *g) {
         row++;
     }
 }
+
+//------------------------------------------------------------------------------
+// DISPLAY
 
 void displayFrame(display *d) {
     SDL_RenderPresent(d->renderer);
