@@ -119,8 +119,8 @@ static void updateGrid(display *d, grid *g, int **gridMatrix, int position) {
         g->x = screenW * 3 / 4 - g->gridW / 2;
         g->y = screenH / 2 - g->gridH / 2;
     }
-    g->selectedCol = 0;
-    g->selectedRow = 0;
+    //g->selectedCol = 0;
+    //g->selectedRow = 0;
 }
 
 grid *newGrid(display *d, int **gridMatrix, int position) {
@@ -143,6 +143,7 @@ static void placeOne(display *d, grid *g, int field, int x, int y) {
 }
 
 void placeGrid(display *d, grid *g, bool selecting) {
+    updateGrid(d, g, g->gridMatrix, g->position);
     placePicture(d, 'G', g->x, g->y, g->gridW, g->gridH);
     int row = 0;
     int col = 0;
@@ -191,6 +192,12 @@ display *newDisplay(char *title, int width, int height) {
     //SDL_RenderPresent(d->renderer);
     loadAll(d);
     return d;
+}
+
+// Note that after resizing all grids have to be updated using placeGrid
+static void resizeWindow(display *d, int w, int h) {
+    d->width = w;
+    d->height = h;
 }
 
 void pause(display *d, int ms) {
@@ -275,7 +282,9 @@ bool setCoords(display *d, grid *g) {
         g->confirmed = true;
     }
     else if (event->type == SDL_WINDOWEVENT) {
-
+        if (event->window.event == SDL_WINDOWEVENT_RESIZED) {
+            resizeWindow(d, event->window.data1, event->window.data2);
+        }
     }
     return g->confirmed;
 }

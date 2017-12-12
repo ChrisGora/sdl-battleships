@@ -785,8 +785,8 @@ void weirdBugTest2(game *g) {
 }
 
 //DONE: Put al of this into an updateGrid function in display.c
-//TODO: Work out a way of selecting a square and storing that selection
-//TODO: Create a mechanism for handling keypresses - change current x and y
+//DONE: Work out a way of selecting a square and storing that selection
+//DONE: Create a mechanism for handling keypresses - change current x and y
 void placeGridTest(game *g) {
 	int screenW = 1000;
 	int screenH = 500;
@@ -798,8 +798,8 @@ void placeGridTest(game *g) {
 }
 
 void coordSelectTest(game *g) {
-	int screenW = 1100;
-	int screenH = 400;
+	int screenW = 1200;
+	int screenH = 700;
 	display *d = newDisplay("coordSelect test", screenW, screenH);
 	grid *grid1 = newGrid(d, selectGridForDisplay(playerGrid(g), g), 1);
 	grid *grid2 = newGrid(d, selectGridForDisplay(trackGrid(g), g), 2);
