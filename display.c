@@ -254,7 +254,6 @@ static void setCoordsMouse(int x, int y, grid *g) {
 }
 
 bool setCoords(display *d, grid *g) {
-    g->selected = false;
     g->confirmed = false;
     SDL_Event event_structure;
     SDL_Event *event = &event_structure;
@@ -271,15 +270,21 @@ bool setCoords(display *d, grid *g) {
         if (sym == SDLK_DOWN) g->selectedRow++;
         if (sym == SDLK_LEFT) g->selectedCol--;
         if (sym == SDLK_RIGHT) g->selectedCol++;
-        if (sym == SDLK_SPACE) g->confirmed = true;
+        if (sym == SDLK_SPACE) {
+            g->confirmed = true;
+            g->selected = false;
+        }
     }
     else if (event->type == SDL_MOUSEMOTION) {
         setCoordsMouse(event->motion.x, event->motion.y, g);
     }
     else if (event->type == SDL_MOUSEBUTTONDOWN) {
-        printf("detected button down\n");
+        printf("detected button down, selected says %d\n", g->selected);
         //if ((event->button.button == SDL_BUTTON_LEFT) && g->selected) g->confirmed = true;
-        g->confirmed = true;
+        if (g->selected) {
+            g->confirmed = true;
+            g->selected = false;
+        }
     }
     else if (event->type == SDL_WINDOWEVENT) {
         if (event->window.event == SDL_WINDOWEVENT_RESIZED) {
