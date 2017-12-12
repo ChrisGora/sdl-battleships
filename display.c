@@ -100,10 +100,11 @@ static void updateGrid(display *d, grid *g, int **gridMatrix, int position) {
     g->gridMatrix = gridMatrix;
     int screenW = d->width;
     int screenH = d->height;
-    int squareW = screenW / 100 * 3;
-    int squareH = screenH / 100 * 6;
+    int squareW = screenW * 3 / 100;
+    int squareH = screenH * 6 / 100;
     if (squareW < squareH) squareH = squareW;
     else squareW = squareH;
+    printf("sqW = %d sqH = %d\n", squareW, squareH);
     g->squareW = squareW;
     g->squareH = squareH;
     g->space = 5;

@@ -153,8 +153,8 @@ void printGrid(int grid, game *g) {
 
 void newGame(game *g) {
 	clear();
-	printf("--- BATTLESHIPS --- \n");
-	printf("Starting a new game \n \n \n");
+	if (! g->display) printf("--- BATTLESHIPS --- \n");
+	if (! g->display) printf("Starting a new game \n \n \n");
 	emptyAllGrids(g);
 	emptyAllShips(g);
 	g->currentPlayer = 1;
@@ -431,11 +431,11 @@ void won(game *g) {
 }
 
 void whoNext(game *g) {
-	printf("Up Next: Player %d \n", g->currentPlayer);
+	if (! g->display) printf("Up Next: Player %d \n", g->currentPlayer);
 }
 
 void confirmContinue() {
-	printf("Please press [Enter] to continue\n");
+	if (! g->display) printf("Please press [Enter] to continue\n");
 	char ch;
 	while (ch != '\r' && ch != '\n') {
 		ch = getchar();
@@ -587,7 +587,31 @@ void playGame(game *g) {
 }
 
 void playGameDisplay(game *f) {
-
+	newGame(g);
+	//Printfs handled
+	whoNext(g);
+	confirmContinue();
+	fillNewIn(g);
+	clear();
+	nextPlayer(g);
+	whoNext(g);
+	confirmContinue();
+	fillNewIn(g);
+	while ((healthSumPlayer1(g) > 0) && (healthSumPlayer2(g) > 0)) {
+		clear();
+		nextPlayer(g);
+		whoNext(g);
+		confirmContinue();
+		clear();
+		printKey();
+		printPlayersGrids(g);
+		printHealth(g);
+		letOpponentKnow(g);
+		target(g);
+		confirmContinue();
+	}
+	won(g);
+	confirmContinue();
 }
 
 //------------------------------------------------------------------------------
