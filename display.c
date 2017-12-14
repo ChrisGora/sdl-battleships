@@ -33,6 +33,10 @@ struct grid {
     int selectedRow;
     bool selected;
     bool confirmed;
+
+// Only used when placing new ships
+    char orientation;
+    int length;
 };
 
 //------------------------------------------------------------------------------
@@ -75,6 +79,7 @@ static void loadAll(display *d) {
     loadPicture(d, "unknown.bmp", 'N');
     loadPicture(d, "sunkShip.bmp", 'U');
     loadPicture(d, "aimTest.bmp", 'A');
+    loadPicture(d, "aimTest.bmp", 'M');
 }
 
 static void placePicture(display *d, int letter, int x, int y, int w, int h) {
@@ -144,7 +149,33 @@ static void placeOne(display *d, grid *g, int field, int x, int y) {
     placePicture(d, c, x, y, g->squareW, g->squareH);
 }
 
-void placeGrid(display *d, grid *g, bool selecting) {
+static void placeAim(display *d, grid *g, int row, int col, int x, int y) {
+    bool A = g->position == 2;
+    bool B = g->selectedCol == col;
+    bool C = g->selectedRow == row;
+    if (A && B && C) {
+        placePicture(d, 'A', x, y, g->squareW, g->squareH);
+    }
+}
+
+static void placeShip(display *d, grid *g, int row, int col, int x, int y) {
+    //printf("inside placeship\n orient = %c\n", g->orientation);
+    bool A = g->position == 1;
+    bool B = false;
+    if (g->orientation == 'v') B = (row >= g->selectedRow) && (row <  g->selectedRow + g->length);
+    if (g->orientation == 'h') B = (col >= g->selectedCol) && (col <  g->selectedCol + g->length);
+    bool C = false;
+    if (g->orientation == 'v') C = g->selectedCol == col;
+    if (g->orientation == 'h') C = g->selectedRow == row;
+    //printf("A %d B %d C %d\n", A, B, C);
+    if (A && B && C) {
+        placePicture(d, 'M', x, y, g->squareW, g->squareH);
+    }
+}
+
+void placeGrid(display *d, grid *g, bool aiming, bool placing) {
+    if(g == NULL) return;
+    printf("aiming %d , placing %d\n", aiming, placing);
     updateGrid(d, g, g->gridMatrix, g->position);
     placePicture(d, 'G', g->x, g->y, g->gridW, g->gridH);
     int row = 0;
@@ -152,16 +183,15 @@ void placeGrid(display *d, grid *g, bool selecting) {
     while (row < 10) {
         col = 0;
         while (col < 10) {
-            int field = g->gridMatrix[row][col];
+            int field = g->gridMatrix[col][row];
             //printf("field: %d\n", field);
-            int x = g->x + g->space + row * (g->squareW + g->space);
+            int x = g->x + g->space + col * (g->squareW + g->space);
             //printf("x %d\n", x);
-            int y = g->y + g->space + col * (g->squareH + g->space);
+            int y = g->y + g->space + row * (g->squareH + g->space);
             //printf("y %d\n", y);
             placeOne(d, g, field, x, y);
-            if ((selecting) && (g->position == 2) && (g->selectedCol == row) && (g->selectedRow == col)){
-                placePicture(d, 'A', x, y, g->squareW, g->squareH);
-            }
+            if (aiming) placeAim(d, g, row, col, x, y);
+            if (placing) placeShip(d, g, row, col, x, y);
             col++;
         }
         row++;
@@ -196,6 +226,13 @@ display *newDisplay(char *title, int width, int height) {
     return d;
 }
 
+void updateDisplay(display *d, grid *g1, grid *g2, bool aiming, bool placing) {
+	placeBackground(d);
+	placeGrid(d, g1, aiming, placing);
+	placeGrid(d, g2, aiming, placing);
+	displayFrame(d);
+}
+
 // Note that after resizing all grids have to be updated using placeGrid
 static void resizeWindow(display *d, int w, int h) {
     d->width = w;
@@ -207,7 +244,7 @@ void pause(display *d, int ms) {
 }
 
 void end(display *d) {
-    pause(d, 5000);
+    pause(d, 2000);
     //SDL_FreeSurface(d->surface);
     //SDL_DestroyRenderer(d->renderer);
     //SDL_DestroyWindow(d->window);
@@ -218,6 +255,11 @@ void end(display *d) {
 
 // 'Selected' shows whether events match the selection
 // 'Confirmed' shows whether the player confirmed the target
+
+static void swapOrientation(grid *g) {
+    if (g->orientation == 'h') g->orientation = 'v';
+    else if (g->orientation == 'v') g->orientation = 'h';
+}
 
 static void checkCoords(int row, int col, int x, int y, grid *g) {
     int startX = g->x + g->space + row * (g->squareW + g->space);
@@ -272,7 +314,8 @@ bool setCoords(display *d, grid *g) {
         if (sym == SDLK_DOWN) g->selectedRow++;
         if (sym == SDLK_LEFT) g->selectedCol--;
         if (sym == SDLK_RIGHT) g->selectedCol++;
-        if (sym == SDLK_SPACE) {
+        if (sym == SDLK_r) swapOrientation(g);
+        if ((sym == SDLK_SPACE) || (sym == SDLK_RETURN)) {
             g->confirmed = true;
             g->selected = false;
         }
@@ -295,12 +338,23 @@ bool setCoords(display *d, grid *g) {
     }
     return g->confirmed;
 }
+
+bool setShipLocation(display *d, grid *g, int length, char *orientation) {
+    g->orientation = orientation[0];
+    g->length = length;
+    return setCoords(d, g);
+}
+
 int getXcoord(grid *g) {
     return g->selectedCol;
 }
 
 int getYcoord(grid *g) {
     return g->selectedRow;
+}
+
+char getOrientation(grid *g) {
+    return g->orientation;
 }
 
 //-----------------------------------------------------------------------------
