@@ -1,21 +1,12 @@
-/* Battleships!!! */
+ /* Battleships!!! */
 
 #include "display.h"
+//#include "field.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
 #include <string.h>
 #include <assert.h>
-
-// S is a ship that hasn't been hit
-// X is a ship that has been hit
-// W is known water - printed as '-'
-// N is unknown
-// U is a completely sunk ship
-
-enum field {S, X, W, N, U};
-typedef enum field field;
-
 
 // Prim is used as the grid with your ships, track is for tracking the enemy ships
 
@@ -23,29 +14,47 @@ typedef enum field field;
 // [3]still healthy length, [4]start x loc, [5]start y loc, [6]orient
 
 
-//TODO: Change char to int!!! Or maybe field????
 struct game {
+// Current game info
 	int currentPlayer;
 	field **prim1;
 	field **track1;
 	field **prim2;
 	field **track2;
+
+// Ship names, lengths, positions and health info
 	char names[7][20];
 	int lengths[7];
 	int ships[14][7];
-    //INFO about the previous move to let the next player know about what happened.
+
+// Previous move info to let the next player know about what happened.
 	int x;
 	int y;
 	field result;
 	char input[2];
 	bool stored;
 
+// Variables and pointers to help with the display
+	display *d;
 	bool display;
+
+	grid *prim1D;
+	grid *track1D;
+	grid *prim2D;
+	grid *track2D;
 };
 
 
 
 typedef struct game game;
+
+void showMessage(game *g, char* title, char* message, bool printTitle) {
+	if (g->display) displayMessage(g->d, title, message);
+	else {
+		if (printTitle) printf("%s\n", title);
+		printf("%s\n", message);
+	}
+}
 
 void emptyAllGrids(game *g) {
 	int x = 0;
@@ -153,8 +162,9 @@ void printGrid(int grid, game *g) {
 
 void newGame(game *g) {
 	clear();
-	if (! g->display) printf("--- BATTLESHIPS --- \n");
-	if (! g->display) printf("Starting a new game \n \n \n");
+	char title[] = "--- BATTLESHIPS ---";
+	char newGame[] = "Starting a new game";
+	showMessage(g, title, newGame, true);
 	emptyAllGrids(g);
 	emptyAllShips(g);
 	g->currentPlayer = 1;
@@ -431,10 +441,13 @@ void won(game *g) {
 }
 
 void whoNext(game *g) {
-	if (! g->display) printf("Up Next: Player %d \n", g->currentPlayer);
+	char title[] = "Next Player";
+	char buffer[50];
+	sprintf(buffer, "Up Next: Player %d", g->currentPlayer);
+	showMessage(g, title, buffer, false);
 }
 
-void confirmContinue() {
+void confirmContinue(game *g) {
 	if (! g->display) printf("Please press [Enter] to continue\n");
 	char ch;
 	while (ch != '\r' && ch != '\n') {
@@ -562,66 +575,46 @@ void target(game *g) {
 void playGame(game *g) {
 	newGame(g);
 	whoNext(g);
-	confirmContinue();
+	confirmContinue(g);
 	fillNewIn(g);
 	clear();
 	nextPlayer(g);
 	whoNext(g);
-	confirmContinue();
+	confirmContinue(g);
 	fillNewIn(g);
 	while ((healthSumPlayer1(g) > 0) && (healthSumPlayer2(g) > 0)) {
 		clear();
 		nextPlayer(g);
 		whoNext(g);
-		confirmContinue();
+		confirmContinue(g);
 		clear();
 		printKey();
 		printPlayersGrids(g);
 		printHealth(g);
 		letOpponentKnow(g);
 		target(g);
-		confirmContinue();
+		confirmContinue(g);
 	}
 	won(g);
-	confirmContinue();
-}
-
-void playGameDisplay(game *f) {
-	newGame(g);
-	//Printfs handled
-	whoNext(g);
-	confirmContinue();
-	fillNewIn(g);
-	clear();
-	nextPlayer(g);
-	whoNext(g);
-	confirmContinue();
-	fillNewIn(g);
-	while ((healthSumPlayer1(g) > 0) && (healthSumPlayer2(g) > 0)) {
-		clear();
-		nextPlayer(g);
-		whoNext(g);
-		confirmContinue();
-		clear();
-		printKey();
-		printPlayersGrids(g);
-		printHealth(g);
-		letOpponentKnow(g);
-		target(g);
-		confirmContinue();
-	}
-	won(g);
-	confirmContinue();
+	confirmContinue(g);
 }
 
 //------------------------------------------------------------------------------
-// DISPLAY HELPER FUNCTIONS
+// DISPLAY RELATED FUNCTIONS
 
-field **selectGridForDisplay(int grid, game *g) {
+field **selectArray(int grid, game *g) {
 	if (grid == 0) return g->prim1;
 	if (grid == 1) return g->track1;
 	if (grid == 2) return g->prim2;
 	if (grid == 3) return g->track2;
+	else return NULL;
+}
+
+grid *selectGrid(int grid, game *g) {
+	if (grid == 0) return g->prim1D;
+	if (grid == 1) return g->track1D;
+	if (grid == 2) return g->prim2D;
+	if (grid == 3) return g->track2D;
 	else return NULL;
 }
 
@@ -632,7 +625,49 @@ void updateDisplay(display *d, grid *g1, grid *g2, bool selecting) {
 	displayFrame(d);
 }
 
+void displayInit(game *g) {
+	g->display = true;
+	int screenW = 1000;
+	int screenH = 500;
+	g->d = newDisplay("Battleships", screenW, screenH);
+	g->currentPlayer = 1;
+	g->prim1D = newGrid(g->d, selectArray(playerGrid(g), g), 1);
+	g->track1D = newGrid(g->d, selectArray(trackGrid(g), g), 2);
+	g->currentPlayer = 2;
+	g->prim2D = newGrid(g->d, selectArray(playerGrid(g), g), 1);
+	g->track2D = newGrid(g->d, selectArray(trackGrid(g), g), 2);
 
+	g->currentPlayer = 1;
+}
+
+void playGameDisplay(game *g) {
+	displayInit(g);
+	newGame(g);
+	//Printfs handled
+	whoNext(g);
+	confirmContinue(g);
+	fillNewIn(g);
+	clear();
+	nextPlayer(g);
+	whoNext(g);
+	confirmContinue(g);
+	fillNewIn(g);
+	while ((healthSumPlayer1(g) > 0) && (healthSumPlayer2(g) > 0)) {
+		clear();
+		nextPlayer(g);
+		whoNext(g);
+		confirmContinue(g);
+		clear();
+		printKey();
+		printPlayersGrids(g);
+		printHealth(g);
+		letOpponentKnow(g);
+		target(g);
+		confirmContinue(g);
+	}
+	won(g);
+	confirmContinue(g);
+}
 
 //------------------------------------------------------------------------------
 // TESTS
@@ -815,8 +850,8 @@ void placeGridTest(game *g) {
 	int screenW = 1000;
 	int screenH = 500;
 	display *d = newDisplay("placeGrid test", screenW, screenH);
-	grid *grid1 = newGrid(d, selectGridForDisplay(playerGrid(g), g), 1);
-	grid *grid2 = newGrid(d, selectGridForDisplay(trackGrid(g), g), 2);
+	grid *grid1 = newGrid(d, selectArray(playerGrid(g), g), 1);
+	grid *grid2 = newGrid(d, selectArray(trackGrid(g), g), 2);
 	updateDisplay(d, grid1, grid2, false);
 	end(d);
 }
@@ -825,8 +860,8 @@ void coordSelectTest(game *g) {
 	int screenW = 1200;
 	int screenH = 700;
 	display *d = newDisplay("coordSelect test", screenW, screenH);
-	grid *grid1 = newGrid(d, selectGridForDisplay(playerGrid(g), g), 1);
-	grid *grid2 = newGrid(d, selectGridForDisplay(trackGrid(g), g), 2);
+	grid *grid1 = newGrid(d, selectArray(playerGrid(g), g), 1);
+	grid *grid2 = newGrid(d, selectArray(trackGrid(g), g), 2);
 	updateDisplay(d, grid1, grid2, true);
 	bool confirmed = false;
 	while (! confirmed) {
@@ -851,8 +886,8 @@ void displayShootTest(game *g) {
 	int screenH = 500;
 	display *d = newDisplay("coordSelect test", screenW, screenH);
 	g->currentPlayer = 1;
-	grid *grid1 = newGrid(d, selectGridForDisplay(playerGrid(g), g), 1);
-	grid *grid2 = newGrid(d, selectGridForDisplay(trackGrid(g), g), 2);
+	grid *grid1 = newGrid(d, selectArray(playerGrid(g), g), 1);
+	grid *grid2 = newGrid(d, selectArray(trackGrid(g), g), 2);
 	updateDisplay(d, grid1, grid2, false);
 
 	printGrid(playerGrid(g), g);
@@ -921,6 +956,7 @@ int main(int n, char *args[n]) {
 	g->track1 = newMatrix(10, 10);
 	g->prim2 = newMatrix(10, 10);
 	g->track2 = newMatrix(10, 10);
+
 	char copy1[7][20] = {
 		{"Carrier"},
 		{"Battleship"},
@@ -933,14 +969,12 @@ int main(int n, char *args[n]) {
 	int copy2[7] = {5,4,3,3,3,2,2};
 	memcpy(g->names, copy1, sizeof(g->names));
 	memcpy(g->lengths, copy2, sizeof(g->lengths));
-	//tests(g);
 	if (n == 1) {
 		g->display = false;
 		while (true) playGame(g);
 	}
 	else if (strcmp(args[1], "t") == 0) tests(g);
 	else if (strcmp(args[1], "d") == 0) {
-		g->display = true;
 		while (true) playGameDisplay(g);
 	}
 	return 0;

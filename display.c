@@ -27,7 +27,7 @@ struct grid {
     int gridW;
     int gridH;
 
-    int **gridMatrix;
+    field **gridMatrix;
 
     int selectedCol;
     int selectedRow;
@@ -58,6 +58,7 @@ int notNeg(int n) { if (n < 0) fail(); return n; }
 static void loadPicture(display *d, char *filename, int letter) {
     SDL_Surface *s = SDL_LoadBMP(filename);
     notNull(s);
+    //SDL_Surface *optimisedS = SDL_ConvertSurface(s, )
     SDL_Texture *t = SDL_CreateTextureFromSurface(d->renderer, s);
     notNull(t);
     d->textures[letter] = t;
@@ -96,7 +97,7 @@ void placeBackground(display *d) {
 //------------------------------------------------------------------------------
 // GRIDS
 
-static void updateGrid(display *d, grid *g, int **gridMatrix, int position) {
+static void updateGrid(display *d, grid *g, field **gridMatrix, int position) {
     g->gridMatrix = gridMatrix;
     int screenW = d->width;
     int screenH = d->height;
@@ -124,7 +125,7 @@ static void updateGrid(display *d, grid *g, int **gridMatrix, int position) {
     //g->selectedRow = 0;
 }
 
-grid *newGrid(display *d, int **gridMatrix, int position) {
+grid *newGrid(display *d, field **gridMatrix, int position) {
     grid *g = malloc(sizeof(grid));
     updateGrid(d, g, gridMatrix, position);
     g->selected = false;
@@ -134,11 +135,11 @@ grid *newGrid(display *d, int **gridMatrix, int position) {
 
 static void placeOne(display *d, grid *g, int field, int x, int y) {
     char c = -1;
-	if (field == 0) c = 'S';
-	if (field == 1) c = 'X';
-	if (field == 2) c = 'W';
-	if (field == 3) c = 'N';
-	if (field == 4) c = 'U';
+	if (field == S) c = 'S';
+	if (field == X) c = 'X';
+	if (field == W) c = 'W';
+	if (field == N) c = 'N';
+	if (field == U) c = 'U';
     //printf("char c = %c\n\n", c);
     placePicture(d, c, x, y, g->squareW, g->squareH);
 }
@@ -183,7 +184,7 @@ display *newDisplay(char *title, int width, int height) {
     int x = SDL_WINDOWPOS_CENTERED, y = SDL_WINDOWPOS_CENTERED;
     d->window = notNull(SDL_CreateWindow(title, x, y, d->width, d->height, SDL_WINDOW_RESIZABLE));
     d->surface = notNull(SDL_GetWindowSurface(d->window));
-    d->renderer = notNull(SDL_CreateRenderer(d->window, -1, 0));
+    d->renderer = notNull(SDL_CreateRenderer(d->window, -1, SDL_RENDERER_ACCELERATED));
 
     notNeg(SDL_RenderClear(d->renderer));
     //loadPicture(d, "sea.bmp", 0, 0, d->width, d->height);
@@ -302,6 +303,12 @@ int getYcoord(grid *g) {
     return g->selectedRow;
 }
 
+//-----------------------------------------------------------------------------
+// MESSAGE BOX
+
+void displayMessage(display *d, char *title, char* message) {
+    notNeg(SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_INFORMATION, title, message, d->window));
+}
 
 //-----------------------------------------------------------------------------
 // TESTING
@@ -346,6 +353,11 @@ static void loadPictureTest() {
     end(d);
 }
 
+static void messageTest() {
+    display *d = newDisplay("message test", 1000, 500);
+    displayMessage(d, "Testing title", "Message test");
+}
+
 /*
 static void gridTest() {
     display *d = newDisplay("picture test");
@@ -363,6 +375,7 @@ static void gridTest() {
 static void tests() {
     newDisplayTest();
     loadPictureTest();
+    messageTest();
     printf("All tests DONE\n");
 }
 
