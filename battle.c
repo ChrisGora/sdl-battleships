@@ -129,6 +129,9 @@ void printOne(int a) {
 	if (a == 2) printf("# ");
 	if (a == 3) printf("- ");
 	if (a == 4) printf("* ");
+	if (a == 5) printf("S ");
+	if (a == 6) printf("S ");
+	if (a == 7) printf("S ");
 }
 
 void printKey() {
@@ -217,15 +220,30 @@ bool waterOnlyAll(game *g, int x, int y, int length, char orientation[]) {
 
 //Place a single ship
 void placeShip(game *g, int x, int y, int length, char orientation[]) {
+	int initLength = length;
 	while (length > 0) {
 		if (g->currentPlayer == 1) {
-			g->prim1[x][y] = S;
+			if (orientation[0] == 'h') {
+				if (initLength == length) g->prim1[x][y] = SF;
+				else g->prim1[x][y] = S;
+			}
+			if (orientation[0] == 'v') {
+				if (initLength == length) g->prim1[x][y] = RF;
+				else g->prim1[x][y] = R;
+			}
 //			g->p1Ships[] = g->p1Ships + 1;
 			printOne(g->prim1[x][y]);
 			printf("\n");
 		}
 		else if (g->currentPlayer == 2) {
-			g->prim2[x][y] = S;
+			if (orientation[0] == 'h') {
+				if (initLength == length) g->prim2[x][y] = SF;
+				else g->prim2[x][y] = S;
+			}
+			if (orientation[0] == 'v') {
+				if (initLength == length) g->prim2[x][y] = RF;
+				else g->prim2[x][y] = R;
+			}
 			printOne(g->prim2[x][y]);
 			printf("\n");
 		}
@@ -447,9 +465,13 @@ void updateHitShipData(game *g, int x, int y) {
 
 field shoot(game *g, int x, int y) {
 	int cell = N;
-	if ((g->currentPlayer == 1) && (g->prim2[x][y] == S)) cell = X;
-	else if ((g->currentPlayer == 2) && (g->prim1[x][y] == S)) cell = X;
+	int aim2 = g->prim1[x][y];
+	int aim1 = g->prim2[x][y];
+	printf("aim1 %d aim2 %d", aim1, aim2);
+	if ((g->currentPlayer == 1) && ((aim1 == S) || (aim1 == SF) || (aim1 == R) || (aim1 == RF))) cell = X;
+	else if ((g->currentPlayer == 2) && ((aim2 == S) || (aim2 == SF) || (aim2 == R) || (aim2 == RF))) cell = X;
 	else cell = W;
+	printf("shoot says cell = %d", cell);
 	if (g->currentPlayer == 1) g->track1[x][y] = cell;
 	if (g->currentPlayer == 2) g->track2[x][y] = cell;
 	if (g->currentPlayer == 1) g->prim2[x][y] = cell;
@@ -769,7 +791,7 @@ void placingShipsTestPlayer1(game *g) {
 	emptyAllGrids(g);
 	g->currentPlayer = 1;
 	placeShip(g,0,0,5,"h");
-	assert(g->prim1[0][0] == S);
+	assert(g->prim1[0][0] == SF);
 	assert(g->prim1[4][0] == S);
 }
 
@@ -777,8 +799,8 @@ void placingShipsTestPlayer2(game *g) {
 	emptyAllGrids(g);
 	g->currentPlayer = 2;
 	placeShip(g,0,0,10,"v");
-	assert(g->prim2[0][0] == S);
-	assert(g->prim2[0][9] == S);
+	assert(g->prim2[0][0] == RF);
+	assert(g->prim2[0][9] == R);
 }
 
 void emptyShipsTest(game *g) {
@@ -835,7 +857,7 @@ void shootTest(game *g) {
 	g->currentPlayer = 1;
 	printGrid(playerGrid(g), g);
 	printGrid(trackGrid(g), g);
-	assert(g->prim2[3][7] == S);
+	assert(g->prim2[3][7] == R);
 	int before = g->ships[8][3];
 	turn(g, 3, 7);
 	int after = g->ships[8][3];
@@ -962,7 +984,7 @@ void displayShootTest(game *g) {
 	printGrid(playerGrid(g), g);
 	printGrid(trackGrid(g), g);
 
-	assert(g->prim2[3][7] == S);
+	assert(g->prim2[3][7] == R);
 	int before = g->ships[8][3];
 
 	printf("IMPORTANT: SELECT x = 3 AND y = 7 \n");

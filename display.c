@@ -78,12 +78,15 @@ static void loadAll(display *d) {
     loadPicture(d, "gridBackground.bmp", 'G');
     loadPicture(d, "testSquare.bmp", 'T');
     loadPicture(d, "healthyShip.bmp", 'S');
+    loadPicture(d, "healthyShip.bmp", 'R');
     loadPicture(d, "hitShip.bmp", 'X');
     loadPicture(d, "water.bmp", 'W');
     loadPicture(d, "unknown.bmp", 'N');
     loadPicture(d, "sunkShip.bmp", 'U');
     loadPicture(d, "aimTest.bmp", 'A');
     loadPicture(d, "aimTest.bmp", 'M');
+    //Front and End
+    loadPicture(d, "aimTest.bmp", 'F');
 }
 
 static void placePicture(display *d, int letter, int x, int y, int w, int h) {
@@ -150,6 +153,7 @@ grid *newGrid(display *d, field **gridMatrix, int position) {
 static void placeOne(display *d, grid *g, int field, int x, int y) {
     char c = -1;
 	if (field == S) c = 'S';
+    if (field == R) c = 'R';
 	if (field == X) c = 'X';
 	if (field == W) c = 'W';
 	if (field == N) c = 'N';
