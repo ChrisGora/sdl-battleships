@@ -10,6 +10,10 @@
 struct display {
     int width;
     int height;
+
+    int prevWidth;
+    int prevHeight;
+
     SDL_Window *window;
     SDL_Renderer *renderer;
     SDL_Surface *surface;
@@ -104,16 +108,17 @@ void placeBackground(display *d) {
 
 static void updateGrid(display *d, grid *g, field **gridMatrix, int position) {
     g->gridMatrix = gridMatrix;
+    //if ((d->prevWidth == d->width) && (d->prevHeight == d->height)) return;
     int screenW = d->width;
     int screenH = d->height;
-    int squareW = screenW * 3 / 100;
-    int squareH = screenH * 6 / 100;
+    int squareW = screenW * 4 / 100;
+    int squareH = screenH * 8 / 100;
     if (squareW < squareH) squareH = squareW;
     else squareW = squareH;
     printf("sqW = %d sqH = %d\n", squareW, squareH);
     g->squareW = squareW;
     g->squareH = squareH;
-    g->space = 5;
+    g->space = 1;
     g->gridW = (squareW * 10) + (g->space * 11);
     g->gridH = (squareH * 10) + (g->space * 11);
 
@@ -126,6 +131,8 @@ static void updateGrid(display *d, grid *g, field **gridMatrix, int position) {
         g->x = screenW * 3 / 4 - g->gridW / 2;
         g->y = screenH / 2 - g->gridH / 2;
     }
+    d->prevWidth = screenW;
+    d->prevHeight = screenH;
     //g->selectedCol = 0;
     //g->selectedRow = 0;
 }
@@ -135,6 +142,8 @@ grid *newGrid(display *d, field **gridMatrix, int position) {
     updateGrid(d, g, gridMatrix, position);
     g->selected = false;
     g->confirmed = false;
+    g->selectedCol = 0;
+    g->selectedRow = 0;
     return g;
 }
 
@@ -235,6 +244,8 @@ void updateDisplay(display *d, grid *g1, grid *g2, bool aiming, bool placing) {
 
 // Note that after resizing all grids have to be updated using placeGrid
 static void resizeWindow(display *d, int w, int h) {
+    d->prevWidth = d->width;
+    d->prevHeight = d->height;
     d->width = w;
     d->height = h;
 }
@@ -297,6 +308,15 @@ static void setCoordsMouse(int x, int y, grid *g) {
     printf("Done loop, selected = %d\n", g->selected);
 }
 
+void forgetEvents(display *d) {
+    SDL_FlushEvent(SDL_KEYDOWN);
+    SDL_FlushEvent(SDL_KEYUP);
+    SDL_FlushEvent(SDL_MOUSEMOTION);
+    SDL_FlushEvent(SDL_MOUSEBUTTONDOWN);
+    SDL_FlushEvent(SDL_MOUSEBUTTONUP);
+    SDL_FlushEvent(SDL_MOUSEWHEEL);
+}
+
 bool setCoords(display *d, grid *g) {
     g->confirmed = false;
     SDL_Event event_structure;
@@ -307,15 +327,15 @@ bool setCoords(display *d, grid *g) {
         SDL_Quit();
         exit(0);
     }
-    else if (event->type == SDL_KEYUP) {
+    else if (event->type == SDL_KEYDOWN) {
         int sym = event->key.keysym.sym;
         g->selected = true;
-        if (sym == SDLK_UP) g->selectedRow--;
-        if (sym == SDLK_DOWN) g->selectedRow++;
-        if (sym == SDLK_LEFT) g->selectedCol--;
-        if (sym == SDLK_RIGHT) g->selectedCol++;
+        if ((sym == SDLK_UP) || (sym == SDLK_w)) g->selectedRow--;
+        if ((sym == SDLK_DOWN) || (sym == SDLK_s)) g->selectedRow++;
+        if ((sym == SDLK_LEFT) || (sym == SDLK_a)) g->selectedCol--;
+        if ((sym == SDLK_RIGHT) || (sym == SDLK_d)) g->selectedCol++;
         if (sym == SDLK_r) swapOrientation(g);
-        if ((sym == SDLK_SPACE) || (sym == SDLK_RETURN)) {
+        if ((sym == SDLK_SPACE)) {
             g->confirmed = true;
             g->selected = false;
         }

@@ -6,11 +6,15 @@
 #include <assert.h>
 
 void showMessage(bool useDisplay, display *d, char* title, char* message, bool printTitle) {
-	if (useDisplay) displayMessage(d, title, message);
+	if (useDisplay) {
+        displayMessage(d, title, message);
+        forgetEvents(d);
+    }
 	else {
 		if (printTitle) printf("%s\n", title);
 		printf("%s\n", message);
 	}
+
 }
 
 int showMain() {

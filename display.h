@@ -43,6 +43,9 @@ void updateDisplay(display *d, grid *g1, grid *g2, bool aiming, bool placing);
 // Show the next frame and clear the render.
 void displayFrame(display *d);
 
+// Forget mouse and keyboard events that happened before the call to this function.
+void forgetEvents(display *d);
+
 // Display a simple message box. The program pauses until OK is pressed or the
 // the box is closed.
 void displayMessage(display *d, char *title, char* message);

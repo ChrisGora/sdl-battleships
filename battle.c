@@ -326,8 +326,8 @@ void locationSelectDisplay(game *g, int id, char ship[], int shipLength) {
 	//char loc[5];
 	char orient[5];
 	orient[0] = 'h';
-	int x = -1;
-	int y = -1;
+	int x = 0;
+	int y = 0;
 	bool valid = false;
 	bool confirmed = false;
 
@@ -344,7 +344,7 @@ void locationSelectDisplay(game *g, int id, char ship[], int shipLength) {
 		x = getXcoord(g1);
 		y = getYcoord(g1);
 		orient[0] = getOrientation(g1);
-		printf("returned x = %d, y= %d", x, y);
+		printf("returned x = %d, y= %d\n", x, y);
 		valid = waterOnlyAll(g, x, y, shipLength, orient);
 		if (confirmed && !valid) showMessage(true, g->d, title, "INCORRECT, please try again", true);
 	}
@@ -589,6 +589,12 @@ void printPlayersGrids(game *g) {
 
 }
 
+void displayPlayersGrids(game *g) {
+	grid *grid1 = selectGrid(playerGrid(g), g);
+	grid *grid2 = selectGrid(trackGrid(g), g);
+	updateDisplay(g->d, grid1, grid2, false, false);
+}
+
 void printHealth(game *g) {
 	int p1 = (healthSumPlayer1(g)*100)/22;
 	int p2 = (healthSumPlayer2(g)*100)/22;
@@ -607,7 +613,43 @@ void printHealth(game *g) {
 	}
 }
 
-void target(game *g) {
+void targetDisplay(game *g) {
+	int x = -1;
+	int y = -1;
+	grid *g1 = selectGrid(playerGrid(g), g);
+	grid *g2 = selectGrid(trackGrid(g), g);
+	updateDisplay(g->d, g1, g2, true, false);
+
+	char title[] = "CALL YOUR SHOT";
+	char message[] = "Please select your next target";
+	showMessage(true, g->d, title, message, true);
+
+	bool valid = false;
+	bool confirmed = false;
+	while (!valid || !confirmed) {
+		confirmed = setCoords(g->d, g2);
+		updateDisplay(g->d, g1, g2, true, false);
+		x = getXcoord(g2);
+		y = getYcoord(g2);
+		valid = validTarget(g, x, y);
+		if (confirmed && !valid) showMessage(true, g->d, "", "INCORRECT, please try again", true);
+	}
+	field result = turn(g, x, y);
+	char position[20];
+	position[0] = x - '0' + 'a';
+	position[1] = y + '0';
+	printf("%d\n", position[0]);
+	printf("%c\n", position[0]);
+	clear(g);
+	displayPlayersGrids(g);
+	letKnow(g, x, y, result, position);
+	store(g, x, y, result, position);
+
+	updateDisplay(g->d, g1, g2, false, false);
+	pause(g->d, 2000);
+}
+
+void targetTerminal(game *g) {
 	char position[20];
 	int x = 0;
 	int y = 0;
@@ -646,7 +688,7 @@ void playGame(game *g) {
 		printPlayersGrids(g);
 		printHealth(g);
 		letOpponentKnow(g);
-		target(g);
+		targetTerminal(g);
 		confirmContinue(g);
 	}
 	won(g);
@@ -686,10 +728,10 @@ void playGameDisplay(game *g) {
 		nextPlayer(g);
 		whoNext(g);
 		//displayKey();
-		//displayPlayersGrids(g);
+		displayPlayersGrids(g);
 		//displayHealth(g);
-		letOpponentKnow(g);
-		target(g);
+		//letOpponentKnow(g);
+		targetDisplay(g);
 		confirmContinue(g);
 	}
 	won(g);
