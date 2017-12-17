@@ -5249,3 +5249,6 @@ aiming 1 , placing 0
 sqW = 40 sqH = 40
 aiming 1 , placing 0
 sqW = 40 sqH = 40
+ctags -R
+gcc -std=c99 -O3 -Wall -pedantic display.c show.c state.c battle.c -lSDL2 -o battle
+Makefile:6: recipe for target 'battle' failed

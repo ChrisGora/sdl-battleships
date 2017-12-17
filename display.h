@@ -37,6 +37,9 @@ int getYcoord(grid *g);
 // Return the ship orientation selected by the user.
 char getOrientation(grid *g);
 
+// Return the save flag - True if the user requested a game save.
+bool getSave(grid *g);
+
 // Automatically update grids and display a new frame.
 void updateDisplay(display *d, grid *g1, grid *g2, bool aiming, bool placing);
 

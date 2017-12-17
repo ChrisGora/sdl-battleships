@@ -9,70 +9,6 @@
 #include <string.h>
 #include <assert.h>
 
-// Prim is used as the grid with your ships, track is for tracking the enemy ships
-
-// int ships matrix:  14 ships, [0]owner, [1]type of ship, [2]initial length,
-// [3]still healthy length, [4]start x loc, [5]start y loc, [6]orient
-
-struct game {
-// Current game info
-	int currentPlayer;
-	field **prim1;
-	field **track1;
-	field **prim2;
-	field **track2;
-
-// Ship names, lengths, positions and health info
-	char names[7][20];
-	int lengths[7];
-	int ships[14][7];
-
-// Previous move info to let the next player know about what happened.
-	int x;
-	int y;
-	field result;
-	char input[2];
-	bool stored;
-
-// Variables and pointers to help with the display
-	display *d;
-	bool display;
-
-	grid *prim1D;
-	grid *track1D;
-	grid *prim2D;
-	grid *track2D;
-};
-
-typedef struct game game;
-
-void emptyAllGrids(game *g) {
-	int x = 0;
-	while (x <= 9) {
-		int y = 0;
-		while (y <= 9) {
-			g->prim1[x][y] = W;
-			g->track1[x][y] = N;
-			g->prim2[x][y] = W;
-			g->track2[x][y] = N;
-			y++;
-		}
-		x++;
-	}
-}
-
-void emptyAllShips(game *g) {
-	int x = 0;
-	while (x <= 13) {
-		int y = 0;
-		while (y <= 6) {
-			g->ships[x][y] = 0;
-			y++;
-		}
-		x++;
-	}
-}
-
 void clear(game *g) {
 	if (! g->display) {
 		int i = 0;
@@ -89,39 +25,6 @@ void clear(game *g) {
 // prim2 is 2
 // track2 is 3
 
-//------------------------------------------------------------------------------
-// GRID / ARRAY selection
-int playerGrid(game *g) {
-	int a;
-	if (g->currentPlayer == 1) a = 0;
-	else if (g->currentPlayer == 2) a = 2;
-	else a = -1;
-	return a;
-}
-
-int trackGrid(game *g) {
-	int a;
-	if (g->currentPlayer == 1) a = 1;
-	else if (g->currentPlayer == 2) a = 3;
-	else a = -1;
-	return a;
-}
-
-field **selectArray(int grid, game *g) {
-	if (grid == 0) return g->prim1;
-	if (grid == 1) return g->track1;
-	if (grid == 2) return g->prim2;
-	if (grid == 3) return g->track2;
-	else return NULL;
-}
-
-grid *selectGrid(int grid, game *g) {
-	if (grid == 0) return g->prim1D;
-	if (grid == 1) return g->track1D;
-	if (grid == 2) return g->prim2D;
-	if (grid == 3) return g->track2D;
-	else return NULL;
-}
 
 void printOne(int a) {
 
@@ -188,10 +91,12 @@ void printGrid(int grid, game *g) {
 	printf("\n \n");
 }
 
-void newGame(game *g) {
+void newGame(game *g, bool loading) {
 	clear(g);
 	char title[] = "--- BATTLESHIPS ---";
-	char newGame[] = "Starting a new game";
+	char newGame[100];
+	if (!loading) strcpy(newGame, "Starting a new game");
+	else strcpy(newGame, "Loading a saved game");
 	showMessage(g->display, g->d, title, newGame, true);
 	emptyAllGrids(g);
 	emptyAllShips(g);
@@ -212,27 +117,6 @@ int row(char *text) {
     return row;
 }
 
-bool waterOnlySingle(game *g, int x, int y) {
-	if (x > 9) return false;
-	if (y > 9) return false;
-	if (x < 0) return false;
-	if (y < 0) return false;
-	if ((g->currentPlayer == 1) && (g->prim1[x][y] != W)) return false;
-	if ((g->currentPlayer == 2) && (g->prim2[x][y] != W)) return false;
-	return true;
-}
-
-bool waterOnlyAll(game *g, int x, int y, int length, char orientation[]) {
-	while (length > 0) {
-		if (waterOnlySingle(g, x, y) == false) return false;
-		if (orientation[0] == 'h') x++;
-		else if (orientation[0] == 'v') y++;
-		else return false;
-		length--;
-	}
-	return true;
-}
-
 //Place a single ship
 void placeShip(game *g, int x, int y, int length, char orientation[]) {
 	int initLength = length;
@@ -248,9 +132,9 @@ void placeShip(game *g, int x, int y, int length, char orientation[]) {
 				else if (length == 1) g->prim1[x][y] = RR;
 				else g->prim1[x][y] = R;
 			}
-//			g->p1Ships[] = g->p1Ships + 1;
-			printOne(g->prim1[x][y]);
-			printf("\n");
+			// g->p1Ships[] = g->p1Ships + 1;
+			// printOne(g->prim1[x][y]);
+			// printf("\n");
 		}
 		else if (g->currentPlayer == 2) {
 			if (orientation[0] == 'h') {
@@ -263,8 +147,8 @@ void placeShip(game *g, int x, int y, int length, char orientation[]) {
 				else if (length == 1) g->prim2[x][y] = RR;
 				else g->prim2[x][y] = R;
 			}
-			printOne(g->prim2[x][y]);
-			printf("\n");
+			// printOne(g->prim2[x][y]);
+			// printf("\n");
 		}
 		if (orientation[0] == 'h') x++;
 		else if (orientation[0] == 'v') y++;
@@ -318,8 +202,8 @@ void askWhereTerminal(char ship[], int length, char location[], char orientation
 void registerShip(game *g, int x, int y, int id, int shipLength, char orientation[]) {
 //	int shipID = 0;
 	int shipID = id;
-	printf("ship ID %d\n", shipID);
-	printf("curr player %d", g->currentPlayer);
+	//printf("ship ID %d\n", shipID);
+	//printf("curr player %d", g->currentPlayer);
 //	if (g->currentPlayer == 1) shipID = id - 1;
 //	else if (g->currentPlayer == 2) shipID = id - 1 + 7;
 	g->ships[shipID][0] = g->currentPlayer;
@@ -381,13 +265,13 @@ void locationSelectDisplay(game *g, int id, char ship[], int shipLength) {
 		x = getXcoord(g1);
 		y = getYcoord(g1);
 		orient[0] = getOrientation(g1);
-		printf("returned x = %d, y= %d\n", x, y);
+		//printf("returned x = %d, y= %d\n", x, y);
 		valid = waterOnlyAll(g, x, y, shipLength, orient);
 		if (confirmed && !valid) showMessage(true, g->d, title, "INCORRECT, please try again", true);
 	}
 	placeShip(g, x, y, shipLength, orient);
 	registerShip(g, x, y, id, shipLength, orient);
-	printGrid(playerGrid(g), g);
+	//printGrid(playerGrid(g), g);
 }
 
 //Ask players to place all of their ships
@@ -399,7 +283,7 @@ void fillNewIn(game *g) {
 	while (i < 7) {
 	    if (! g->display) locationSelectTerminal(g, n, g->names[i], g->lengths[i]);
 		else locationSelectDisplay(g, n, g->names[i], g->lengths[i]);
-//		printf("fillNewIn i %d n %d", i, n);
+		// printf("fillNewIn i %d n %d", i, n);
         i++;
 		n++;
 	}
@@ -486,7 +370,7 @@ field shoot(game *g, int x, int y) {
 	int cell = N;
 	int aim2 = g->prim1[x][y];
 	int aim1 = g->prim2[x][y];
-	printf("aim1 %d aim2 %d\n", aim1, aim2);
+	// printf("aim1 %d aim2 %d\n", aim1, aim2);
 	if ((g->currentPlayer == 1)
 		&& ((aim1 == S)
 		|| (aim1 == SF)
@@ -627,17 +511,22 @@ void letKnow(game *g, int x, int y, field result, char input[]) {
 
 void letOpponentKnow(game *g) {
 	if (g->stored) {
-		printf("\n\nYour opponent shot at %c%c and ", g->input[0], g->input[1]);
-		if (g->result == W) printf("they MISSED\n");
+		char buffer1[150];
+		char buffer2[80];
+		char buffer3[30] = "";
+		sprintf(buffer1, "Your opponent shot at %c%c and ", g->input[0], g->input[1]);
+		if (g->result == W) sprintf(buffer2, "they MISSED\n");
 		if (g->result == X) {
-			printf("they HIT a ");
 			int id = locateShip(g, g->x, g->y, true);
 			bool isSunk = sunk(g, id);
 			id = longToShortID(id);
-			printf("%s", g->names[id]);
-			if (isSunk == true) printf(" and it has been SUNK\n");
+			sprintf(buffer2, "they HIT a %s", g->names[id]);
+			if (isSunk == true) sprintf(buffer3, " and it has been SUNK\n");
 			else printf("\n");
 		}
+		strcat(buffer2, buffer3);
+		strcat(buffer1, buffer2);
+		showMessage(g->display, g->d, "", buffer1, false);
 	}
 }
 
@@ -699,19 +588,23 @@ void targetDisplay(game *g) {
 		updateDisplay(g->d, g1, g2, true, false);
 		x = getXcoord(g2);
 		y = getYcoord(g2);
+		if (getSave(g2)) {
+			saveGame(g);
+			showMessage(true, g->d, "", "Game saved", true);
+		}
 		valid = validTarget(g, x, y);
 		if (confirmed && !valid) showMessage(true, g->d, "", "INCORRECT, please try again", true);
 	}
 	field result = turn(g, x, y);
 	char position[20];
-	printf ("x before = %d\n", x);
-	printf("y before = %d\n", y);
+	// printf ("x before = %d\n", x);
+	// printf("y before = %d\n", y);
 	position[0] = x + 'a';
 	position[1] = y + '0';
-	printf("position 0 as int %d\n", position[0]);
-	printf("position 0 as ch  %c\n", position[0]);
-	printf("position 1 as int %d\n", position[1]);
-	printf("position 1 as ch  %c\n", position[1]);
+	// printf("position 0 as int %d\n", position[0]);
+	// printf("position 0 as ch  %c\n", position[0]);
+	// printf("position 1 as int %d\n", position[1]);
+	// printf("position 1 as ch  %c\n", position[1]);
 	clear(g);
 	displayPlayersGrids(g);
 	letKnow(g, x, y, result, position);
@@ -741,7 +634,7 @@ void targetTerminal(game *g) {
 }
 
 void playGame(game *g) {
-	newGame(g);
+	newGame(g, false);
 	whoNext(g);
 	confirmContinue(g);
 	fillNewIn(g);
@@ -785,26 +678,30 @@ void displayInit(game *g) {
 	g->currentPlayer = 1;
 }
 
-void playGameDisplay(game *g) {
+void playGameDisplay(game *g, bool load) {
 	displayInit(g);
-	newGame(g);
-	//Printfs handled
-	whoNext(g);
-	fillNewIn(g);
-	clear(g);
-	nextPlayer(g);
-	whoNext(g);
-	fillNewIn(g);
-	while ((healthSumPlayer1(g) > 0) && (healthSumPlayer2(g) > 0)) {
+	newGame(g, load);
+	if (load) loadGame(g);
+	else {
+		whoNext(g);
+		fillNewIn(g);
 		clear(g);
 		nextPlayer(g);
+		whoNext(g);
+		fillNewIn(g);
+		clear(g);
+		nextPlayer(g);
+	}
+	while ((healthSumPlayer1(g) > 0) && (healthSumPlayer2(g) > 0)) {
 		whoNext(g);
 		//displayKey();
 		displayPlayersGrids(g);
 		//displayHealth(g);
-		//letOpponentKnow(g);
+		letOpponentKnow(g);
 		targetDisplay(g);
 		confirmContinue(g);
+		clear(g);
+		nextPlayer(g);
 	}
 	won(g);
 	confirmContinue(g);
@@ -997,9 +894,6 @@ void weirdBugTest2(game *g) {
 	printf("All LOGIC tests passed\n");
 }
 
-//DONE: Put al of this into an updateGrid function in display.c
-//DONE: Work out a way of selecting a square and storing that selection
-//DONE: Create a mechanism for handling keypresses - change current x and y
 void placeGridTest(game *g) {
 	int screenW = 1000;
 	int screenH = 500;
@@ -1072,12 +966,24 @@ void displayShootTest(game *g) {
 	end(d);
 }
 
+void saveGameTest(game *g) {
+	emptyAllGrids(g);
+	emptyAllShips(g);
+	g->currentPlayer = 2;
+	saveGame(g);
+
+	emptyAllGrids(g);
+	emptyAllShips(g);
+	g->currentPlayer = 1;
+	saveGame(g);
+}
+
 void displayPlaceShipTest(game *g) {
 	emptyAllGrids(g);
 	emptyAllShips(g);
 	displayInit(g);
 
-	newGame(g);
+	newGame(g, false);
 	whoNext(g);
 	fillNewIn(g);
 	clear(g);
@@ -1091,7 +997,7 @@ void tests(game *g) {
 	emptyGridsTest(g);
 	placingShipsTestPlayer1(g);
 	placingShipsTestPlayer2(g);
-	newGame(g);
+	newGame(g, false);
 	emptyShipsTest(g);
 	shipRegTest(g);
 	locationTest(g);
@@ -1099,53 +1005,29 @@ void tests(game *g) {
 	weirdBugTest(g);
 	sinkingTest(g);
 	weirdBugTest2(g);
-	//placeGridTest(g);
+	placeGridTest(g);
 	coordSelectTest(g);
 	displayShootTest(g);
+	saveGameTest(g);
 	displayPlaceShipTest(g);
 	printf("tests passed!\n");
 }
 
 //-----------------------------------------------------------------------------
 
-field **newMatrix(int rows, int cols) {
-	field **matrix = malloc(rows * sizeof(field *));
-	for(int i = 0; i < rows; i++) {
-		matrix[i] = malloc(cols * sizeof(field));
-	}
-	return matrix;
-}
-
 int main(int n, char *args[n]) {
-    // for (int i=0; i<n; i++) {
-	// printf("Arg %d is %s\n", i, args[i]);
-	// }
-	game *g;
-	g = malloc(sizeof(struct game));
-	g->prim1 = newMatrix(10, 10);
-	g->track1 = newMatrix(10, 10);
-	g->prim2 = newMatrix(10, 10);
-	g->track2 = newMatrix(10, 10);
+	game *g = newState();
 
-	char copy1[7][20] = {
-		{"Carrier"},
-		{"Battleship"},
-		{"Cruiser"},
-		{"Submarine"},
-		{"second Submarine"},
-		{"Destroyer"},
-		{"second Destroyer"}
-	};
-	int copy2[7] = {5,4,3,3,3,2,2};
-	memcpy(g->names, copy1, sizeof(g->names));
-	memcpy(g->lengths, copy2, sizeof(g->lengths));
 	if (n == 1) {
 		g->display = false;
 		while (true) playGame(g);
 	}
 	else if (strcmp(args[1], "t") == 0) tests(g);
 	else if (strcmp(args[1], "d") == 0) {
-		while (true) playGameDisplay(g);
+		while (true) playGameDisplay(g, false);
+	}
+	else if (strcmp(args[1], "l") == 0) {
+		while (true) playGameDisplay(g, true);
 	}
 	return 0;
 }

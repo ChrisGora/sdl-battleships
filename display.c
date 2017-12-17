@@ -38,6 +38,8 @@ struct grid {
     bool selected;
     bool confirmed;
 
+    bool save;
+
 // Only used when placing new ships
     char orientation;
     int length;
@@ -124,7 +126,7 @@ static void updateGrid(display *d, grid *g, field **gridMatrix, int position) {
     int squareH = screenH * 8 / 100;
     if (squareW < squareH) squareH = squareW;
     else squareW = squareH;
-    printf("sqW = %d sqH = %d\n", squareW, squareH);
+    // printf("sqW = %d sqH = %d\n", squareW, squareH);
     g->squareW = squareW;
     g->squareH = squareH;
     g->space = 0;
@@ -198,7 +200,7 @@ static void placeShip(display *d, grid *g, int row, int col, int x, int y) {
 
 void placeGrid(display *d, grid *g, bool aiming, bool placing) {
     if(g == NULL) return;
-    printf("aiming %d , placing %d\n", aiming, placing);
+    // printf("aiming %d , placing %d\n", aiming, placing);
     updateGrid(d, g, g->gridMatrix, g->position);
     placePicture(d, 'G', g->x, g->y, g->gridW, g->gridH);
     int row = 0;
@@ -321,9 +323,9 @@ static void checkCoords(int row, int col, int x, int y, grid *g) {
     //printf("y %d\n", y);
     if ((x >= startX) && (x <= endX) && (y >= startY) && (y <= endY)) {
         g->selectedCol = row;
-        printf("x selected as %d\n", g->selectedCol);
+        // printf("x selected as %d\n", g->selectedCol);
         g->selectedRow = col;
-        printf("y selected as %d\n", g->selectedRow);
+        // printf("y selected as %d\n", g->selectedRow);
         moveSelection(g, 'r', 0);
         moveSelection(g, 'c', 0);
         g->selected = true;
@@ -331,12 +333,12 @@ static void checkCoords(int row, int col, int x, int y, grid *g) {
 }
 
 static void setCoordsMouse(int x, int y, grid *g) {
-    printf("setting coords with mouse\n");
-    printf("mouse says x = %d , y = %d\n", x, y);
+    // printf("setting coords with mouse\n");
+    // printf("mouse says x = %d , y = %d\n", x, y);
     g->selected = false;
     checkCoords(g->selectedRow, g->selectedCol, x, y, g);
     if (g->selected) return;
-    printf("first check not successfull\n");
+    // printf("first check not successfull\n");
     int row = 0;
     int col = 0;
     while ((row < 10) && (! g->selected)) {
@@ -347,19 +349,20 @@ static void setCoordsMouse(int x, int y, grid *g) {
         }
         row++;
     }
-    printf("Done loop, selected = %d\n", g->selected);
+    // printf("Done loop, selected = %d\n", g->selected);
 }
 
 void forgetEvents(display *d) {
     SDL_Event event_structure;
     SDL_Event *event = &event_structure;
     while (SDL_PollEvent(event));
-    printf("Done forgetting");
+    // printf("Done forgetting");
 }
 
 
 static bool setCoords(display *d, grid *g) {
     g->confirmed = false;
+    g->save = false;
     SDL_Event event_structure;
     SDL_Event *event = &event_structure;
     notNeg(SDL_WaitEvent(event));
@@ -376,6 +379,7 @@ static bool setCoords(display *d, grid *g) {
         if ((sym == SDLK_LEFT) || (sym == SDLK_a)) moveSelection(g, 'c', -1);
         if ((sym == SDLK_RIGHT) || (sym == SDLK_d)) moveSelection(g, 'c', 1);
         if (sym == SDLK_r) swapOrientation(g);
+        if (sym == SDLK_p) g->save = true;
         if ((sym == SDLK_SPACE)) {
             g->confirmed = true;
             g->selected = false;
@@ -385,7 +389,7 @@ static bool setCoords(display *d, grid *g) {
         setCoordsMouse(event->motion.x, event->motion.y, g);
     }
     else if (event->type == SDL_MOUSEBUTTONDOWN) {
-        printf("detected button down, selected says %d\n", g->selected);
+        // printf("detected button down, selected says %d\n", g->selected);
         //if ((event->button.button == SDL_BUTTON_LEFT) && g->selected) g->confirmed = true;
         if (g->selected) {
             g->confirmed = true;
@@ -417,6 +421,10 @@ int getXcoord(grid *g) {
 
 int getYcoord(grid *g) {
     return g->selectedRow;
+}
+
+bool getSave(grid *g) {
+    return g->save;
 }
 
 char getOrientation(grid *g) {
