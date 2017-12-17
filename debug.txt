@@ -1,0 +1,5251 @@
+sqW = 40 sqH = 40
+sqW = 40 sqH = 40
+sqW = 40 sqH = 40
+sqW = 40 sqH = 40
+Done forgettingDone forgettingaiming 0 , placing 1
+sqW = 40 sqH = 40
+Done forgettingaiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 0
+setting coords with mouse
+mouse says x = 489 , y = 253
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 0
+setting coords with mouse
+mouse says x = 433 , y = 239
+first check not successfull
+x selected as 9
+y selected as 4
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 5, y= 4
+setting coords with mouse
+mouse says x = 382 , y = 235
+first check not successfull
+x selected as 8
+y selected as 4
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 5, y= 4
+setting coords with mouse
+mouse says x = 322 , y = 223
+first check not successfull
+x selected as 6
+y selected as 4
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 5, y= 4
+setting coords with mouse
+mouse says x = 250 , y = 197
+first check not successfull
+x selected as 4
+y selected as 3
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 4, y= 3
+setting coords with mouse
+mouse says x = 215 , y = 184
+first check not successfull
+x selected as 4
+y selected as 3
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 4, y= 3
+setting coords with mouse
+mouse says x = 181 , y = 178
+first check not successfull
+x selected as 3
+y selected as 3
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 3, y= 3
+setting coords with mouse
+mouse says x = 163 , y = 174
+first check not successfull
+x selected as 2
+y selected as 3
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 2, y= 3
+setting coords with mouse
+mouse says x = 151 , y = 170
+first check not successfull
+x selected as 2
+y selected as 3
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 2, y= 3
+setting coords with mouse
+mouse says x = 142 , y = 166
+first check not successfull
+x selected as 2
+y selected as 2
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 2, y= 2
+setting coords with mouse
+mouse says x = 124 , y = 158
+first check not successfull
+x selected as 1
+y selected as 2
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 1, y= 2
+setting coords with mouse
+mouse says x = 116 , y = 154
+first check not successfull
+x selected as 1
+y selected as 2
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 1, y= 2
+setting coords with mouse
+mouse says x = 108 , y = 149
+first check not successfull
+x selected as 1
+y selected as 2
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 1, y= 2
+setting coords with mouse
+mouse says x = 100 , y = 145
+first check not successfull
+x selected as 1
+y selected as 2
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 1, y= 2
+setting coords with mouse
+mouse says x = 95 , y = 142
+first check not successfull
+x selected as 1
+y selected as 2
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 1, y= 2
+setting coords with mouse
+mouse says x = 93 , y = 140
+first check not successfull
+x selected as 1
+y selected as 2
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 1, y= 2
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 1, y= 2
+detected button down, selected says 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 1, y= 2
+S 
+S 
+S 
+S 
+S 
+ship ID 0
+curr player 1
+  a b c d e f g h i j 
+0 # # # # # # # # # # 
+1 # # # # # # # # # # 
+2 # S S S S S # # # # 
+3 # # # # # # # # # # 
+4 # # # # # # # # # # 
+5 # # # # # # # # # # 
+6 # # # # # # # # # # 
+7 # # # # # # # # # # 
+8 # # # # # # # # # # 
+9 # # # # # # # # # # 
+
+ 
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+Done forgettingaiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 1, y= 2
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 1, y= 2
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 1, y= 2
+setting coords with mouse
+mouse says x = 521 , y = 278
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 1, y= 2
+setting coords with mouse
+mouse says x = 515 , y = 282
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 1, y= 2
+setting coords with mouse
+mouse says x = 502 , y = 289
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 1, y= 2
+setting coords with mouse
+mouse says x = 468 , y = 302
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 1, y= 2
+setting coords with mouse
+mouse says x = 421 , y = 310
+first check not successfull
+x selected as 9
+y selected as 6
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 6, y= 6
+setting coords with mouse
+mouse says x = 367 , y = 319
+first check not successfull
+x selected as 7
+y selected as 6
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 6, y= 6
+setting coords with mouse
+mouse says x = 284 , y = 327
+first check not successfull
+x selected as 5
+y selected as 6
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 5, y= 6
+setting coords with mouse
+mouse says x = 240 , y = 331
+first check not successfull
+x selected as 4
+y selected as 6
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 4, y= 6
+setting coords with mouse
+mouse says x = 206 , y = 331
+first check not successfull
+x selected as 3
+y selected as 6
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 3, y= 6
+setting coords with mouse
+mouse says x = 168 , y = 331
+first check not successfull
+x selected as 2
+y selected as 6
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 2, y= 6
+setting coords with mouse
+mouse says x = 145 , y = 331
+first check not successfull
+x selected as 2
+y selected as 6
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 2, y= 6
+setting coords with mouse
+mouse says x = 129 , y = 331
+first check not successfull
+x selected as 2
+y selected as 6
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 2, y= 6
+setting coords with mouse
+mouse says x = 115 , y = 333
+first check not successfull
+x selected as 1
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 1, y= 7
+setting coords with mouse
+mouse says x = 103 , y = 336
+first check not successfull
+x selected as 1
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 1, y= 7
+setting coords with mouse
+mouse says x = 93 , y = 337
+first check not successfull
+x selected as 1
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 1, y= 7
+setting coords with mouse
+mouse says x = 89 , y = 339
+first check not successfull
+x selected as 1
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 1, y= 7
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 1, y= 6
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 1, y= 6
+setting coords with mouse
+mouse says x = 88 , y = 340
+first check not successfull
+x selected as 1
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 1, y= 6
+setting coords with mouse
+mouse says x = 85 , y = 341
+first check not successfull
+x selected as 0
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 79 , y = 344
+first check not successfull
+x selected as 0
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 72 , y = 346
+first check not successfull
+x selected as 0
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 65 , y = 349
+first check not successfull
+x selected as 0
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 56 , y = 351
+first check not successfull
+x selected as 0
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 50 , y = 353
+first check not successfull
+x selected as 0
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 45 , y = 355
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 42 , y = 356
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 41 , y = 357
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 42 , y = 356
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 44 , y = 355
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 45 , y = 355
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 47 , y = 353
+first check not successfull
+x selected as 0
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 49 , y = 352
+first check not successfull
+x selected as 0
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 51 , y = 351
+first check not successfull
+x selected as 0
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 53 , y = 349
+first check not successfull
+x selected as 0
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 55 , y = 347
+first check not successfull
+x selected as 0
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 57 , y = 347
+first check not successfull
+x selected as 0
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 59 , y = 346
+first check not successfull
+x selected as 0
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 61 , y = 346
+first check not successfull
+x selected as 0
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+detected button down, selected says 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+S 
+S 
+S 
+S 
+ship ID 1
+curr player 1
+  a b c d e f g h i j 
+0 # # # # # # # # # # 
+1 # # # # # # # # # # 
+2 # S S S S S # # # # 
+3 # # # # # # # # # # 
+4 # # # # # # # # # # 
+5 # # # # # # # # # # 
+6 S # # # # # # # # # 
+7 S # # # # # # # # # 
+8 S # # # # # # # # # 
+9 S # # # # # # # # # 
+
+ 
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+Done forgettingaiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 483 , y = 290
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 474 , y = 310
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 462 , y = 333
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 455 , y = 342
+first check not successfull
+x selected as 9
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 7
+setting coords with mouse
+mouse says x = 450 , y = 349
+first check not successfull
+x selected as 9
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 7
+setting coords with mouse
+mouse says x = 446 , y = 351
+first check not successfull
+x selected as 9
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 7
+setting coords with mouse
+mouse says x = 444 , y = 352
+first check not successfull
+x selected as 9
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 7
+setting coords with mouse
+mouse says x = 443 , y = 352
+first check not successfull
+x selected as 9
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 7
+setting coords with mouse
+mouse says x = 443 , y = 353
+first check not successfull
+x selected as 9
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 7
+setting coords with mouse
+mouse says x = 441 , y = 352
+first check not successfull
+x selected as 9
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 7
+setting coords with mouse
+mouse says x = 439 , y = 352
+first check not successfull
+x selected as 9
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 7
+setting coords with mouse
+mouse says x = 438 , y = 352
+first check not successfull
+x selected as 9
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 7
+setting coords with mouse
+mouse says x = 436 , y = 353
+first check not successfull
+x selected as 9
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 7
+setting coords with mouse
+mouse says x = 434 , y = 354
+first check not successfull
+x selected as 9
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 7
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 7
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 7
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 7
+setting coords with mouse
+mouse says x = 435 , y = 355
+first check not successfull
+x selected as 9
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 9, y= 7
+setting coords with mouse
+mouse says x = 439 , y = 356
+first check not successfull
+x selected as 9
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 9, y= 7
+setting coords with mouse
+mouse says x = 441 , y = 357
+first check not successfull
+x selected as 9
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 9, y= 7
+setting coords with mouse
+mouse says x = 442 , y = 358
+first check not successfull
+x selected as 9
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 9, y= 7
+setting coords with mouse
+mouse says x = 443 , y = 358
+first check not successfull
+x selected as 9
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 9, y= 7
+setting coords with mouse
+mouse says x = 443 , y = 359
+first check not successfull
+x selected as 9
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 9, y= 7
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 9, y= 7
+detected button down, selected says 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 9, y= 7
+S 
+S 
+S 
+ship ID 2
+curr player 1
+  a b c d e f g h i j 
+0 # # # # # # # # # # 
+1 # # # # # # # # # # 
+2 # S S S S S # # # # 
+3 # # # # # # # # # # 
+4 # # # # # # # # # # 
+5 # # # # # # # # # # 
+6 S # # # # # # # # # 
+7 S # # # # # # # # S 
+8 S # # # # # # # # S 
+9 S # # # # # # # # S 
+
+ 
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+Done forgettingaiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 9, y= 7
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 9, y= 7
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 9, y= 7
+setting coords with mouse
+mouse says x = 509 , y = 260
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 9, y= 7
+setting coords with mouse
+mouse says x = 487 , y = 234
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 9, y= 7
+setting coords with mouse
+mouse says x = 474 , y = 217
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 9, y= 7
+setting coords with mouse
+mouse says x = 459 , y = 193
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 9, y= 7
+setting coords with mouse
+mouse says x = 454 , y = 178
+first check not successfull
+x selected as 9
+y selected as 3
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 3
+setting coords with mouse
+mouse says x = 445 , y = 160
+first check not successfull
+x selected as 9
+y selected as 2
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 2
+setting coords with mouse
+mouse says x = 435 , y = 144
+first check not successfull
+x selected as 9
+y selected as 2
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 2
+setting coords with mouse
+mouse says x = 425 , y = 133
+first check not successfull
+x selected as 9
+y selected as 2
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 2
+setting coords with mouse
+mouse says x = 418 , y = 123
+first check not successfull
+x selected as 9
+y selected as 1
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 1
+setting coords with mouse
+mouse says x = 417 , y = 120
+first check not successfull
+x selected as 9
+y selected as 1
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 1
+setting coords with mouse
+mouse says x = 416 , y = 119
+first check not successfull
+x selected as 9
+y selected as 1
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 1
+setting coords with mouse
+mouse says x = 415 , y = 119
+first check not successfull
+x selected as 9
+y selected as 1
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 1
+setting coords with mouse
+mouse says x = 414 , y = 119
+first check not successfull
+x selected as 8
+y selected as 1
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 1
+setting coords with mouse
+mouse says x = 412 , y = 119
+first check not successfull
+x selected as 8
+y selected as 1
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 1
+setting coords with mouse
+mouse says x = 412 , y = 118
+first check not successfull
+x selected as 8
+y selected as 1
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 1
+setting coords with mouse
+mouse says x = 411 , y = 115
+first check not successfull
+x selected as 8
+y selected as 1
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 1
+setting coords with mouse
+mouse says x = 411 , y = 110
+first check not successfull
+x selected as 8
+y selected as 1
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 1
+setting coords with mouse
+mouse says x = 413 , y = 107
+first check not successfull
+x selected as 8
+y selected as 1
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 1
+setting coords with mouse
+mouse says x = 415 , y = 103
+first check not successfull
+x selected as 9
+y selected as 1
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 1
+setting coords with mouse
+mouse says x = 417 , y = 100
+first check not successfull
+x selected as 9
+y selected as 1
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 1
+setting coords with mouse
+mouse says x = 419 , y = 97
+first check not successfull
+x selected as 9
+y selected as 1
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 1
+setting coords with mouse
+mouse says x = 419 , y = 92
+first check not successfull
+x selected as 9
+y selected as 1
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 1
+setting coords with mouse
+mouse says x = 419 , y = 88
+first check not successfull
+x selected as 9
+y selected as 1
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 1
+setting coords with mouse
+mouse says x = 418 , y = 85
+first check not successfull
+x selected as 9
+y selected as 0
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 0
+setting coords with mouse
+mouse says x = 417 , y = 82
+first check not successfull
+x selected as 9
+y selected as 0
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 0
+setting coords with mouse
+mouse says x = 416 , y = 79
+first check not successfull
+x selected as 9
+y selected as 0
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 0
+setting coords with mouse
+mouse says x = 416 , y = 77
+first check not successfull
+x selected as 9
+y selected as 0
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 0
+setting coords with mouse
+mouse says x = 416 , y = 76
+first check not successfull
+x selected as 9
+y selected as 0
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 0
+setting coords with mouse
+mouse says x = 415 , y = 76
+first check not successfull
+x selected as 9
+y selected as 0
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 0
+setting coords with mouse
+mouse says x = 415 , y = 75
+first check not successfull
+x selected as 9
+y selected as 0
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 0
+detected button down, selected says 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 0
+S 
+S 
+S 
+ship ID 3
+curr player 1
+  a b c d e f g h i j 
+0 # # # # # # # S S S 
+1 # # # # # # # # # # 
+2 # S S S S S # # # # 
+3 # # # # # # # # # # 
+4 # # # # # # # # # # 
+5 # # # # # # # # # # 
+6 S # # # # # # # # # 
+7 S # # # # # # # # S 
+8 S # # # # # # # # S 
+9 S # # # # # # # # S 
+
+ 
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+Done forgettingaiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 0
+setting coords with mouse
+mouse says x = 455 , y = 237
+first check not successfull
+x selected as 9
+y selected as 4
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 4
+setting coords with mouse
+mouse says x = 403 , y = 211
+first check not successfull
+x selected as 8
+y selected as 4
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 4
+setting coords with mouse
+mouse says x = 376 , y = 200
+first check not successfull
+x selected as 8
+y selected as 3
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 3
+setting coords with mouse
+mouse says x = 332 , y = 180
+first check not successfull
+x selected as 6
+y selected as 3
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 6, y= 3
+setting coords with mouse
+mouse says x = 302 , y = 164
+first check not successfull
+x selected as 6
+y selected as 2
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 6, y= 2
+setting coords with mouse
+mouse says x = 275 , y = 147
+first check not successfull
+x selected as 5
+y selected as 2
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 5, y= 2
+setting coords with mouse
+mouse says x = 239 , y = 130
+first check not successfull
+x selected as 4
+y selected as 2
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 4, y= 2
+setting coords with mouse
+mouse says x = 203 , y = 115
+first check not successfull
+x selected as 3
+y selected as 1
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 3, y= 1
+setting coords with mouse
+mouse says x = 175 , y = 104
+first check not successfull
+x selected as 3
+y selected as 1
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 3, y= 1
+setting coords with mouse
+mouse says x = 150 , y = 95
+first check not successfull
+x selected as 2
+y selected as 1
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 2, y= 1
+setting coords with mouse
+mouse says x = 136 , y = 92
+first check not successfull
+x selected as 2
+y selected as 1
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 2, y= 1
+setting coords with mouse
+mouse says x = 124 , y = 88
+first check not successfull
+x selected as 1
+y selected as 1
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 1, y= 1
+setting coords with mouse
+mouse says x = 111 , y = 85
+first check not successfull
+x selected as 1
+y selected as 0
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 1, y= 0
+setting coords with mouse
+mouse says x = 100 , y = 82
+first check not successfull
+x selected as 1
+y selected as 0
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 1, y= 0
+setting coords with mouse
+mouse says x = 93 , y = 80
+first check not successfull
+x selected as 1
+y selected as 0
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 1, y= 0
+setting coords with mouse
+mouse says x = 87 , y = 79
+first check not successfull
+x selected as 1
+y selected as 0
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 1, y= 0
+setting coords with mouse
+mouse says x = 83 , y = 78
+first check not successfull
+x selected as 0
+y selected as 0
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 0
+setting coords with mouse
+mouse says x = 79 , y = 75
+x selected as 0
+y selected as 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 0
+setting coords with mouse
+mouse says x = 77 , y = 73
+x selected as 0
+y selected as 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 0
+setting coords with mouse
+mouse says x = 76 , y = 71
+x selected as 0
+y selected as 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 0
+setting coords with mouse
+mouse says x = 74 , y = 71
+x selected as 0
+y selected as 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 0
+setting coords with mouse
+mouse says x = 72 , y = 71
+x selected as 0
+y selected as 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 0
+setting coords with mouse
+mouse says x = 71 , y = 71
+x selected as 0
+y selected as 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 0
+setting coords with mouse
+mouse says x = 70 , y = 71
+x selected as 0
+y selected as 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 0
+detected button down, selected says 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 0
+S 
+S 
+S 
+ship ID 4
+curr player 1
+  a b c d e f g h i j 
+0 S S S # # # # S S S 
+1 # # # # # # # # # # 
+2 # S S S S S # # # # 
+3 # # # # # # # # # # 
+4 # # # # # # # # # # 
+5 # # # # # # # # # # 
+6 S # # # # # # # # # 
+7 S # # # # # # # # S 
+8 S # # # # # # # # S 
+9 S # # # # # # # # S 
+
+ 
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+Done forgettingaiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 0
+setting coords with mouse
+mouse says x = 493 , y = 277
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 0
+setting coords with mouse
+mouse says x = 482 , y = 279
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 0
+setting coords with mouse
+mouse says x = 466 , y = 282
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 0
+setting coords with mouse
+mouse says x = 435 , y = 293
+first check not successfull
+x selected as 9
+y selected as 6
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 8, y= 6
+setting coords with mouse
+mouse says x = 416 , y = 301
+first check not successfull
+x selected as 9
+y selected as 6
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 8, y= 6
+setting coords with mouse
+mouse says x = 395 , y = 309
+first check not successfull
+x selected as 8
+y selected as 6
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 8, y= 6
+setting coords with mouse
+mouse says x = 374 , y = 317
+first check not successfull
+x selected as 8
+y selected as 6
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 8, y= 6
+setting coords with mouse
+mouse says x = 348 , y = 325
+first check not successfull
+x selected as 7
+y selected as 6
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 6
+setting coords with mouse
+mouse says x = 303 , y = 338
+x selected as 6
+y selected as 7
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 6, y= 7
+setting coords with mouse
+mouse says x = 279 , y = 346
+first check not successfull
+x selected as 5
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 5, y= 7
+setting coords with mouse
+mouse says x = 257 , y = 348
+first check not successfull
+x selected as 5
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 5, y= 7
+setting coords with mouse
+mouse says x = 242 , y = 348
+first check not successfull
+x selected as 4
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 4, y= 7
+setting coords with mouse
+mouse says x = 234 , y = 346
+first check not successfull
+x selected as 4
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 4, y= 7
+setting coords with mouse
+mouse says x = 229 , y = 343
+first check not successfull
+x selected as 4
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 4, y= 7
+setting coords with mouse
+mouse says x = 225 , y = 343
+first check not successfull
+x selected as 4
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 4, y= 7
+setting coords with mouse
+mouse says x = 218 , y = 342
+first check not successfull
+x selected as 4
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 4, y= 7
+setting coords with mouse
+mouse says x = 212 , y = 343
+first check not successfull
+x selected as 4
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 4, y= 7
+setting coords with mouse
+mouse says x = 206 , y = 344
+first check not successfull
+x selected as 3
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 3, y= 7
+setting coords with mouse
+mouse says x = 201 , y = 346
+first check not successfull
+x selected as 3
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 3, y= 7
+setting coords with mouse
+mouse says x = 195 , y = 348
+first check not successfull
+x selected as 3
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 3, y= 7
+setting coords with mouse
+mouse says x = 192 , y = 349
+first check not successfull
+x selected as 3
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 3, y= 7
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 3, y= 7
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 3, y= 7
+setting coords with mouse
+mouse says x = 188 , y = 350
+first check not successfull
+x selected as 3
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 3, y= 7
+setting coords with mouse
+mouse says x = 184 , y = 351
+first check not successfull
+x selected as 3
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 3, y= 7
+setting coords with mouse
+mouse says x = 182 , y = 352
+first check not successfull
+x selected as 3
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 3, y= 7
+setting coords with mouse
+mouse says x = 181 , y = 352
+first check not successfull
+x selected as 3
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 3, y= 7
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 3, y= 7
+setting coords with mouse
+mouse says x = 182 , y = 351
+first check not successfull
+x selected as 3
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 3, y= 7
+setting coords with mouse
+mouse says x = 183 , y = 350
+first check not successfull
+x selected as 3
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 3, y= 7
+setting coords with mouse
+mouse says x = 185 , y = 348
+first check not successfull
+x selected as 3
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 3, y= 7
+setting coords with mouse
+mouse says x = 186 , y = 348
+first check not successfull
+x selected as 3
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 3, y= 7
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 3, y= 7
+detected button down, selected says 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 3, y= 7
+S 
+S 
+ship ID 5
+curr player 1
+  a b c d e f g h i j 
+0 S S S # # # # S S S 
+1 # # # # # # # # # # 
+2 # S S S S S # # # # 
+3 # # # # # # # # # # 
+4 # # # # # # # # # # 
+5 # # # # # # # # # # 
+6 S # # # # # # # # # 
+7 S # # S # # # # # S 
+8 S # # S # # # # # S 
+9 S # # # # # # # # S 
+
+ 
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+Done forgettingaiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 3, y= 7
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 3, y= 7
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 3, y= 7
+setting coords with mouse
+mouse says x = 473 , y = 266
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 3, y= 7
+setting coords with mouse
+mouse says x = 446 , y = 265
+first check not successfull
+x selected as 9
+y selected as 5
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 8, y= 5
+setting coords with mouse
+mouse says x = 437 , y = 268
+first check not successfull
+x selected as 9
+y selected as 5
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 8, y= 5
+setting coords with mouse
+mouse says x = 427 , y = 269
+first check not successfull
+x selected as 9
+y selected as 5
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 8, y= 5
+setting coords with mouse
+mouse says x = 411 , y = 270
+first check not successfull
+x selected as 8
+y selected as 5
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 8, y= 5
+setting coords with mouse
+mouse says x = 396 , y = 269
+first check not successfull
+x selected as 8
+y selected as 5
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 8, y= 5
+setting coords with mouse
+mouse says x = 378 , y = 268
+first check not successfull
+x selected as 8
+y selected as 5
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 8, y= 5
+setting coords with mouse
+mouse says x = 363 , y = 265
+first check not successfull
+x selected as 7
+y selected as 5
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 5
+setting coords with mouse
+mouse says x = 348 , y = 261
+first check not successfull
+x selected as 7
+y selected as 5
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 5
+setting coords with mouse
+mouse says x = 340 , y = 259
+first check not successfull
+x selected as 7
+y selected as 5
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 5
+setting coords with mouse
+mouse says x = 332 , y = 256
+first check not successfull
+x selected as 6
+y selected as 5
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 6, y= 5
+setting coords with mouse
+mouse says x = 324 , y = 255
+first check not successfull
+x selected as 6
+y selected as 5
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 6, y= 5
+setting coords with mouse
+mouse says x = 316 , y = 255
+first check not successfull
+x selected as 6
+y selected as 5
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 6, y= 5
+setting coords with mouse
+mouse says x = 311 , y = 255
+first check not successfull
+x selected as 6
+y selected as 5
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 6, y= 5
+setting coords with mouse
+mouse says x = 308 , y = 255
+first check not successfull
+x selected as 6
+y selected as 5
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 6, y= 5
+setting coords with mouse
+mouse says x = 306 , y = 255
+first check not successfull
+x selected as 6
+y selected as 5
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 6, y= 5
+setting coords with mouse
+mouse says x = 305 , y = 255
+first check not successfull
+x selected as 6
+y selected as 5
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 6, y= 5
+setting coords with mouse
+mouse says x = 303 , y = 255
+first check not successfull
+x selected as 6
+y selected as 5
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 6, y= 5
+setting coords with mouse
+mouse says x = 301 , y = 253
+first check not successfull
+x selected as 6
+y selected as 5
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 6, y= 5
+setting coords with mouse
+mouse says x = 298 , y = 251
+first check not successfull
+x selected as 6
+y selected as 5
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 6, y= 5
+setting coords with mouse
+mouse says x = 294 , y = 248
+first check not successfull
+x selected as 6
+y selected as 4
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 6, y= 4
+setting coords with mouse
+mouse says x = 293 , y = 247
+first check not successfull
+x selected as 6
+y selected as 4
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 6, y= 4
+setting coords with mouse
+mouse says x = 291 , y = 246
+first check not successfull
+x selected as 5
+y selected as 4
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 5, y= 4
+setting coords with mouse
+mouse says x = 290 , y = 244
+first check not successfull
+x selected as 5
+y selected as 4
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 5, y= 4
+setting coords with mouse
+mouse says x = 289 , y = 242
+first check not successfull
+x selected as 5
+y selected as 4
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 5, y= 4
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 5, y= 4
+detected button down, selected says 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 5, y= 4
+S 
+S 
+ship ID 6
+curr player 1
+  a b c d e f g h i j 
+0 S S S # # # # S S S 
+1 # # # # # # # # # # 
+2 # S S S S S # # # # 
+3 # # # # # # # # # # 
+4 # # # # # S S # # # 
+5 # # # # # # # # # # 
+6 S # # # # # # # # # 
+7 S # # S # # # # # S 
+8 S # # S # # # # # S 
+9 S # # # # # # # # S 
+
+ 
+aiming 0 , placing 0
+sqW = 40 sqH = 40
+Done forgettingaiming 0 , placing 1
+sqW = 40 sqH = 40
+Done forgettingaiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 0
+setting coords with mouse
+mouse says x = 517 , y = 273
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 0
+setting coords with mouse
+mouse says x = 491 , y = 283
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 0
+setting coords with mouse
+mouse says x = 478 , y = 284
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 0
+setting coords with mouse
+mouse says x = 454 , y = 284
+first check not successfull
+x selected as 9
+y selected as 5
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 5, y= 5
+setting coords with mouse
+mouse says x = 419 , y = 282
+first check not successfull
+x selected as 9
+y selected as 5
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 5, y= 5
+setting coords with mouse
+mouse says x = 378 , y = 275
+first check not successfull
+x selected as 8
+y selected as 5
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 5, y= 5
+setting coords with mouse
+mouse says x = 336 , y = 264
+first check not successfull
+x selected as 7
+y selected as 5
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 5, y= 5
+setting coords with mouse
+mouse says x = 275 , y = 245
+first check not successfull
+x selected as 5
+y selected as 4
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 5, y= 4
+setting coords with mouse
+mouse says x = 242 , y = 233
+first check not successfull
+x selected as 4
+y selected as 4
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 4, y= 4
+setting coords with mouse
+mouse says x = 218 , y = 226
+x selected as 4
+y selected as 4
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 4, y= 4
+setting coords with mouse
+mouse says x = 205 , y = 220
+first check not successfull
+x selected as 3
+y selected as 4
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 3, y= 4
+setting coords with mouse
+mouse says x = 194 , y = 213
+first check not successfull
+x selected as 3
+y selected as 4
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 3, y= 4
+setting coords with mouse
+mouse says x = 186 , y = 206
+first check not successfull
+x selected as 3
+y selected as 3
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 3, y= 3
+setting coords with mouse
+mouse says x = 175 , y = 198
+x selected as 3
+y selected as 3
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 3, y= 3
+setting coords with mouse
+mouse says x = 168 , y = 193
+first check not successfull
+x selected as 2
+y selected as 3
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 2, y= 3
+setting coords with mouse
+mouse says x = 165 , y = 187
+first check not successfull
+x selected as 2
+y selected as 3
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 2, y= 3
+setting coords with mouse
+mouse says x = 163 , y = 184
+first check not successfull
+x selected as 2
+y selected as 3
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 2, y= 3
+setting coords with mouse
+mouse says x = 161 , y = 179
+first check not successfull
+x selected as 2
+y selected as 3
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 2, y= 3
+setting coords with mouse
+mouse says x = 159 , y = 172
+first check not successfull
+x selected as 2
+y selected as 3
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 2, y= 3
+setting coords with mouse
+mouse says x = 156 , y = 165
+first check not successfull
+x selected as 2
+y selected as 2
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 2, y= 2
+setting coords with mouse
+mouse says x = 152 , y = 158
+x selected as 2
+y selected as 2
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 2, y= 2
+setting coords with mouse
+mouse says x = 147 , y = 152
+x selected as 2
+y selected as 2
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 2, y= 2
+setting coords with mouse
+mouse says x = 137 , y = 142
+x selected as 2
+y selected as 2
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 2, y= 2
+setting coords with mouse
+mouse says x = 131 , y = 134
+x selected as 2
+y selected as 2
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 2, y= 2
+setting coords with mouse
+mouse says x = 124 , y = 128
+first check not successfull
+x selected as 1
+y selected as 2
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 1, y= 2
+setting coords with mouse
+mouse says x = 121 , y = 121
+first check not successfull
+x selected as 1
+y selected as 1
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 1, y= 1
+setting coords with mouse
+mouse says x = 119 , y = 118
+x selected as 1
+y selected as 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 1, y= 1
+setting coords with mouse
+mouse says x = 116 , y = 115
+x selected as 1
+y selected as 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 1, y= 1
+setting coords with mouse
+mouse says x = 113 , y = 112
+x selected as 1
+y selected as 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 1, y= 1
+setting coords with mouse
+mouse says x = 110 , y = 110
+x selected as 1
+y selected as 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 1, y= 1
+setting coords with mouse
+mouse says x = 106 , y = 108
+x selected as 1
+y selected as 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 1, y= 1
+setting coords with mouse
+mouse says x = 103 , y = 106
+x selected as 1
+y selected as 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 1, y= 1
+setting coords with mouse
+mouse says x = 99 , y = 104
+x selected as 1
+y selected as 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 1, y= 1
+setting coords with mouse
+mouse says x = 93 , y = 102
+x selected as 1
+y selected as 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 1, y= 1
+setting coords with mouse
+mouse says x = 84 , y = 99
+first check not successfull
+x selected as 0
+y selected as 1
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 1
+setting coords with mouse
+mouse says x = 79 , y = 98
+first check not successfull
+x selected as 0
+y selected as 1
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 1
+setting coords with mouse
+mouse says x = 77 , y = 96
+first check not successfull
+x selected as 0
+y selected as 1
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 1
+setting coords with mouse
+mouse says x = 76 , y = 95
+first check not successfull
+x selected as 0
+y selected as 1
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 1
+setting coords with mouse
+mouse says x = 76 , y = 94
+first check not successfull
+x selected as 0
+y selected as 1
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 1
+setting coords with mouse
+mouse says x = 75 , y = 94
+first check not successfull
+x selected as 0
+y selected as 1
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 1
+setting coords with mouse
+mouse says x = 74 , y = 91
+first check not successfull
+x selected as 0
+y selected as 1
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 1
+setting coords with mouse
+mouse says x = 73 , y = 89
+first check not successfull
+x selected as 0
+y selected as 1
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 1
+setting coords with mouse
+mouse says x = 73 , y = 86
+first check not successfull
+x selected as 0
+y selected as 0
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 0
+setting coords with mouse
+mouse says x = 73 , y = 81
+x selected as 0
+y selected as 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 0
+setting coords with mouse
+mouse says x = 73 , y = 77
+x selected as 0
+y selected as 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 0
+setting coords with mouse
+mouse says x = 73 , y = 72
+x selected as 0
+y selected as 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 0
+setting coords with mouse
+mouse says x = 73 , y = 68
+x selected as 0
+y selected as 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 0
+setting coords with mouse
+mouse says x = 73 , y = 66
+x selected as 0
+y selected as 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 0
+detected button down, selected says 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 0
+S 
+S 
+S 
+S 
+S 
+ship ID 7
+curr player 2
+  a b c d e f g h i j 
+0 S S S S S # # # # # 
+1 # # # # # # # # # # 
+2 # # # # # # # # # # 
+3 # # # # # # # # # # 
+4 # # # # # # # # # # 
+5 # # # # # # # # # # 
+6 # # # # # # # # # # 
+7 # # # # # # # # # # 
+8 # # # # # # # # # # 
+9 # # # # # # # # # # 
+
+ 
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+Done forgettingaiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 0
+setting coords with mouse
+mouse says x = 518 , y = 264
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 0
+setting coords with mouse
+mouse says x = 492 , y = 267
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 0
+setting coords with mouse
+mouse says x = 430 , y = 282
+first check not successfull
+x selected as 9
+y selected as 5
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 6, y= 5
+setting coords with mouse
+mouse says x = 376 , y = 295
+first check not successfull
+x selected as 8
+y selected as 6
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 6, y= 6
+setting coords with mouse
+mouse says x = 325 , y = 309
+x selected as 6
+y selected as 6
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 6, y= 6
+setting coords with mouse
+mouse says x = 269 , y = 321
+first check not successfull
+x selected as 5
+y selected as 6
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 5, y= 6
+setting coords with mouse
+mouse says x = 213 , y = 329
+first check not successfull
+x selected as 4
+y selected as 6
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 4, y= 6
+setting coords with mouse
+mouse says x = 164 , y = 337
+first check not successfull
+x selected as 2
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 2, y= 7
+setting coords with mouse
+mouse says x = 118 , y = 349
+first check not successfull
+x selected as 1
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 1, y= 7
+setting coords with mouse
+mouse says x = 98 , y = 353
+first check not successfull
+x selected as 1
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 1, y= 7
+setting coords with mouse
+mouse says x = 82 , y = 357
+first check not successfull
+x selected as 0
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 7
+setting coords with mouse
+mouse says x = 69 , y = 359
+first check not successfull
+x selected as 0
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 7
+setting coords with mouse
+mouse says x = 65 , y = 361
+first check not successfull
+x selected as 0
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 7
+setting coords with mouse
+mouse says x = 60 , y = 361
+first check not successfull
+x selected as 0
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 7
+setting coords with mouse
+mouse says x = 56 , y = 362
+first check not successfull
+x selected as 0
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 7
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 50 , y = 362
+first check not successfull
+x selected as 0
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 44 , y = 362
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 39 , y = 363
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 36 , y = 364
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 34 , y = 364
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 31 , y = 363
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 28 , y = 361
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 25 , y = 361
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 21 , y = 360
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 16 , y = 360
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 15 , y = 360
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 16 , y = 359
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 18 , y = 358
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 23 , y = 356
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 30 , y = 354
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 39 , y = 354
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 50 , y = 352
+first check not successfull
+x selected as 0
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 60 , y = 349
+first check not successfull
+x selected as 0
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 62 , y = 349
+first check not successfull
+x selected as 0
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+detected button down, selected says 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+S 
+S 
+S 
+S 
+ship ID 8
+curr player 2
+  a b c d e f g h i j 
+0 S S S S S # # # # # 
+1 # # # # # # # # # # 
+2 # # # # # # # # # # 
+3 # # # # # # # # # # 
+4 # # # # # # # # # # 
+5 # # # # # # # # # # 
+6 S # # # # # # # # # 
+7 S # # # # # # # # # 
+8 S # # # # # # # # # 
+9 S # # # # # # # # # 
+
+ 
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+Done forgettingaiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 493 , y = 279
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 487 , y = 288
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 481 , y = 294
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 472 , y = 301
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 466 , y = 306
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 458 , y = 314
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 0, y= 6
+setting coords with mouse
+mouse says x = 454 , y = 318
+first check not successfull
+x selected as 9
+y selected as 6
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 6
+setting coords with mouse
+mouse says x = 452 , y = 321
+first check not successfull
+x selected as 9
+y selected as 6
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 6
+setting coords with mouse
+mouse says x = 450 , y = 324
+first check not successfull
+x selected as 9
+y selected as 6
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 6
+setting coords with mouse
+mouse says x = 448 , y = 327
+first check not successfull
+x selected as 9
+y selected as 6
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 6
+setting coords with mouse
+mouse says x = 448 , y = 328
+first check not successfull
+x selected as 9
+y selected as 6
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 6
+setting coords with mouse
+mouse says x = 447 , y = 331
+first check not successfull
+x selected as 9
+y selected as 6
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 6
+setting coords with mouse
+mouse says x = 447 , y = 333
+first check not successfull
+x selected as 9
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 7
+setting coords with mouse
+mouse says x = 446 , y = 334
+first check not successfull
+x selected as 9
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 7
+setting coords with mouse
+mouse says x = 446 , y = 336
+first check not successfull
+x selected as 9
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 7
+setting coords with mouse
+mouse says x = 445 , y = 337
+first check not successfull
+x selected as 9
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 7
+setting coords with mouse
+mouse says x = 444 , y = 339
+first check not successfull
+x selected as 9
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 7
+setting coords with mouse
+mouse says x = 444 , y = 340
+first check not successfull
+x selected as 9
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 7
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 7
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 7
+setting coords with mouse
+mouse says x = 444 , y = 341
+first check not successfull
+x selected as 9
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 9, y= 7
+setting coords with mouse
+mouse says x = 444 , y = 342
+first check not successfull
+x selected as 9
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 9, y= 7
+setting coords with mouse
+mouse says x = 443 , y = 345
+first check not successfull
+x selected as 9
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 9, y= 7
+setting coords with mouse
+mouse says x = 443 , y = 347
+first check not successfull
+x selected as 9
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 9, y= 7
+setting coords with mouse
+mouse says x = 443 , y = 348
+first check not successfull
+x selected as 9
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 9, y= 7
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 9, y= 7
+setting coords with mouse
+mouse says x = 442 , y = 349
+first check not successfull
+x selected as 9
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 9, y= 7
+setting coords with mouse
+mouse says x = 442 , y = 350
+first check not successfull
+x selected as 9
+y selected as 7
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 9, y= 7
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 9, y= 7
+detected button down, selected says 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 9, y= 7
+S 
+S 
+S 
+ship ID 9
+curr player 2
+  a b c d e f g h i j 
+0 S S S S S # # # # # 
+1 # # # # # # # # # # 
+2 # # # # # # # # # # 
+3 # # # # # # # # # # 
+4 # # # # # # # # # # 
+5 # # # # # # # # # # 
+6 S # # # # # # # # # 
+7 S # # # # # # # # S 
+8 S # # # # # # # # S 
+9 S # # # # # # # # S 
+
+ 
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+Done forgettingaiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 9, y= 7
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 9, y= 7
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 9, y= 7
+setting coords with mouse
+mouse says x = 491 , y = 264
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 9, y= 7
+setting coords with mouse
+mouse says x = 483 , y = 251
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 9, y= 7
+setting coords with mouse
+mouse says x = 474 , y = 237
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 9, y= 7
+setting coords with mouse
+mouse says x = 466 , y = 222
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 9, y= 7
+setting coords with mouse
+mouse says x = 459 , y = 202
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 9, y= 7
+setting coords with mouse
+mouse says x = 455 , y = 188
+first check not successfull
+x selected as 9
+y selected as 3
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 3
+setting coords with mouse
+mouse says x = 450 , y = 175
+first check not successfull
+x selected as 9
+y selected as 3
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 3
+setting coords with mouse
+mouse says x = 444 , y = 161
+first check not successfull
+x selected as 9
+y selected as 2
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 2
+setting coords with mouse
+mouse says x = 439 , y = 152
+first check not successfull
+x selected as 9
+y selected as 2
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 2
+setting coords with mouse
+mouse says x = 437 , y = 145
+first check not successfull
+x selected as 9
+y selected as 2
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 2
+setting coords with mouse
+mouse says x = 434 , y = 140
+first check not successfull
+x selected as 9
+y selected as 2
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 2
+setting coords with mouse
+mouse says x = 431 , y = 135
+first check not successfull
+x selected as 9
+y selected as 2
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 2
+setting coords with mouse
+mouse says x = 429 , y = 130
+first check not successfull
+x selected as 9
+y selected as 2
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 2
+setting coords with mouse
+mouse says x = 426 , y = 124
+first check not successfull
+x selected as 9
+y selected as 1
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 1
+setting coords with mouse
+mouse says x = 425 , y = 120
+first check not successfull
+x selected as 9
+y selected as 1
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 1
+setting coords with mouse
+mouse says x = 425 , y = 115
+first check not successfull
+x selected as 9
+y selected as 1
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 1
+setting coords with mouse
+mouse says x = 426 , y = 109
+first check not successfull
+x selected as 9
+y selected as 1
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 1
+setting coords with mouse
+mouse says x = 426 , y = 103
+first check not successfull
+x selected as 9
+y selected as 1
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 1
+setting coords with mouse
+mouse says x = 427 , y = 97
+first check not successfull
+x selected as 9
+y selected as 1
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 1
+setting coords with mouse
+mouse says x = 428 , y = 94
+first check not successfull
+x selected as 9
+y selected as 1
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 1
+setting coords with mouse
+mouse says x = 429 , y = 93
+first check not successfull
+x selected as 9
+y selected as 1
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 1
+setting coords with mouse
+mouse says x = 429 , y = 92
+first check not successfull
+x selected as 9
+y selected as 1
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 1
+setting coords with mouse
+mouse says x = 429 , y = 91
+first check not successfull
+x selected as 9
+y selected as 1
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 1
+setting coords with mouse
+mouse says x = 429 , y = 86
+first check not successfull
+x selected as 9
+y selected as 0
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 0
+setting coords with mouse
+mouse says x = 428 , y = 77
+first check not successfull
+x selected as 9
+y selected as 0
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 0
+detected button down, selected says 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 0
+S 
+S 
+S 
+ship ID 10
+curr player 2
+  a b c d e f g h i j 
+0 S S S S S # # S S S 
+1 # # # # # # # # # # 
+2 # # # # # # # # # # 
+3 # # # # # # # # # # 
+4 # # # # # # # # # # 
+5 # # # # # # # # # # 
+6 S # # # # # # # # # 
+7 S # # # # # # # # S 
+8 S # # # # # # # # S 
+9 S # # # # # # # # S 
+
+ 
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+Done forgettingaiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 0
+setting coords with mouse
+mouse says x = 475 , y = 276
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 0
+setting coords with mouse
+mouse says x = 431 , y = 280
+first check not successfull
+x selected as 9
+y selected as 5
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 5
+setting coords with mouse
+mouse says x = 378 , y = 284
+first check not successfull
+x selected as 8
+y selected as 5
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 5
+setting coords with mouse
+mouse says x = 343 , y = 284
+first check not successfull
+x selected as 7
+y selected as 5
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 5
+setting coords with mouse
+mouse says x = 308 , y = 282
+first check not successfull
+x selected as 6
+y selected as 5
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 6, y= 5
+setting coords with mouse
+mouse says x = 280 , y = 275
+first check not successfull
+x selected as 5
+y selected as 5
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 5, y= 5
+setting coords with mouse
+mouse says x = 249 , y = 268
+first check not successfull
+x selected as 4
+y selected as 5
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 4, y= 5
+setting coords with mouse
+mouse says x = 217 , y = 260
+first check not successfull
+x selected as 4
+y selected as 5
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 4, y= 5
+setting coords with mouse
+mouse says x = 189 , y = 257
+first check not successfull
+x selected as 3
+y selected as 5
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 3, y= 5
+setting coords with mouse
+mouse says x = 168 , y = 251
+first check not successfull
+x selected as 2
+y selected as 5
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 2, y= 5
+setting coords with mouse
+mouse says x = 156 , y = 246
+first check not successfull
+x selected as 2
+y selected as 4
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 2, y= 4
+setting coords with mouse
+mouse says x = 153 , y = 243
+first check not successfull
+x selected as 2
+y selected as 4
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 2, y= 4
+setting coords with mouse
+mouse says x = 152 , y = 242
+first check not successfull
+x selected as 2
+y selected as 4
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 2, y= 4
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 2, y= 4
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 2, y= 4
+setting coords with mouse
+mouse says x = 150 , y = 240
+first check not successfull
+x selected as 2
+y selected as 4
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 2, y= 4
+setting coords with mouse
+mouse says x = 149 , y = 239
+first check not successfull
+x selected as 2
+y selected as 4
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 2, y= 4
+setting coords with mouse
+mouse says x = 147 , y = 238
+first check not successfull
+x selected as 2
+y selected as 4
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 2, y= 4
+setting coords with mouse
+mouse says x = 146 , y = 238
+first check not successfull
+x selected as 2
+y selected as 4
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 2, y= 4
+setting coords with mouse
+mouse says x = 145 , y = 237
+first check not successfull
+x selected as 2
+y selected as 4
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 2, y= 4
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 2, y= 4
+setting coords with mouse
+mouse says x = 145 , y = 236
+first check not successfull
+x selected as 2
+y selected as 4
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 2, y= 4
+setting coords with mouse
+mouse says x = 144 , y = 236
+first check not successfull
+x selected as 2
+y selected as 4
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 2, y= 4
+setting coords with mouse
+mouse says x = 144 , y = 235
+first check not successfull
+x selected as 2
+y selected as 4
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 2, y= 4
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 2, y= 4
+detected button down, selected says 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 2, y= 4
+S 
+S 
+S 
+ship ID 11
+curr player 2
+  a b c d e f g h i j 
+0 S S S S S # # S S S 
+1 # # # # # # # # # # 
+2 # # # # # # # # # # 
+3 # # # # # # # # # # 
+4 # # S # # # # # # # 
+5 # # S # # # # # # # 
+6 S # S # # # # # # # 
+7 S # # # # # # # # S 
+8 S # # # # # # # # S 
+9 S # # # # # # # # S 
+
+ 
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+Done forgettingaiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 2, y= 4
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 2, y= 4
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 2, y= 4
+setting coords with mouse
+mouse says x = 478 , y = 257
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 2, y= 4
+setting coords with mouse
+mouse says x = 420 , y = 235
+first check not successfull
+x selected as 9
+y selected as 4
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 8, y= 4
+setting coords with mouse
+mouse says x = 397 , y = 231
+first check not successfull
+x selected as 8
+y selected as 4
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 8, y= 4
+setting coords with mouse
+mouse says x = 380 , y = 222
+first check not successfull
+x selected as 8
+y selected as 4
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 8, y= 4
+setting coords with mouse
+mouse says x = 359 , y = 212
+first check not successfull
+x selected as 7
+y selected as 4
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 4
+setting coords with mouse
+mouse says x = 337 , y = 202
+first check not successfull
+x selected as 7
+y selected as 3
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 3
+setting coords with mouse
+mouse says x = 296 , y = 192
+first check not successfull
+x selected as 6
+y selected as 3
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 6, y= 3
+setting coords with mouse
+mouse says x = 269 , y = 190
+first check not successfull
+x selected as 5
+y selected as 3
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 5, y= 3
+setting coords with mouse
+mouse says x = 255 , y = 190
+first check not successfull
+x selected as 5
+y selected as 3
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 5, y= 3
+setting coords with mouse
+mouse says x = 243 , y = 189
+first check not successfull
+x selected as 4
+y selected as 3
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 4, y= 3
+setting coords with mouse
+mouse says x = 232 , y = 187
+first check not successfull
+x selected as 4
+y selected as 3
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 4, y= 3
+setting coords with mouse
+mouse says x = 233 , y = 187
+first check not successfull
+x selected as 4
+y selected as 3
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 4, y= 3
+setting coords with mouse
+mouse says x = 234 , y = 187
+first check not successfull
+x selected as 4
+y selected as 3
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 4, y= 3
+setting coords with mouse
+mouse says x = 234 , y = 186
+first check not successfull
+x selected as 4
+y selected as 3
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 4, y= 3
+setting coords with mouse
+mouse says x = 235 , y = 186
+first check not successfull
+x selected as 4
+y selected as 3
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 4, y= 3
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 4, y= 3
+detected button down, selected says 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 4, y= 3
+S 
+S 
+ship ID 12
+curr player 2
+  a b c d e f g h i j 
+0 S S S S S # # S S S 
+1 # # # # # # # # # # 
+2 # # # # # # # # # # 
+3 # # # # S S # # # # 
+4 # # S # # # # # # # 
+5 # # S # # # # # # # 
+6 S # S # # # # # # # 
+7 S # # # # # # # # S 
+8 S # # # # # # # # S 
+9 S # # # # # # # # S 
+
+ 
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+Done forgettingaiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 4, y= 3
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 4, y= 3
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 4, y= 3
+setting coords with mouse
+mouse says x = 486 , y = 274
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 4, y= 3
+setting coords with mouse
+mouse says x = 470 , y = 276
+first check not successfull
+Done loop, selected = 0
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 4, y= 3
+setting coords with mouse
+mouse says x = 445 , y = 283
+first check not successfull
+x selected as 9
+y selected as 5
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 8, y= 5
+setting coords with mouse
+mouse says x = 433 , y = 289
+first check not successfull
+x selected as 9
+y selected as 5
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 8, y= 5
+setting coords with mouse
+mouse says x = 417 , y = 296
+first check not successfull
+x selected as 9
+y selected as 6
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 8, y= 6
+setting coords with mouse
+mouse says x = 400 , y = 300
+first check not successfull
+x selected as 8
+y selected as 6
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 8, y= 6
+setting coords with mouse
+mouse says x = 385 , y = 302
+first check not successfull
+x selected as 8
+y selected as 6
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 8, y= 6
+setting coords with mouse
+mouse says x = 367 , y = 305
+first check not successfull
+x selected as 7
+y selected as 6
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 6
+setting coords with mouse
+mouse says x = 356 , y = 308
+first check not successfull
+x selected as 7
+y selected as 6
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 6
+setting coords with mouse
+mouse says x = 341 , y = 312
+first check not successfull
+x selected as 7
+y selected as 6
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 7, y= 6
+setting coords with mouse
+mouse says x = 331 , y = 315
+first check not successfull
+x selected as 6
+y selected as 6
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 6, y= 6
+setting coords with mouse
+mouse says x = 322 , y = 317
+x selected as 6
+y selected as 6
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 6, y= 6
+setting coords with mouse
+mouse says x = 315 , y = 320
+x selected as 6
+y selected as 6
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 6, y= 6
+setting coords with mouse
+mouse says x = 308 , y = 321
+x selected as 6
+y selected as 6
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 6, y= 6
+setting coords with mouse
+mouse says x = 299 , y = 323
+x selected as 6
+y selected as 6
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 6, y= 6
+setting coords with mouse
+mouse says x = 294 , y = 325
+x selected as 6
+y selected as 6
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 6, y= 6
+setting coords with mouse
+mouse says x = 291 , y = 327
+first check not successfull
+x selected as 5
+y selected as 6
+Done loop, selected = 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 5, y= 6
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 5, y= 6
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 5, y= 6
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 5, y= 6
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 5, y= 6
+detected button down, selected says 1
+aiming 0 , placing 1
+sqW = 40 sqH = 40
+returned x = 5, y= 6
+S 
+S 
+ship ID 13
+curr player 2
+  a b c d e f g h i j 
+0 S S S S S # # S S S 
+1 # # # # # # # # # # 
+2 # # # # # # # # # # 
+3 # # # # S S # # # # 
+4 # # S # # # # # # # 
+5 # # S # # # # # # # 
+6 S # S # # S # # # # 
+7 S # # # # S # # # S 
+8 S # # # # # # # # S 
+9 S # # # # # # # # S 
+
+ 
+aiming 0 , placing 0
+sqW = 40 sqH = 40
+Done forgettingaiming 0 , placing 0
+sqW = 40 sqH = 40
+aiming 0 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+Done forgettingaiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 521 , y = 237
+first check not successfull
+Done loop, selected = 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 526 , y = 204
+first check not successfull
+Done loop, selected = 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 531 , y = 179
+first check not successfull
+Done loop, selected = 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 532 , y = 155
+first check not successfull
+Done loop, selected = 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 535 , y = 136
+first check not successfull
+Done loop, selected = 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 538 , y = 123
+first check not successfull
+Done loop, selected = 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 541 , y = 114
+first check not successfull
+Done loop, selected = 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 546 , y = 102
+first check not successfull
+x selected as 0
+y selected as 1
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 548 , y = 99
+first check not successfull
+x selected as 0
+y selected as 1
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 550 , y = 97
+first check not successfull
+x selected as 0
+y selected as 1
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 553 , y = 94
+first check not successfull
+x selected as 0
+y selected as 1
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 554 , y = 91
+first check not successfull
+x selected as 0
+y selected as 1
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 555 , y = 87
+first check not successfull
+x selected as 0
+y selected as 1
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 555 , y = 81
+first check not successfull
+x selected as 0
+y selected as 0
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 557 , y = 72
+x selected as 0
+y selected as 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 559 , y = 66
+x selected as 0
+y selected as 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 561 , y = 62
+x selected as 0
+y selected as 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 563 , y = 59
+x selected as 0
+y selected as 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 563 , y = 58
+x selected as 0
+y selected as 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 563 , y = 61
+x selected as 0
+y selected as 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 563 , y = 66
+x selected as 0
+y selected as 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 563 , y = 69
+x selected as 0
+y selected as 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 563 , y = 71
+x selected as 0
+y selected as 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 563 , y = 73
+x selected as 0
+y selected as 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+detected button down, selected says 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aim1 6 aim2 6shoot says cell = 1x before = 0y before = 0position 0 as int 49
+position 0 as ch  1
+position 1 as int 48
+position 1 as ch  0
+aiming 0 , placing 0
+sqW = 40 sqH = 40
+aiming 0 , placing 0
+sqW = 40 sqH = 40
+
+
+You shot at 10 and you HIT a ship!
+
+aiming 0 , placing 0
+sqW = 40 sqH = 40
+aiming 0 , placing 0
+sqW = 40 sqH = 40
+Done forgettingaiming 0 , placing 0
+sqW = 40 sqH = 40
+aiming 0 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+Done forgettingaiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 502 , y = 267
+first check not successfull
+Done loop, selected = 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 509 , y = 271
+first check not successfull
+Done loop, selected = 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 519 , y = 283
+first check not successfull
+Done loop, selected = 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 526 , y = 292
+first check not successfull
+Done loop, selected = 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 533 , y = 300
+first check not successfull
+Done loop, selected = 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 538 , y = 307
+first check not successfull
+Done loop, selected = 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 542 , y = 313
+first check not successfull
+Done loop, selected = 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 547 , y = 321
+first check not successfull
+x selected as 0
+y selected as 6
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 553 , y = 332
+first check not successfull
+x selected as 0
+y selected as 6
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 555 , y = 338
+first check not successfull
+x selected as 0
+y selected as 7
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 558 , y = 346
+first check not successfull
+x selected as 0
+y selected as 7
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 561 , y = 353
+first check not successfull
+x selected as 0
+y selected as 7
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 563 , y = 360
+first check not successfull
+x selected as 0
+y selected as 7
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 566 , y = 369
+first check not successfull
+x selected as 0
+y selected as 7
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 568 , y = 376
+first check not successfull
+x selected as 0
+y selected as 8
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 570 , y = 379
+first check not successfull
+x selected as 0
+y selected as 8
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 572 , y = 382
+first check not successfull
+x selected as 0
+y selected as 8
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 573 , y = 384
+first check not successfull
+x selected as 0
+y selected as 8
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 575 , y = 388
+first check not successfull
+x selected as 0
+y selected as 8
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 576 , y = 392
+first check not successfull
+x selected as 0
+y selected as 8
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 577 , y = 397
+first check not successfull
+x selected as 0
+y selected as 8
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 577 , y = 399
+first check not successfull
+x selected as 0
+y selected as 8
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 577 , y = 401
+first check not successfull
+x selected as 0
+y selected as 8
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 577 , y = 402
+first check not successfull
+x selected as 0
+y selected as 8
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 578 , y = 403
+first check not successfull
+x selected as 0
+y selected as 8
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 578 , y = 405
+first check not successfull
+x selected as 0
+y selected as 8
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 578 , y = 407
+first check not successfull
+x selected as 0
+y selected as 8
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 576 , y = 412
+first check not successfull
+x selected as 0
+y selected as 8
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 575 , y = 414
+first check not successfull
+x selected as 0
+y selected as 8
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 575 , y = 416
+first check not successfull
+x selected as 0
+y selected as 9
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 574 , y = 417
+first check not successfull
+x selected as 0
+y selected as 9
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 574 , y = 419
+first check not successfull
+x selected as 0
+y selected as 9
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 573 , y = 421
+first check not successfull
+x selected as 0
+y selected as 9
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 572 , y = 423
+first check not successfull
+x selected as 0
+y selected as 9
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 572 , y = 425
+first check not successfull
+x selected as 0
+y selected as 9
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+detected button down, selected says 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aim1 5 aim2 5shoot says cell = 1x before = 0y before = 9position 0 as int 49
+position 0 as ch  1
+position 1 as int 57
+position 1 as ch  9
+aiming 0 , placing 0
+sqW = 40 sqH = 40
+aiming 0 , placing 0
+sqW = 40 sqH = 40
+
+
+You shot at 19 and you HIT a ship!
+
+aiming 0 , placing 0
+sqW = 40 sqH = 40
+aiming 0 , placing 0
+sqW = 40 sqH = 40
+Done forgettingaiming 0 , placing 0
+sqW = 40 sqH = 40
+aiming 0 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+Done forgettingaiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 514 , y = 271
+first check not successfull
+Done loop, selected = 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 521 , y = 258
+first check not successfull
+Done loop, selected = 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 528 , y = 247
+first check not successfull
+Done loop, selected = 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 534 , y = 234
+first check not successfull
+Done loop, selected = 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 538 , y = 220
+first check not successfull
+Done loop, selected = 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 544 , y = 203
+first check not successfull
+Done loop, selected = 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 552 , y = 194
+first check not successfull
+x selected as 0
+y selected as 3
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 569 , y = 184
+first check not successfull
+x selected as 0
+y selected as 3
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 594 , y = 173
+first check not successfull
+x selected as 1
+y selected as 3
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 622 , y = 164
+first check not successfull
+x selected as 1
+y selected as 2
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 650 , y = 155
+first check not successfull
+x selected as 2
+y selected as 2
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 695 , y = 143
+first check not successfull
+x selected as 3
+y selected as 2
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 726 , y = 138
+first check not successfull
+x selected as 4
+y selected as 2
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 760 , y = 135
+first check not successfull
+x selected as 5
+y selected as 2
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 798 , y = 131
+first check not successfull
+x selected as 6
+y selected as 2
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 832 , y = 127
+first check not successfull
+x selected as 6
+y selected as 1
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 862 , y = 123
+first check not successfull
+x selected as 7
+y selected as 1
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 886 , y = 120
+first check not successfull
+x selected as 8
+y selected as 1
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 907 , y = 116
+first check not successfull
+x selected as 8
+y selected as 1
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 917 , y = 116
+first check not successfull
+x selected as 9
+y selected as 1
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 926 , y = 115
+first check not successfull
+x selected as 9
+y selected as 1
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 932 , y = 112
+first check not successfull
+x selected as 9
+y selected as 1
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 936 , y = 111
+first check not successfull
+x selected as 9
+y selected as 1
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 938 , y = 110
+first check not successfull
+x selected as 9
+y selected as 1
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 947 , y = 103
+first check not successfull
+x selected as 9
+y selected as 1
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 950 , y = 100
+first check not successfull
+x selected as 9
+y selected as 1
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 954 , y = 97
+first check not successfull
+x selected as 9
+y selected as 1
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 957 , y = 94
+first check not successfull
+Done loop, selected = 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 957 , y = 93
+first check not successfull
+Done loop, selected = 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 957 , y = 91
+first check not successfull
+Done loop, selected = 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 955 , y = 89
+first check not successfull
+x selected as 9
+y selected as 1
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 953 , y = 87
+first check not successfull
+x selected as 9
+y selected as 1
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 951 , y = 86
+first check not successfull
+x selected as 9
+y selected as 0
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 947 , y = 83
+first check not successfull
+x selected as 9
+y selected as 0
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 946 , y = 81
+first check not successfull
+x selected as 9
+y selected as 0
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 945 , y = 79
+first check not successfull
+x selected as 9
+y selected as 0
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 944 , y = 77
+first check not successfull
+x selected as 9
+y selected as 0
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 942 , y = 74
+first check not successfull
+x selected as 9
+y selected as 0
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 940 , y = 72
+first check not successfull
+x selected as 9
+y selected as 0
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 939 , y = 71
+first check not successfull
+x selected as 9
+y selected as 0
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 937 , y = 69
+first check not successfull
+x selected as 9
+y selected as 0
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 936 , y = 68
+first check not successfull
+x selected as 9
+y selected as 0
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+detected button down, selected says 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aim1 0 aim2 0shoot says cell = 1x before = 9y before = 0position 0 as int 58
+position 0 as ch  :
+position 1 as int 48
+position 1 as ch  0
+aiming 0 , placing 0
+sqW = 40 sqH = 40
+aiming 0 , placing 0
+sqW = 40 sqH = 40
+
+
+You shot at :0 and you HIT a ship!
+
+aiming 0 , placing 0
+sqW = 40 sqH = 40
+aiming 0 , placing 0
+sqW = 40 sqH = 40
+Done forgettingaiming 0 , placing 0
+sqW = 40 sqH = 40
+aiming 0 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+Done forgettingaiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 513 , y = 276
+first check not successfull
+Done loop, selected = 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 515 , y = 275
+first check not successfull
+Done loop, selected = 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 519 , y = 275
+first check not successfull
+Done loop, selected = 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 527 , y = 274
+first check not successfull
+Done loop, selected = 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 539 , y = 275
+first check not successfull
+Done loop, selected = 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 583 , y = 279
+first check not successfull
+x selected as 0
+y selected as 5
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 623 , y = 286
+first check not successfull
+x selected as 1
+y selected as 5
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 665 , y = 291
+first check not successfull
+x selected as 2
+y selected as 5
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 709 , y = 298
+first check not successfull
+x selected as 3
+y selected as 6
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 781 , y = 316
+first check not successfull
+x selected as 5
+y selected as 6
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 817 , y = 326
+first check not successfull
+x selected as 6
+y selected as 6
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 845 , y = 334
+first check not successfull
+x selected as 7
+y selected as 7
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 861 , y = 345
+x selected as 7
+y selected as 7
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 876 , y = 357
+first check not successfull
+x selected as 8
+y selected as 7
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 889 , y = 368
+first check not successfull
+x selected as 8
+y selected as 7
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 897 , y = 378
+first check not successfull
+x selected as 8
+y selected as 8
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 906 , y = 391
+x selected as 8
+y selected as 8
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 912 , y = 402
+x selected as 8
+y selected as 8
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 917 , y = 415
+first check not successfull
+x selected as 9
+y selected as 9
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 922 , y = 430
+x selected as 9
+y selected as 9
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 927 , y = 442
+x selected as 9
+y selected as 9
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 930 , y = 452
+x selected as 9
+y selected as 9
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 934 , y = 462
+first check not successfull
+Done loop, selected = 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 934 , y = 466
+first check not successfull
+Done loop, selected = 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 935 , y = 467
+first check not successfull
+Done loop, selected = 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 935 , y = 468
+first check not successfull
+Done loop, selected = 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 935 , y = 467
+first check not successfull
+Done loop, selected = 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 934 , y = 457
+first check not successfull
+Done loop, selected = 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 932 , y = 449
+x selected as 9
+y selected as 9
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 932 , y = 441
+x selected as 9
+y selected as 9
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 932 , y = 439
+x selected as 9
+y selected as 9
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 932 , y = 438
+x selected as 9
+y selected as 9
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 932 , y = 437
+x selected as 9
+y selected as 9
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 932 , y = 436
+x selected as 9
+y selected as 9
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 932 , y = 435
+x selected as 9
+y selected as 9
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 932 , y = 434
+x selected as 9
+y selected as 9
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+detected button down, selected says 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aim1 5 aim2 5shoot says cell = 1x before = 9y before = 9position 0 as int 58
+position 0 as ch  :
+position 1 as int 57
+position 1 as ch  9
+aiming 0 , placing 0
+sqW = 40 sqH = 40
+aiming 0 , placing 0
+sqW = 40 sqH = 40
+
+
+You shot at :9 and you HIT a ship!
+
+aiming 0 , placing 0
+sqW = 40 sqH = 40
+aiming 0 , placing 0
+sqW = 40 sqH = 40
+Done forgettingaiming 0 , placing 0
+sqW = 40 sqH = 40
+aiming 0 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+Done forgettingaiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 522 , y = 266
+first check not successfull
+Done loop, selected = 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 525 , y = 262
+first check not successfull
+Done loop, selected = 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 527 , y = 260
+first check not successfull
+Done loop, selected = 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 527 , y = 259
+first check not successfull
+Done loop, selected = 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 526 , y = 250
+first check not successfull
+Done loop, selected = 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 525 , y = 233
+first check not successfull
+Done loop, selected = 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 531 , y = 205
+first check not successfull
+Done loop, selected = 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 567 , y = 125
+first check not successfull
+x selected as 0
+y selected as 1
+Done loop, selected = 1
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 609 , y = 83
+x selected as 1
+y selected as 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 653 , y = 40
+first check not successfull
+Done loop, selected = 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 700 , y = 12
+first check not successfull
+Done loop, selected = 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+setting coords with mouse
+mouse says x = 750 , y = 0
+first check not successfull
+Done loop, selected = 0
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40
+aiming 1 , placing 0
+sqW = 40 sqH = 40

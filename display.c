@@ -86,6 +86,7 @@ static void loadAll(display *d) {
     loadPicture(d, "aimTest.bmp", 'A');
     loadPicture(d, "aimTest.bmp", 'M');
     //Front and End
+    loadPicture(d, "aimTest.bmp", 'E');
     loadPicture(d, "aimTest.bmp", 'F');
 }
 
@@ -121,7 +122,7 @@ static void updateGrid(display *d, grid *g, field **gridMatrix, int position) {
     printf("sqW = %d sqH = %d\n", squareW, squareH);
     g->squareW = squareW;
     g->squareH = squareH;
-    g->space = 1;
+    g->space = 0;
     g->gridW = (squareW * 10) + (g->space * 11);
     g->gridH = (squareH * 10) + (g->space * 11);
 
@@ -154,6 +155,8 @@ static void placeOne(display *d, grid *g, int field, int x, int y) {
     char c = -1;
 	if (field == S) c = 'S';
     if (field == R) c = 'R';
+    if (field == SF) c = 'F';
+    if (field == RF) c = 'E';
 	if (field == X) c = 'X';
 	if (field == W) c = 'W';
 	if (field == N) c = 'N';
@@ -271,9 +274,35 @@ void end(display *d) {
 // 'Selected' shows whether events match the selection
 // 'Confirmed' shows whether the player confirmed the target
 
+static void moveSelection(grid *g, char o, int delta) {
+    int maxRow = 9;
+    int maxCol = 9;
+    int minRow = 0;
+    int minCol = 0;
+
+    if (g->orientation == 'h') maxCol = 10 - g->length;
+    else maxRow = 10 - g->length;
+
+    if(o == 'r') {
+        int new = g->selectedRow + delta;
+        if ((new <= maxRow) && (new >= minRow)) g->selectedRow = new;
+        else if (new > maxRow) g->selectedRow = maxRow;
+        else if (new < minRow) g->selectedRow = minRow;
+    }
+    if(o == 'c') {
+        int new = g->selectedCol + delta;
+        if ((new <= maxCol) && (new >= minCol)) g->selectedCol = new;
+        else if (new > maxCol) g->selectedCol = maxCol;
+        else if (new < minCol) g->selectedCol = minCol;
+    }
+}
+
 static void swapOrientation(grid *g) {
     if (g->orientation == 'h') g->orientation = 'v';
     else if (g->orientation == 'v') g->orientation = 'h';
+
+    moveSelection(g, 'r', 0);
+    moveSelection(g, 'c', 0);
 }
 
 static void checkCoords(int row, int col, int x, int y, grid *g) {
@@ -288,6 +317,8 @@ static void checkCoords(int row, int col, int x, int y, grid *g) {
         printf("x selected as %d\n", g->selectedCol);
         g->selectedRow = col;
         printf("y selected as %d\n", g->selectedRow);
+        moveSelection(g, 'r', 0);
+        moveSelection(g, 'c', 0);
         g->selected = true;
     }
 }
@@ -313,15 +344,14 @@ static void setCoordsMouse(int x, int y, grid *g) {
 }
 
 void forgetEvents(display *d) {
-    SDL_FlushEvent(SDL_KEYDOWN);
-    SDL_FlushEvent(SDL_KEYUP);
-    SDL_FlushEvent(SDL_MOUSEMOTION);
-    SDL_FlushEvent(SDL_MOUSEBUTTONDOWN);
-    SDL_FlushEvent(SDL_MOUSEBUTTONUP);
-    SDL_FlushEvent(SDL_MOUSEWHEEL);
+    SDL_Event event_structure;
+    SDL_Event *event = &event_structure;
+    while (SDL_PollEvent(event));
+    printf("Done forgetting");
 }
 
-bool setCoords(display *d, grid *g) {
+
+static bool setCoords(display *d, grid *g) {
     g->confirmed = false;
     SDL_Event event_structure;
     SDL_Event *event = &event_structure;
@@ -334,10 +364,10 @@ bool setCoords(display *d, grid *g) {
     else if (event->type == SDL_KEYDOWN) {
         int sym = event->key.keysym.sym;
         g->selected = true;
-        if ((sym == SDLK_UP) || (sym == SDLK_w)) g->selectedRow--;
-        if ((sym == SDLK_DOWN) || (sym == SDLK_s)) g->selectedRow++;
-        if ((sym == SDLK_LEFT) || (sym == SDLK_a)) g->selectedCol--;
-        if ((sym == SDLK_RIGHT) || (sym == SDLK_d)) g->selectedCol++;
+        if ((sym == SDLK_UP) || (sym == SDLK_w)) moveSelection(g, 'r', -1);
+        if ((sym == SDLK_DOWN) || (sym == SDLK_s)) moveSelection(g, 'r', 1);
+        if ((sym == SDLK_LEFT) || (sym == SDLK_a)) moveSelection(g, 'c', -1);
+        if ((sym == SDLK_RIGHT) || (sym == SDLK_d)) moveSelection(g, 'c', 1);
         if (sym == SDLK_r) swapOrientation(g);
         if ((sym == SDLK_SPACE)) {
             g->confirmed = true;
@@ -366,6 +396,11 @@ bool setCoords(display *d, grid *g) {
 bool setShipLocation(display *d, grid *g, int length, char *orientation) {
     g->orientation = orientation[0];
     g->length = length;
+    return setCoords(d, g);
+}
+
+bool setAim(display *d, grid *g) {
+    g->length = 1;
     return setCoords(d, g);
 }
 

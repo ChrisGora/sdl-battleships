@@ -22,8 +22,8 @@ grid *newGrid(display *d, field **gridMatrix, int position);
 // Draw a 10x10 grid for the ships.
 void placeGrid(display *d, grid *g, bool aiming, bool placing);
 
-// Ask the user to select a square and saves the column and row in grid structure.
-bool setCoords(display *d, grid *g);
+// Ask the user to aim and saves the column and row in grid structure.
+bool setAim(display *d, grid *g);
 
 // Ask the user to select location for a new ship.
 bool setShipLocation(display *d, grid *g, int length, char *orientation);
@@ -37,7 +37,7 @@ int getYcoord(grid *g);
 // Return the ship orientation selected by the user.
 char getOrientation(grid *g);
 
-// Automatically update grids and display a new fram
+// Automatically update grids and display a new frame.
 void updateDisplay(display *d, grid *g1, grid *g2, bool aiming, bool placing);
 
 // Show the next frame and clear the render.

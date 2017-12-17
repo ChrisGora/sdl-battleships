@@ -225,10 +225,12 @@ void placeShip(game *g, int x, int y, int length, char orientation[]) {
 		if (g->currentPlayer == 1) {
 			if (orientation[0] == 'h') {
 				if (initLength == length) g->prim1[x][y] = SF;
+				else if (length == 1) g->prim1[x][y] = SF;
 				else g->prim1[x][y] = S;
 			}
 			if (orientation[0] == 'v') {
 				if (initLength == length) g->prim1[x][y] = RF;
+				else if (length == 1) g->prim1[x][y] = RF;
 				else g->prim1[x][y] = R;
 			}
 //			g->p1Ships[] = g->p1Ships + 1;
@@ -238,10 +240,12 @@ void placeShip(game *g, int x, int y, int length, char orientation[]) {
 		else if (g->currentPlayer == 2) {
 			if (orientation[0] == 'h') {
 				if (initLength == length) g->prim2[x][y] = SF;
+				else if (length == 1) g->prim2[x][y] = SF;
 				else g->prim2[x][y] = S;
 			}
 			if (orientation[0] == 'v') {
 				if (initLength == length) g->prim2[x][y] = RF;
+				else if (length == 1) g->prim2[x][y] = RF;
 				else g->prim2[x][y] = R;
 			}
 			printOne(g->prim2[x][y]);
@@ -649,7 +653,7 @@ void targetDisplay(game *g) {
 	bool valid = false;
 	bool confirmed = false;
 	while (!valid || !confirmed) {
-		confirmed = setCoords(g->d, g2);
+		confirmed = setAim(g->d, g2);
 		updateDisplay(g->d, g1, g2, true, false);
 		x = getXcoord(g2);
 		y = getYcoord(g2);
@@ -658,10 +662,14 @@ void targetDisplay(game *g) {
 	}
 	field result = turn(g, x, y);
 	char position[20];
-	position[0] = x - '0' + 'a';
+	printf ("x before = %d\n", x);
+	printf("y before = %d\n", y);
+	position[0] = x + 'a';
 	position[1] = y + '0';
-	printf("%d\n", position[0]);
-	printf("%c\n", position[0]);
+	printf("position 0 as int %d\n", position[0]);
+	printf("position 0 as ch  %c\n", position[0]);
+	printf("position 1 as int %d\n", position[1]);
+	printf("position 1 as ch  %c\n", position[1]);
 	clear(g);
 	displayPlayersGrids(g);
 	letKnow(g, x, y, result, position);
@@ -792,7 +800,7 @@ void placingShipsTestPlayer1(game *g) {
 	g->currentPlayer = 1;
 	placeShip(g,0,0,5,"h");
 	assert(g->prim1[0][0] == SF);
-	assert(g->prim1[4][0] == S);
+	assert(g->prim1[4][0] == SF);
 }
 
 void placingShipsTestPlayer2(game *g) {
@@ -800,7 +808,7 @@ void placingShipsTestPlayer2(game *g) {
 	g->currentPlayer = 2;
 	placeShip(g,0,0,10,"v");
 	assert(g->prim2[0][0] == RF);
-	assert(g->prim2[0][9] == R);
+	assert(g->prim2[0][8] == R);
 }
 
 void emptyShipsTest(game *g) {
@@ -956,7 +964,7 @@ void coordSelectTest(game *g) {
 	updateDisplay(d, grid1, grid2, true, false);
 	bool confirmed = false;
 	while (! confirmed) {
-		confirmed = setCoords(d, grid2);
+		confirmed = setAim(d, grid2);
 		updateDisplay(d, grid1, grid2, true, false);
 	}
 	int x = getXcoord(grid2);
@@ -991,7 +999,7 @@ void displayShootTest(game *g) {
 
 	bool confirmed = false;
 	while (! confirmed) {
-		confirmed = setCoords(d, grid2);
+		confirmed = setAim(d, grid2);
 		updateDisplay(d, grid1, grid2, true, false);
 	}
 	int x = getXcoord(grid2);
