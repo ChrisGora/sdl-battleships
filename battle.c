@@ -124,6 +124,7 @@ grid *selectGrid(int grid, game *g) {
 }
 
 void printOne(int a) {
+
 	if (a == 0) printf("S ");
 	if (a == 1) printf("X ");
 	if (a == 2) printf("# ");
@@ -132,6 +133,20 @@ void printOne(int a) {
 	if (a == 5) printf("S ");
 	if (a == 6) printf("S ");
 	if (a == 7) printf("S ");
+	if (a == 8) printf("S ");
+	if (a == 9) printf("S ");
+	/*
+	if (a == 0) printf("S ");
+	if (a == 1) printf("X ");
+	if (a == 2) printf("# ");
+	if (a == 3) printf("- ");
+	if (a == 4) printf("* ");
+	if (a == 5) printf("R ");
+	if (a == 6) printf("SF");
+	if (a == 7) printf("RF");
+	if (a == 8) printf("SR");
+	if (a == 9) printf("RR");
+	*/
 }
 
 void printKey() {
@@ -225,12 +240,12 @@ void placeShip(game *g, int x, int y, int length, char orientation[]) {
 		if (g->currentPlayer == 1) {
 			if (orientation[0] == 'h') {
 				if (initLength == length) g->prim1[x][y] = SF;
-				else if (length == 1) g->prim1[x][y] = SF;
+				else if (length == 1) g->prim1[x][y] = SR;
 				else g->prim1[x][y] = S;
 			}
 			if (orientation[0] == 'v') {
 				if (initLength == length) g->prim1[x][y] = RF;
-				else if (length == 1) g->prim1[x][y] = RF;
+				else if (length == 1) g->prim1[x][y] = RR;
 				else g->prim1[x][y] = R;
 			}
 //			g->p1Ships[] = g->p1Ships + 1;
@@ -240,12 +255,12 @@ void placeShip(game *g, int x, int y, int length, char orientation[]) {
 		else if (g->currentPlayer == 2) {
 			if (orientation[0] == 'h') {
 				if (initLength == length) g->prim2[x][y] = SF;
-				else if (length == 1) g->prim2[x][y] = SF;
+				else if (length == 1) g->prim2[x][y] = SR;
 				else g->prim2[x][y] = S;
 			}
 			if (orientation[0] == 'v') {
 				if (initLength == length) g->prim2[x][y] = RF;
-				else if (length == 1) g->prim2[x][y] = RF;
+				else if (length == 1) g->prim2[x][y] = RR;
 				else g->prim2[x][y] = R;
 			}
 			printOne(g->prim2[x][y]);
@@ -471,11 +486,31 @@ field shoot(game *g, int x, int y) {
 	int cell = N;
 	int aim2 = g->prim1[x][y];
 	int aim1 = g->prim2[x][y];
-	printf("aim1 %d aim2 %d", aim1, aim2);
-	if ((g->currentPlayer == 1) && ((aim1 == S) || (aim1 == SF) || (aim1 == R) || (aim1 == RF))) cell = X;
-	else if ((g->currentPlayer == 2) && ((aim2 == S) || (aim2 == SF) || (aim2 == R) || (aim2 == RF))) cell = X;
+	printf("aim1 %d aim2 %d\n", aim1, aim2);
+	if ((g->currentPlayer == 1)
+		&& ((aim1 == S)
+		|| (aim1 == SF)
+		|| (aim1 == R)
+		|| (aim1 == RF)
+		|| (aim1 == SR)
+		|| (aim1 == RR))) {
+			//printf("player 1 shooting \n");
+			cell = X;
+		}
+
+	else if ((g->currentPlayer == 2)
+		&& ((aim2 == S)
+		|| (aim2 == SF)
+		|| (aim2 == R)
+		|| (aim2 == RF)
+		|| (aim2 == SR)
+		|| (aim2 == RR))) {
+			//printf("player 2 shooting \n");
+			cell = X;
+		}
+
 	else cell = W;
-	printf("shoot says cell = %d", cell);
+	//printf("shoot says cell = %d", cell);
 	if (g->currentPlayer == 1) g->track1[x][y] = cell;
 	if (g->currentPlayer == 2) g->track2[x][y] = cell;
 	if (g->currentPlayer == 1) g->prim2[x][y] = cell;
@@ -514,8 +549,10 @@ int healthSumPlayer2(game *g) {
 }
 
 void won(game *g) {
-	printf("Congratulation! Player %d won!!! \n \n", g->currentPlayer);
-	printf("Start a new game? \n");
+	char title[] = "GAME OVER";
+	char buffer[100];
+	sprintf(buffer, "Congratulation! Player %d won!!!\nStart a new game?", g->currentPlayer);
+	showMessage(g->display, g->d, title, buffer, true);
 }
 
 void whoNext(game *g) {
@@ -569,18 +606,23 @@ bool sunk(game *g, int id) {
 }
 
 void letKnow(game *g, int x, int y, field result, char input[]) {
-	printf("\n\nYou shot at %c%c and ", input[0], input[1]);
-	if (result == W) printf("you MISSED\n\n");
+	char buffer1[150];
+	char buffer2[120];
+	char buffer3[100] = "";
+	sprintf(buffer1, "You shot at %c%c and ", input[0], input[1]);
+	if (result == W) sprintf(buffer2, "you MISSED\n");
 	if (result == X) {
-		printf("you HIT a ship!\n");
+		sprintf(buffer2, "you HIT a ship!\n");
 		int id = locateShip(g, x, y, false);
 		bool isSunk = sunk(g, id);
 		if (isSunk == true) {
 			id = longToShortID(id);
-			printf("It was a %s and it has been SUNK \n\n", g->names[id]);
+			sprintf(buffer3, "It was a %s and it has been SUNK \n", g->names[id]);
 		}
-		else printf("\n");
 	}
+	strcat(buffer2, buffer3);
+	strcat(buffer1, buffer2);
+	showMessage(g->display, g->d, "", buffer1, false);
 }
 
 void letOpponentKnow(game *g) {
@@ -800,7 +842,7 @@ void placingShipsTestPlayer1(game *g) {
 	g->currentPlayer = 1;
 	placeShip(g,0,0,5,"h");
 	assert(g->prim1[0][0] == SF);
-	assert(g->prim1[4][0] == SF);
+	assert(g->prim1[4][0] == SR);
 }
 
 void placingShipsTestPlayer2(game *g) {
@@ -875,6 +917,19 @@ void shootTest(game *g) {
 	assert(g->track1[3][7] == X);
 	assert(after == before - 1);
 	letKnow(g, 3, 7, X, "d7");
+	turn(g, 5, 7);
+	assert(g->track1[5][7] == W);
+	letKnow(g, 5, 7, W, "f7");
+
+	emptyAllGrids(g);
+	g->currentPlayer = 2;
+	printGrid(playerGrid(g), g);
+	printGrid(trackGrid(g), g);
+	turn(g, 5, 7);
+	printGrid(playerGrid(g), g);
+	printGrid(trackGrid(g), g);
+	assert(g->track2[5][7] == W);
+	letKnow(g, 5, 7, W, "f7");
 }
 
 void weirdBugTest(game *g) {

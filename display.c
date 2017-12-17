@@ -77,17 +77,22 @@ static void loadAll(display *d) {
     loadPicture(d, "sea.bmp", 'B');
     loadPicture(d, "gridBackground.bmp", 'G');
     loadPicture(d, "testSquare.bmp", 'T');
-    loadPicture(d, "healthyShip.bmp", 'S');
-    loadPicture(d, "healthyShip.bmp", 'R');
+    loadPicture(d, "S.bmp", 'S');
+    loadPicture(d, "R.bmp", 'R');
     loadPicture(d, "hitShip.bmp", 'X');
     loadPicture(d, "water.bmp", 'W');
     loadPicture(d, "unknown.bmp", 'N');
     loadPicture(d, "sunkShip.bmp", 'U');
     loadPicture(d, "aimTest.bmp", 'A');
     loadPicture(d, "aimTest.bmp", 'M');
-    //Front and End
-    loadPicture(d, "aimTest.bmp", 'E');
-    loadPicture(d, "aimTest.bmp", 'F');
+    //Front
+    loadPicture(d, "RF.bmp", 'E');
+    loadPicture(d, "SF.bmp", 'F');
+    //Rear
+    loadPicture(d, "RR.bmp", 'e');
+    loadPicture(d, "SR.bmp", 'f');
+
+
 }
 
 static void placePicture(display *d, int letter, int x, int y, int w, int h) {
@@ -157,6 +162,8 @@ static void placeOne(display *d, grid *g, int field, int x, int y) {
     if (field == R) c = 'R';
     if (field == SF) c = 'F';
     if (field == RF) c = 'E';
+    if (field == SR) c = 'f';
+    if (field == RR) c = 'e';
 	if (field == X) c = 'X';
 	if (field == W) c = 'W';
 	if (field == N) c = 'N';
