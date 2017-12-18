@@ -111,4 +111,14 @@ battle |  -> state      |
 The only thing false about this is that state does depend on display - it stores
 a pointer to the display - however this is a very tiny connection and it doesn't
 affect testing in any way. Even though that pointer is stored in state only battle
-is capable of passing it from state to display.
+is capable of passing it from state to display. Display module has no direct access
+to information in state. That's why everything is passed via battle.
+
+
+### POSSIBLE IMPROVEMENTS
+
+Battle.c is still quite huge and messy. It would be useful to separate the
+terminal IO functions from logic functions. I didn't separate them in the end,
+because I knew I wasn't going to work on the terminal functions anymore and also
+because there are some cyclic dependencies between the IO and logic functions.
+It was therefore best to leave it as it is and not break what's already working.
