@@ -1,4 +1,4 @@
-// This display module provides graphics for the battleships game.
+/* This display module provides graphics for the battleships game */
 
 #include <stdbool.h>
 #include "field.h"

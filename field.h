@@ -1,3 +1,4 @@
+/* This module provides a field enum, used by all the other modules */
 
 // S is a ship that hasn't been hit (Horizontal)
 // R is a ship that hasn't been hit (Vertical)
@@ -6,7 +7,7 @@
 // RF - Vertical ship front
 // RR - Vertical ship rear
 // X is a ship that has been hit
-// W is known water - printed as '-'
+// W is known water
 // N is unknown
 // U is a completely sunk ship
 

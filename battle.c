@@ -1,4 +1,5 @@
- /* Battleships!!! */
+ /* This is a second version of my Battleships game. Now with graphics using
+ 	as well as other new features (see the readme file) */
 
 #include "show.h"
 //#include "state.h"

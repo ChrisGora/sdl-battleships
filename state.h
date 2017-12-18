@@ -1,3 +1,5 @@
+/* This module manages the state of the game, which includes management of all
+    field matricies, the ships database and also game saving and loading */
 
 #include <stdbool.h>
 #include "display.h"

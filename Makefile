@@ -1,4 +1,4 @@
-.PHONY: battle display
+.PHONY: battle display show
 
 GCC = gcc -std=c99 -O3 -Wall -pedantic
 
