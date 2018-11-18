@@ -69,19 +69,24 @@ Save game (when aiming only - saving does not work during initial game setup)
 
 ### Modules and structure
 
-**battle**  
+**battle**
+
 The main game file which runs all logic and terminal IO - the controller
 
-**show**    
+**show**
+
 A module for showing the user some informastion in the correct (terminal or display). This replaced various printfs in battle.
 
 **state**
+
 Module to store and manage the main game structure
 
 **display**
+
 The display module
 
 **field**
+
 A tiny header with the field enum
 
 Based strictly on the headers, my dependencies work as follows:
